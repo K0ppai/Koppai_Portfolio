@@ -8,29 +8,31 @@ import Resume from './components/Resume/Resume';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? setTheme('dark')
-      : setTheme('light');
+      ? setDarkMode(true)
+      : setDarkMode(false);
   }, []);
 
   const toggleDarkMode = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
+    setDarkMode(!darkMode);
   };
 
   return (
-    <>
-      <NavBarDesktop theme={theme} toggleDarkMode={toggleDarkMode} />
-      <NavBarMobile theme={theme} toggleDarkMode={toggleDarkMode} />
-      <Routes>
-        <Route path="/" element={<AboutMe theme={theme} />} />
-        <Route path="/projects" element={<Projects theme={theme} />} />
-        <Route path="/contact" element={<Contact theme={theme} />} />
-        <Route path="/resume" Component={Resume} />
-      </Routes>
-    </>
+    <div className={darkMode ? 'dark' : ''}>
+      <div className="bg-bg_light bg-opacity-90 text-text_light dark:bg-bg_dark dark:text-text_dark">
+        <NavBarDesktop darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <NavBarMobile darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Routes>
+          <Route path="/" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" Component={Resume} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

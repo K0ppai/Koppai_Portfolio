@@ -1,7 +1,7 @@
 
-const Contact = ({theme}) => {
+const Contact = () => {
   return (
-    <div className={`${theme === 'light' ? 'bg-gray-500': 'bg-black'}`}>
+    <div className='h-screen text-orange-700 dark:text-black'>
       Contact
     </div>
   )
