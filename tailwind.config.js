@@ -15,6 +15,7 @@ export default {
         bg_card_pale_dark: '#0a131e',
         primary_light: '#e38b26',
         secondary_light: '#bfefaf',
+        secondary_pale_light: '#e7f6ed',
         accent_light: '#b56b17',
         bg_light: '#f1f7fd',
         text_light: '#030c17',
