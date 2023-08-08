@@ -15,45 +15,45 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   const path = useLocation().pathname;
 
   return (
-    <div className="fixed bottom-0 flex w-screen items-center justify-around bg-third_light py-2 text-text_light dark:bg-third_dark dark:text-text_dark rounded-tl-2xl rounded-tr-2xl md:hidden z-30">
+    <div className="fixed bottom-0 flex w-screen items-center justify-around bg-secondary_light py-2 text-text_light dark:bg-secondary_dark dark:text-text_dark md:hidden z-30">
       <NavLink to="/" className="flex flex-col items-center justify-center">
         {path === '/' ? (
-          <AiFillHome className="text-accent_light dark:text-accent_dark" />
+          <AiFillHome className="text-primary_dark" />
         ) : (
-          <AiOutlineHome className="text-accent_light dark:text-accent_dark" />
+          <AiOutlineHome className="text-primary_dark" />
         )}
-        <span>About</span>
+        <span className='text-bg_card_pale_dark dark:text-secondary_pale_light'>About</span>
       </NavLink>
       <NavLink to="/projects" className="flex flex-col items-center justify-center">
         {path === '/projects' ? (
-          <BsFillGridFill className="text-accent_light dark:text-accent_dark" />
+          <BsFillGridFill className="text-primary_dark" />
         ) : (
-          <BsGrid className="text-accent_light dark:text-accent_dark" />
+          <BsGrid className="text-primary_dark" />
         )}
-        <span>Projects</span>
+        <span className='text-bg_card_pale_dark dark:text-secondary_pale_light'>Projects</span>
       </NavLink>
       <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
         {darkMode ? (
-          <BsFillMoonStarsFill className="text-accent_light dark:text-accent_dark" />
+          <BsFillMoonStarsFill className="text-primary_dark" />
         ) : (
-          <ImSun className="text-accent_light dark:text-accent_dark" />
+          <ImSun className="text-primary_dark" />
         )}
-        <span>{darkMode ? 'Dark' : 'Light'}</span>
+        <span className='text-bg_card_pale_dark dark:text-secondary_pale_light'>{darkMode ? 'Dark' : 'Light'}</span>
       </button>
       <NavLink
         to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
         className="flex flex-col items-center justify-center"
       >
-        <BsFileEarmarkText className="text-accent_light dark:text-accent_dark" />
-        <span>Resume</span>
+        <BsFileEarmarkText className="text-primary_dark" />
+        <span className='text-bg_card_pale_dark dark:text-secondary_pale_light'>Resume</span>
       </NavLink>
       <NavLink to="/contact" className="flex flex-col items-center justify-center">
         {path === '/contact' ? (
-          <BsFillSendFill className="text-accent_light dark:text-accent_dark" />
+          <BsFillSendFill className="text-primary_dark" />
         ) : (
-          <BsSend className="text-accent_light dark:text-accent_dark" />
+          <BsSend className="text-primary_dark" />
         )}
-        <span>Contact</span>
+        <span className='text-bg_card_pale_dark dark:text-secondary_pale_light'>Contact</span>
       </NavLink>
     </div>
   );
