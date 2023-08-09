@@ -5,5 +5,6 @@ import siribox from './siribox.png';
 import leaderboard from './leaderboard.png';
 import todo from './todo.png';
 import awesomeBooks from './awesome_books.png';
+import matrix from './matrix.png';
 
-export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, todo, awesomeBooks };
+export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, todo, awesomeBooks, matrix };
