@@ -27,7 +27,7 @@ function App() {
         <NavBarDesktop darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <NavBarMobile darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path="/" element={<AboutMe />} />
+          <Route path="/" element={<AboutMe darkMode={darkMode} />} />
           <Route path="/projects" element={<Projects darkMode={darkMode} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" Component={Resume} />
