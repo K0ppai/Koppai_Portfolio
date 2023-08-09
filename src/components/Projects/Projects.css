@@ -104,3 +104,14 @@
   width: 150%;
   margin-left: -40px;
 }
+.horizontal-grid{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 95%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  column-gap: 5vmin;
+}
+.horizontal-grid::-webkit-scrollbar {
+  display: none;
+}
