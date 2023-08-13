@@ -1,42 +1,81 @@
 import { matrix } from '@/assets/images/images';
 import PropTypes from 'prop-types';
+import { techs } from '@/assets/Techs/Techs';
 import './AboutMe.css';
-import { Player } from '@lottiefiles/react-lottie-player';
-import { ReactGif, RemoteGif } from '@/assets/Animations/Animations';
+import { useState } from 'react';
+import Connect from './Connect';
+import ReactModal from 'react-modal';
 
 const AboutMe = ({ darkMode }) => {
-  
+  const [hoveredTech, setHoveredTech] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    const rotateElems = document.querySelectorAll('#connect .rotate');
+    rotateElems.forEach((elem) => {
+      elem.classList.remove('active');
+    });
+
+    setTimeout(() => {
+      setIsModalOpen(false);
+    }, 600);
+  };
+
   return (
-    <section className="text-lg">
-      <div className="h-[30vmin] w-screen bg-gradient-light" />
+    <section className="text-lg" id="about-me">
+      <ReactModal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
+        overlayClassName="fixed inset-0 bg-black bg-opacity-40 z-50"
+        closeTimeoutMS={600}
+      >
+        <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
+      </ReactModal>
+      <div className="color-change-2x h-[35vmin] w-screen" />
       <div className="relative -top-[17.5vmin] px-4">
         {/* Profile Image */}
-        <figure className="relative ml-3 flex w-[35vmin] flex-col">
+        <figure className="relative flex w-[35vmin] flex-col">
           <img
             src={matrix}
             alt="Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } w-[35vmin] rounded-[50%] border-4 border-bg_light dark:border-bg_dark`}
+            } box-border w-[35vmin] rounded-[50%] border-4 border-bg_light dark:border-bg_dark`}
           />
-          <div className="absolute bottom-[2vmin] right-[4vmin] h-5 w-5 rounded-[50%] bg-green-400" />
         </figure>
-
-        <svg className="mt-3 h-[4vmax] w-[27vmin]">
-          <text x="50%" y="50%" dy=".35em" textAnchor="middle" id="name" className="font-semibold">
-            Koppai
-          </text>
-        </svg>
-        <p className="mt-2">Front-End Web Developer</p>
+        <div className="flex items-center justify-between">
+          <div className="mt-3 flex items-center">
+            <svg className="h-[4vmax] w-[27vmin]">
+              <text
+                x="50%"
+                y="50%"
+                dy=".35em"
+                textAnchor="middle"
+                id="name"
+                className="font-semibold"
+              >
+                Koppai
+              </text>
+            </svg>
+            <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" />
+          </div>
+          <button className="rounded-xl border-2 border-primary_dark px-4 py-1" onClick={openModal}>
+            connect
+          </button>
+        </div>
+        <p className="mt-2">Front-End Developer</p>
         <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span>
         {/* Keywords */}
         <div className="my-2 flex">
           <span className="mr-2 rounded-xl bg-bg_card_pale_light px-2 text-primary_dark">
             Front End
           </span>
-          <span className="mr-2 rounded-xl bg-secondary_pale_light px-2 text-green-400">
-            Remote
-          </span>
+          <span className="mr-2 rounded-xl bg-bg_card_pale_light px-2 text-green-400">Remote</span>
         </div>
         {/* About Me */}
         <article>
@@ -59,43 +98,24 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      {/* Services */}
-      <article className="bg-bg_card_white_light px-4">
+      <div className="bg-bg_card_white_light px-4">
         <div className="flex items-center py-3">
-          <h2 className="text-2xl text-gray-400">Services</h2>
+          <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
         </div>
-        <h2 className="pb-2 text-4xl font-bold">Where Do I Specialize?</h2>
-        <p>
-          I specialize in helping startups create responsive websites using JavaScript and React.
-        </p>
-        {/* stats */}
-        <div className="my-2 flex items-center justify-around">
-          <p>
-            <p className="text-3xl font-bold">789+</p>
-            <p>Hours Coding</p>
-          </p>
-          <p>
-            <p className="text-3xl font-bold">9+</p>
-            <p>Projects In 3 months</p>
-          </p>
+        <div className="flex flex-wrap items-center justify-center gap-5">
+          {techs.map((tech) => (
+            <div
+              key={tech.id}
+              className="group"
+              onMouseEnter={() => setHoveredTech(tech.id)}
+              onMouseLeave={() => setHoveredTech(null)}
+            >
+              {hoveredTech === tech.id ? tech.hoverElement : tech.originalElement}
+            </div>
+          ))}
         </div>
-        {/* Specialization */}
-        <div className="grid grid-cols-1 gap-y-4">
-          <div className="flex flex-col items-center rounded-xl bg-secondary_light py-2">
-            <Player src={ReactGif} loop autoplay speed={1.5} className="h-[50vmin] w-[50vmin]" />
-            <p>Front End Development</p>
-          </div>
-          <div className="flex flex-col items-center rounded-xl bg-secondary_light py-2">
-            <Player src={RemoteGif} loop autoplay speed={1.5} className="h-[50vmin] w-[50vmin]" />
-            <p>Remote Collaboration</p>
-          </div>
-        </div>
-        {/* Techs */}
-        <div>
-          
-        </div>
-      </article>
+      </div>
     </section>
   );
 };
