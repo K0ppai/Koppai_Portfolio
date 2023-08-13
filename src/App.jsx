@@ -1,12 +1,10 @@
 import NavBarDesktop from '@/components/NavBar/NavBarDesktop';
 import NavBarMobile from '@/components/NavBar/NavBarMobile';
 import { Routes, Route } from 'react-router-dom';
-import AboutMe from './components/AboutMe/AboutMe';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-import Resume from './components/Resume/Resume';
 import ProjectDetails from './components/Projects/ProjectDetails';
 import { useEffect, useState } from 'react';
+import Home from './pages/Home';
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,10 +25,7 @@ function App() {
         <NavBarDesktop darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <NavBarMobile darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path="/" element={<AboutMe darkMode={darkMode} />} />
-          <Route path="/projects" element={<Projects darkMode={darkMode} />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" Component={Resume} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/projects/:projectId" element={<ProjectDetails darkMode={darkMode} />} />
         </Routes>
       </div>

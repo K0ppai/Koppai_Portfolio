@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Projects = ({ darkMode }) => {
   return (
-    <div className="px-4 pb-20 pt-4">
+    <div className="px-4 py-8 bg-bg_card_white_light" id="projects">
       <div className="flex items-center py-4">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />

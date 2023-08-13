@@ -12,7 +12,6 @@ const NavBarDesktop = () => {
       loop: true,
       autoplay: true,
     });
-    console.log('animation loaded');
   }, []);
 
   return (

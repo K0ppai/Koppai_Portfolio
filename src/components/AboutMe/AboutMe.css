@@ -33,3 +33,90 @@
       stroke-width: 0;
     }
   }
+.rotate-in-center {
+  -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+#about-me{
+  scroll-behavior: smooth;
+}
+
+.color-change-2x {
+  animation: color-change-2x 3s linear infinite alternate both;
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: #e38b26;
+  }
+
+  100% {
+    background: #bfefaf;
+  }
+}
+
+#connect .rotate {
+  transform-origin: calc(90vw/2);
+  left: 0;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(calc(80vw/2));
+}
+
+#connect .rotate.active {
+  transform: rotate(calc(360deg / 6 * var(--i)));
+}
+
+#connect .rotate.active a svg {
+  transform: rotate(calc(360deg / -6 * var(--i)));
+}
+
+.scale-in-center {
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.scale-out-center {
+  animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}

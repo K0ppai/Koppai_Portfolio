@@ -24,6 +24,8 @@ export default {
         third_light: '#eee2d2',
         gradient_lToR: 'linear-gradient(to right, #e38b26, #eeb677)',
         accent_pale: '#cda373',
+        tailwindGradient:
+          'linear-gradient(90deg,hsl(187deg 73% 42%) 0%,hsl(186deg 85% 40%) 11%,hsl(184deg 100% 37%) 22%,hsl(183deg 100% 37%) 33%,hsl(181deg 100% 37%) 44%,hsl(180deg 100% 37%) 56%,hsl(178deg 100% 38%) 67%,hsl(177deg 100% 39%) 78%,hsl(175deg 100% 40%) 89%,hsl(173deg 85% 44%) 100%)',
       },
       backgroundImage: {
         'gradient-light':
