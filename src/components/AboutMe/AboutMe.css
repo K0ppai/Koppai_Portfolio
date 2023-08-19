@@ -82,7 +82,7 @@
   transform: rotate(calc(360deg / 6 * var(--i)));
 }
 
-#connect .rotate.active a svg {
+#connect .rotate a svg {
   transform: rotate(calc(360deg / -6 * var(--i)));
 }
 
@@ -118,5 +118,36 @@
     -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 1;
+  }
+}
+
+.border-animation{
+  border-radius: 4px;
+}
+.border-animation::after{
+  content: '';
+  position: absolute;
+  background-color: #f1f7fd;
+  inset: 2px;
+  border-radius: 4px;
+}
+.border-animation::before{
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg,rgb(254, 135, 0), #62fa2f);
+  background: black;
+  width: 220px;
+  height: 10px;
+  background-size: cover;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
