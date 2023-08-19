@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Projects = ({ darkMode }) => {
   return (
-    <div className="bg-bg_card_white_light px-4 dark:bg-bg_card_pale_dark" id="projects">
+    <section className="bg-bg_card_white_light px-4 md:px-[20vmax] dark:bg-bg_card_pale_dark" id="projects">
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
@@ -75,7 +75,7 @@ const Projects = ({ darkMode }) => {
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

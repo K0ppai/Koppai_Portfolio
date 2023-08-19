@@ -63,53 +63,53 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         <a
           href="#about-me"
           className={`flex flex-col items-center justify-center ${
-            activeSection === 'about-me' && 'rounded-full bg-primary_light bg-opacity-[20%] p-4'
+            activeSection === 'about-me' && 'rounded-full bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('about-me')}
         >
           {activeSection === 'about-me' ? (
             <AiFillHome className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <AiOutlineHome className="mx-4 text-2xl text-primary_dark" />
+            <AiOutlineHome className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
         <a
           href="#projects"
           className={`flex flex-col items-center justify-center ${
-            activeSection === 'projects' && 'rounded-full bg-primary_light bg-opacity-[20%] p-4'
+            activeSection === 'projects' && 'rounded-full bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('projects')}
         >
           {activeSection === 'projects' ? (
             <BsFillGridFill className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <BsGrid className="mx-4 text-2xl text-primary_dark" />
+            <BsGrid className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
         <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
           {darkMode ? (
-            <BsFillMoonStarsFill className="mx-4 text-2xl text-primary_dark" />
+            <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark" />
           ) : (
-            <ImSun className="mx-4 text-2xl text-primary_dark" />
+            <ImSun className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </button>
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
           className="flex flex-col items-center justify-center"
         >
-          <BsFileEarmarkText className="mx-4 text-2xl text-primary_dark" />
+          <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
         </NavLink>
         <a
           href="#contact"
           className={`flex flex-col items-center justify-center ${
-            activeSection === 'contact' && 'rounded-full bg-primary_light bg-opacity-[20%] p-4'
+            activeSection === 'contact' && 'rounded-full bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('contact')}
         >
           {activeSection === 'contact' ? (
             <BsFillSendFill className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <BsSend className="mx-4 text-2xl text-primary_dark" />
+            <BsSend className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
       </div>

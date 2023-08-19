@@ -16,34 +16,34 @@ const Connect = ({ closeModal, isModalOpen }) => {
     {
       id: 1,
       url: 'mailto:psthu.koppai@gmail.com',
-      icon: <BiLogoGmail className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
+      icon: <BiLogoGmail className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin] md:text-[12vmin]" />,
     },
     {
       id: 2,
       url: 'https://wa.me/+959796679793',
-      icon: <BiLogoWhatsapp className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
+      icon: <BiLogoWhatsapp className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin] md:text-[12vmin]" />,
     },
     {
       id: 3,
       url: 'https://discord.com/users/665938913256275980',
       icon: (
-        <BiLogoDiscordAlt className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />
+        <BiLogoDiscordAlt className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin] md:text-[12vmin]" />
       ),
     },
     {
       id: 4,
       url: 'https://twitter.com/_koppai_',
-      icon: <BiLogoTwitter className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
+      icon: <BiLogoTwitter className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin] md:text-[12vmin]" />,
     },
     {
       id: 5,
       url: 'https://www.linkedin.com/in/paingsoe-thu/',
-      icon: <BiLogoLinkedin className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
+      icon: <BiLogoLinkedin className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin] md:text-[12vmin]" />,
     },
     {
       id: 6,
       url: 'https://github.com/K0ppai',
-      icon: <BiLogoGithub className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
+      icon: <BiLogoGithub className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin] md:text-[12vmin]" />,
     },
   ];
 
@@ -66,7 +66,7 @@ const Connect = ({ closeModal, isModalOpen }) => {
 
   return (
     <div
-      className="fixed left-[50%] top-[50%] flex w-[90vw] translate-x-[-50%] translate-y-[-50%] items-center justify-center"
+      className="fixed left-[50%] top-[50%] flex w-[90vw] md:w-[80vh] translate-x-[-50%] translate-y-[-50%] items-center justify-center"
       id="connect"
     >
       <button

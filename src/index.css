@@ -17,7 +17,7 @@
   font-family: 'Rambla', sans-serif;
   }
 
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 

@@ -36,8 +36,8 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
-      <div className="color-change-2x h-[35vmin] w-screen" />
-      <div className="relative -top-[17.5vmin] px-4">
+      <div className="color-change-2x h-[35vmin] md:h-[25vmin] w-screen" />
+      <div className="relative -top-[17.5vmin] md:-top-[5vmax] px-4 md:px-[20vmax]">
         {/* Profile Image */}
         <figure className="relative flex w-[35vmin] flex-col">
           <img
@@ -45,7 +45,7 @@ const AboutMe = ({ darkMode }) => {
             alt="Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } box-border w-[35vmin] rounded-[50%] border-4 border-bg_light dark:border-bg_dark`}
+            } box-border w-[35vmin] rounded-[50%] border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
           />
         </figure>
         <div className="mt-3 flex items-center justify-between">
@@ -68,7 +68,7 @@ const AboutMe = ({ darkMode }) => {
           <button
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex items-center justify-center rounded-xl bg-primary_dark dark:text-text_light px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150`}
+            } flex items-center justify-center rounded-xl bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
             onClick={openModal}
           >
             <span className="px-1">connect</span>
@@ -106,7 +106,7 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      <div className="bg-bg_card_white_light px-4 py-10 dark:bg-bg_card_pale_dark">
+      <div className="bg-bg_card_white_light px-4 md:px-[20vmax] py-10 dark:bg-bg_card_pale_dark">
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
