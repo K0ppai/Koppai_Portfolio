@@ -8,7 +8,7 @@ const Home = ({ darkMode }) => {
     <>
       <AboutMe darkMode={darkMode} />
       <Projects darkMode={darkMode} />
-      <Contact />
+      <Contact darkMode={darkMode} />
     </>
   );
 };
