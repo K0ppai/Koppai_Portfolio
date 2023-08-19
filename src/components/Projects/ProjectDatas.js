@@ -21,6 +21,10 @@ const projectDatas = [
     tech: ['React', 'Redux', 'TailwindCss', 'Rest API'],
     built_date: 'August 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
   {
     id: 2,
@@ -34,6 +38,10 @@ const projectDatas = [
     responsive: 'Responsive',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
   {
     id: 3,
@@ -47,6 +55,10 @@ const projectDatas = [
     responsive: 'Responsive',
     built_date: 'June 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
   {
     id: 4,
@@ -60,6 +72,10 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
   {
     id: 5,
@@ -73,6 +89,10 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
   {
     id: 6,
@@ -85,6 +105,10 @@ const projectDatas = [
     responsive: 'Responsive',
     built_date: 'June 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
   {
     id: 7,
@@ -97,6 +121,10 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'June 2023',
     development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
   },
 ];
 export default projectDatas;

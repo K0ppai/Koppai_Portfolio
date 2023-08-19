@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className="bg-bg_light bg-opacity-90 text-text_light dark:bg-bg_dark dark:text-text_dark">
+      <div className="bg-bg_light text-text_light dark:bg-bg_dark dark:text-text_dark">
         <NavBarDesktop darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <NavBarMobile darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>

@@ -1,4 +1,3 @@
-
 .slide-right {
   animation: slide-right 1.1s cubic-bezier(0.600, -0.280, 0.735, 0.045) infinite alternate both;
 }
@@ -27,11 +26,11 @@
 
 .left {
   clip-path: polygon(0 0, 100% 0, calc(100% - 50px) 100%, 0 100%);
-  width: 150%;
+  width: 55vw;
 }
 .right {
   clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
-  width: 150%;
+  width: 55vw;
   margin-left: -40px;
 }
 .horizontal-grid{

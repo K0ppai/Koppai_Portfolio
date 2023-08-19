@@ -22,7 +22,7 @@ const ProjectDetails = ({ darkMode }) => {
   return (
     <section className="pb-20">
       <h1 className="py-4 text-center text-4xl font-semibold">
-        {projectDatas[currentProjectIndex].title}
+        {projectDatas[currentProjectIndex].title.toUpperCase()}
       </h1>
       <h2 className="pb-3 text-center text-lg text-gray-400">
         {projectDatas[currentProjectIndex].development_type}
@@ -32,13 +32,13 @@ const ProjectDetails = ({ darkMode }) => {
         alt={`${projectDatas[currentProjectIndex].title}-image`}
       />
       {/* Source/Live Buttons */}
-      <div className="my-2 flex">
+      <div className="my-2 flex justify-between">
         <a
           href={projectDatas[currentProjectIndex].github_link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`left flex items-center justify-start bg-primary_light py-2 ${
-            darkMode ? 'shadow-drop-primary' : 'shadow-drop-primary'
+          className={`left flex items-center justify-start border-y-2 border-text_light bg-primary_light py-2 dark:border-bg_card_pale_light ${
+            darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
           }`}
         >
           <span className="ml-[7vmin] text-2xl">Source</span>
@@ -48,7 +48,7 @@ const ProjectDetails = ({ darkMode }) => {
           href={projectDatas[currentProjectIndex].live_link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`right flex items-center justify-end bg-secondary_light py-2 dark:bg-bg_card_pale_dark ${
+          className={`right flex items-center justify-end border-y-2 border-text_light bg-secondary_light py-2 dark:border-bg_card_pale_light dark:bg-secondary_dark ${
             darkMode ? 'shadow-drop-secondary-dark' : 'shadow-drop-secondary-light'
           }`}
         >
@@ -56,39 +56,57 @@ const ProjectDetails = ({ darkMode }) => {
           <RxExternalLink className="mr-[7vmin] text-3xl" />
         </a>
       </div>
-      <div className="flex flex-wrap items-center justify-center px-2 pt-2">
-        {projectDatas[currentProjectIndex].tech.map((tech) => (
-          <span
-            key={id()}
-            className="mx-1 mb-2 rounded bg-accent_dark px-2 py-1 text-secondary_pale_light dark:bg-bg_card_dark dark:text-text_dark"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-      {/* Project Description */}
-      <article className="my-4">
-        <h2 className="text-center text-2xl">Project Overview</h2>
-        <p className="px-3">{projectDatas[currentProjectIndex].description}</p>
-      </article>
-      {/* Next/Previous Buttons */}
-      <div className="flex px-4">
-        {currentProjectIndex !== 0 && (
-          <Link to={`/projects/${projectDatas[prevProjectIndex].id}`} className="me-auto">
-            <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:bg-secondary_dark dark:text-text_dark">
-              <BsArrowLeft className="slide-left mr-1 fill-current text-2xl text-text_light dark:text-text_dark" />
-              <span className="pl-2">{prevProjectTitle}</span>
-            </button>
-          </Link>
-        )}
-        {currentProjectIndex !== projectDatas.length - 1 && (
-          <Link to={`/projects/${projectDatas[nextProjectIndex].id}`} className="ms-auto">
-            <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:bg-secondary_dark dark:text-text_dark">
-              <span className="pr-2">{nextProjectTitle}</span>
-              <BsArrowRight className="slide-right ml-1 text-2xl text-text_light dark:text-text_dark" />
-            </button>
-          </Link>
-        )}
+
+      <div className="px-4">
+        <div>
+          <h3 className="text-center text-2xl font-semibold">TECHS</h3>
+          <div className="flex flex-wrap items-center justify-around pt-2">
+            {projectDatas[currentProjectIndex].tech.map((tech) => (
+              <span
+                key={id()}
+                className="rounded-br-xl rounded-tl-xl bg-bg_card_white_light px-3 py-1 text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* Project Informations */}
+        <article className="my-4">
+          <h2 className="text-center text-2xl font-semibold">INTRODUCTION</h2>
+          <p className="">{projectDatas[currentProjectIndex].description}</p>
+        </article>
+        <article>
+          <h2 className="text-center text-2xl font-semibold">PURPOSE AND GOAL</h2>
+          <p>{projectDatas[currentProjectIndex].goal}</p>
+        </article>
+        <article>
+          <h2 className="text-center text-2xl font-semibold">SPOTLIGHT</h2>
+          <p>{projectDatas[currentProjectIndex].key_feature}</p>
+        </article>
+        <article>
+          <h2 className="text-center text-2xl font-semibold">LESSON LEARNED</h2>
+          <p>{projectDatas[currentProjectIndex].lesson_learned}</p>
+        </article>
+        {/* Next/Previous Buttons */}
+        <div className="flex px-4">
+          {currentProjectIndex !== 0 && (
+            <Link to={`/projects/${projectDatas[prevProjectIndex].id}`} className="me-auto">
+              <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:bg-secondary_dark dark:text-text_dark">
+                <BsArrowLeft className="slide-left mr-1 fill-current text-2xl text-text_light dark:text-text_dark" />
+                <span className="pl-2">{prevProjectTitle}</span>
+              </button>
+            </Link>
+          )}
+          {currentProjectIndex !== projectDatas.length - 1 && (
+            <Link to={`/projects/${projectDatas[nextProjectIndex].id}`} className="ms-auto">
+              <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:bg-secondary_dark dark:text-text_dark">
+                <span className="pr-2">{nextProjectTitle}</span>
+                <BsArrowRight className="slide-right ml-1 text-2xl text-text_light dark:text-text_dark" />
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   );
