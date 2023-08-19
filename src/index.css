@@ -21,6 +21,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+a:focus,a:active,button:focus,button:active,button {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
     :root {
       --shadow-color: 210deg 22% 60%;
       --shadow-elevation-medium:

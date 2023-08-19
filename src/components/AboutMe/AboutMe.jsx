@@ -68,14 +68,14 @@ const AboutMe = ({ darkMode }) => {
           <button
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex items-center justify-center rounded-xl bg-primary_dark dark:text-text_light px-5 py-2 text-xl font-semibold text-secondary_pale_light transition duration-150`}
+            } flex items-center justify-center rounded-xl bg-primary_dark dark:text-text_light px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150`}
             onClick={openModal}
           >
             <span className="px-1">connect</span>
           </button>
         </div>
-        <p className="mt-2">Front-End Developer</p>
-        <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span>
+        <p className="mt-2 text-gray-400">Front-End Developer</p>
+        {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
         <div className="mt-2 flex">
           <span className="mr-2 rounded-full bg-bg_card_pale_light px-4 py-[0.2rem] text-primary_dark">
