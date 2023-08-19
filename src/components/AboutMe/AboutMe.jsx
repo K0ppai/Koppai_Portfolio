@@ -50,7 +50,7 @@ const AboutMe = ({ darkMode }) => {
         </figure>
         <div className="mt-3 flex items-center justify-between">
           <div className="flex items-center">
-            <svg className="h-[4vmax] w-[27vmin]">
+            {/* <svg className="h-[4vmax] w-[27vmin]">
               <text
                 x="50%"
                 y="50%"
@@ -61,13 +61,14 @@ const AboutMe = ({ darkMode }) => {
               >
                 Koppai
               </text>
-            </svg>
+            </svg> */}
+            <h1 className="text-4xl font-extrabold">Koppai</h1>
             <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" />
           </div>
           <button
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex items-center justify-center rounded-xl bg-primary_dark px-5 py-2 text-xl font-semibold text-secondary_pale_light transition duration-150`}
+            } flex items-center justify-center rounded-xl bg-primary_dark dark:text-text_light px-5 py-2 text-xl font-semibold text-secondary_pale_light transition duration-150`}
             onClick={openModal}
           >
             <span className="px-1">connect</span>
