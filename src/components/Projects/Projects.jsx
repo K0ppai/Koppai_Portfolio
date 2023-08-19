@@ -7,13 +7,13 @@ import PropTypes from 'prop-types';
 
 const Projects = ({ darkMode }) => {
   return (
-    <div className="px-4 py-8 bg-bg_card_white_light" id="projects">
-      <div className="flex items-center py-4">
+    <div className="bg-bg_card_white_light px-4 dark:bg-bg_card_pale_dark" id="projects">
+      <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
       </div>
       <h2 className="text-4xl font-bold">Latest Work</h2>
-      <div className="horizontal-grid px-4 py-4">
+      <div className="horizontal-grid pb-20 pt-10">
         {projectDatas.map((projectData) => (
           <button
             key={projectData.id}

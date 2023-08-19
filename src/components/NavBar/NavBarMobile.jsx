@@ -17,8 +17,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   const path = useLocation().pathname;
   const navigate = useNavigate();
   const sections = ['about-me', 'projects', 'contact'];
-  
-  
+
   const handleIntersection = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -26,7 +25,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
       }
     });
   };
-  
+
   const handleNavigation = (sectionId) => {
     if (path.startsWith('/projects/')) {
       navigate('/');
@@ -36,7 +35,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
       sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
       rootMargin: '-50% 0px -50% 0px',
@@ -59,52 +58,58 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
       <div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-        } fixed bottom-4 z-30 flex w-[85vw] items-center justify-around rounded-3xl bg-white bg-opacity-40 px-2 py-5  text-text_light dark:bg-bg_dark dark:text-text_dark md:hidden`}
+        } fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-full px-2 py-2 text-text_light  backdrop-blur-[0.3rem] dark:bg-bg_dark dark:text-text_dark dark:backdrop-blur-[0.5rem] dark:bg-opacity-30 md:hidden`}
       >
         <a
           href="#about-me"
-          className="flex flex-col items-center justify-center"
+          className={`flex flex-col items-center justify-center ${
+            activeSection === 'about-me' && 'rounded-full bg-primary_light bg-opacity-[20%] p-4'
+          }`}
           onClick={() => handleNavigation('about-me')}
         >
           {activeSection === 'about-me' ? (
-            <AiFillHome className="text-2xl text-primary_dark" />
+            <AiFillHome className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <AiOutlineHome className="text-2xl text-primary_dark" />
+            <AiOutlineHome className="mx-4 text-2xl text-primary_dark" />
           )}
         </a>
         <a
           href="#projects"
-          className="flex flex-col items-center justify-center"
+          className={`flex flex-col items-center justify-center ${
+            activeSection === 'projects' && 'rounded-full bg-primary_light bg-opacity-[20%] p-4'
+          }`}
           onClick={() => handleNavigation('projects')}
         >
           {activeSection === 'projects' ? (
-            <BsFillGridFill className="text-2xl text-primary_dark" />
+            <BsFillGridFill className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <BsGrid className="text-2xl text-primary_dark" />
+            <BsGrid className="mx-4 text-2xl text-primary_dark" />
           )}
         </a>
         <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
           {darkMode ? (
-            <BsFillMoonStarsFill className="text-2xl text-primary_dark" />
+            <BsFillMoonStarsFill className="mx-4 text-2xl text-primary_dark" />
           ) : (
-            <ImSun className="text-2xl text-primary_dark" />
+            <ImSun className="mx-4 text-2xl text-primary_dark" />
           )}
         </button>
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
           className="flex flex-col items-center justify-center"
         >
-          <BsFileEarmarkText className="text-2xl text-primary_dark" />
+          <BsFileEarmarkText className="mx-4 text-2xl text-primary_dark" />
         </NavLink>
         <a
           href="#contact"
-          className="flex flex-col items-center justify-center"
+          className={`flex flex-col items-center justify-center ${
+            activeSection === 'contact' && 'rounded-full bg-primary_light bg-opacity-[20%] p-4'
+          }`}
           onClick={() => handleNavigation('contact')}
         >
           {activeSection === 'contact' ? (
-            <BsFillSendFill className="text-2xl text-primary_dark" />
+            <BsFillSendFill className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <BsSend className="text-2xl text-primary_dark" />
+            <BsSend className="mx-4 text-2xl text-primary_dark" />
           )}
         </a>
       </div>

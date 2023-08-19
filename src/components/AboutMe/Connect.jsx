@@ -15,34 +15,34 @@ const Connect = ({ closeModal, isModalOpen }) => {
   const socialMedias = [
     {
       id: 1,
-      url: 'https://t.me/AgustinGarciaDev',
+      url: 'mailto:psthu.koppai@gmail.com',
       icon: <BiLogoGmail className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
     },
     {
       id: 2,
-      url: 'https://api.whatsapp.com/send?phone=+5491130787100&text=Hola%20Agustin%20',
+      url: 'https://wa.me/+959796679793',
       icon: <BiLogoWhatsapp className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
     },
     {
       id: 3,
-      url: 'https://discord.com/users/AgustinGarcia#0001',
+      url: 'https://discord.com/users/665938913256275980',
       icon: (
         <BiLogoDiscordAlt className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />
       ),
     },
     {
       id: 4,
-      url: 'https://twitter.com/AgustinGarcia',
+      url: 'https://twitter.com/_koppai_',
       icon: <BiLogoTwitter className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
     },
     {
       id: 5,
-      url: 'https://www.linkedin.com/in/agustin-garcia-dev/',
+      url: 'https://www.linkedin.com/in/paingsoe-thu/',
       icon: <BiLogoLinkedin className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
     },
     {
       id: 6,
-      url: 'https://www.linkedin.com/in/agustin-garcia-dev/',
+      url: 'https://github.com/K0ppai',
       icon: <BiLogoGithub className="rounded-[50%] bg-secondary_pale_light p-4 text-[17vmin]" />,
     },
   ];
@@ -70,7 +70,7 @@ const Connect = ({ closeModal, isModalOpen }) => {
       id="connect"
     >
       <button
-        className="absolute z-[999] flex h-[120px] w-[120px] cursor-pointer items-center justify-center rounded-[50%] bg-secondary_pale_light"
+        className="absolute z-[999] flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-[50%] bg-secondary_pale_light"
         onClick={closeModal}
       >
         <BiX className="text-4xl" />

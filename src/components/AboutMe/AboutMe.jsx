@@ -31,7 +31,7 @@ const AboutMe = ({ darkMode }) => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
-        overlayClassName="fixed inset-0 bg-black bg-opacity-40 z-50"
+        overlayClassName="fixed inset-0 bg-black backdrop-blur-[0.1rem] bg-opacity-40 z-50"
         closeTimeoutMS={600}
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
@@ -48,8 +48,8 @@ const AboutMe = ({ darkMode }) => {
             } box-border w-[35vmin] rounded-[50%] border-4 border-bg_light dark:border-bg_dark`}
           />
         </figure>
-        <div className="flex items-center justify-between">
-          <div className="mt-3 flex items-center">
+        <div className="mt-3 flex items-center justify-between">
+          <div className="flex items-center">
             <svg className="h-[4vmax] w-[27vmin]">
               <text
                 x="50%"
@@ -57,29 +57,36 @@ const AboutMe = ({ darkMode }) => {
                 dy=".35em"
                 textAnchor="middle"
                 id="name"
-                className="font-semibold"
+                className="text-4xl font-extrabold"
               >
                 Koppai
               </text>
             </svg>
             <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" />
           </div>
-          <button className="rounded-xl border-2 border-primary_dark px-4 py-1" onClick={openModal}>
-            connect
+          <button
+            className={`${
+              darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
+            } flex items-center justify-center rounded-xl bg-primary_dark px-5 py-2 text-xl font-semibold text-secondary_pale_light transition duration-150`}
+            onClick={openModal}
+          >
+            <span className="px-1">connect</span>
           </button>
         </div>
         <p className="mt-2">Front-End Developer</p>
         <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span>
         {/* Keywords */}
-        <div className="my-2 flex">
-          <span className="mr-2 rounded-xl bg-bg_card_pale_light px-2 text-primary_dark">
+        <div className="mt-2 flex">
+          <span className="mr-2 rounded-full bg-bg_card_pale_light px-4 py-[0.2rem] text-primary_dark">
             Front End
           </span>
-          <span className="mr-2 rounded-xl bg-bg_card_pale_light px-2 text-green-400">Remote</span>
+          <span className="mr-2 rounded-full bg-secondary_pale_light px-4 py-[0.2rem] text-green-400">
+            Remote
+          </span>
         </div>
         {/* About Me */}
         <article>
-          <div className="flex items-center py-3">
+          <div className="flex items-center py-8">
             <h1 className="text-2xl text-gray-400">About Me</h1>
             <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
           </div>
@@ -98,8 +105,8 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      <div className="bg-bg_card_white_light px-4">
-        <div className="flex items-center py-3">
+      <div className="bg-bg_card_white_light px-4 py-10 dark:bg-bg_card_pale_dark">
+        <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
         </div>
