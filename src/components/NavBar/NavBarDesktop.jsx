@@ -63,7 +63,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
     <nav
       className={`${
         isNavExpanded ? 'w-[20vmax]' : 'w-[8vmax]'
-      } fixed right-0 top-0 z-[50] hidden h-[100vh]  text-text_light dark:text-text_dark md:block`}
+      } fixed right-0 top-0 z-[50] hidden h-[100vh]  text-text_light dark:text-text_dark md:block transition-all duration-500 ease-in-out`}
     >
       <ul className="flex h-[100vh] flex-col  rounded-tl-3xl">
         <li
@@ -75,7 +75,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             onClick={handleNavExpand}
             className={`z-99 top-[value here] absolute -left-[16px] rounded-full bg-primary_dark p-[2px] text-[30px] text-white`}
           >
-            <MdOutlineKeyboardArrowLeft />
+            <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
           <div className="flex w-full items-center justify-end gap-x-9 pr-9">
             {darkMode ? (
@@ -84,16 +84,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Light</span>
             )}
             {darkMode ? (
-              <button>
+              <button className='my-[4vw]'>
                 <BsFillMoonStarsFill
-                  className="my-[4vw] min-w-[24px] text-2xl text-primary_dark"
+                  className="min-w-[24px] text-2xl text-primary_dark"
                   onClick={toggleDarkMode}
                 />
               </button>
             ) : (
-              <button>
+              <button className='my-[4vw]'>
                 <ImSun
-                  className="my-[4vw] min-w-[24px] text-2xl text-primary_dark"
+                  className="min-w-[24px] text-2xl text-primary_dark"
                   onClick={toggleDarkMode}
                 />
               </button>
