@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 
 const Home = ({ darkMode }) => {
   return (
-    <>
+    <main>
       <AboutMe darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <Contact darkMode={darkMode} />
-    </>
+    </main>
   );
 };
 
