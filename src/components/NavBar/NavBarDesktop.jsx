@@ -12,6 +12,7 @@ import { ImSun } from 'react-icons/im';
 import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
+import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -56,22 +57,25 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <nav className="fixed right-0 top-0 z-[90] hidden h-[100vh] w-[19vmax] text-text_light dark:text-text_dark md:block">
-      <div className="relative flex h-full flex-col justify-around rounded-tl-3xl">
-        <button
+      <div className="flex h-full flex-col justify-around rounded-tl-3xl">
+        <div
           className={`${
             darkMode ? 'bg-bg_dark' : 'bg-bg_light'
-          } flex flex-col items-center justify-center`}
-          onClick={toggleDarkMode}
+          } relative flex flex-col items-center justify-center`}
         >
-          <div className="flex w-full items-center justify-end gap-x-9 pr-9">
+          <MdOutlineKeyboardArrowLeft className="z-99 absolute -left-[0.75rem] rounded-full bg-primary_dark text-2xl text-white" />
+          <button
+            className="flex w-full items-center justify-end gap-x-9 pr-9"
+            onClick={toggleDarkMode}
+          >
             {darkMode ? <span>Dark</span> : <span>Light</span>}
             {darkMode ? (
               <BsFillMoonStarsFill className="my-[4vw] text-2xl text-primary_dark" />
             ) : (
               <ImSun className="my-[4vw] text-2xl text-primary_dark" />
             )}
-          </div>
-        </button>
+          </button>
+        </div>
         <a
           href="#about-me"
           className={`flex flex-col items-center justify-center ${
