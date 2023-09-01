@@ -1,0 +1,130 @@
+import {
+  awesomeBooks,
+  bookstore,
+  dota2Heros,
+  leaderboard,
+  siribox,
+  spaceTravellers,
+  todo,
+} from '../../assets/images/images';
+
+const projectDatas = [
+  {
+    id: 1,
+    title: 'Dota2 Heros',
+    description:
+      'Dota2_Heros is a responsive web application that allows users to learn about Dota2 heros.Users can search for heros and learn about their abilities and stats.This project was built with React.js and Redux.',
+    image: dota2Heros,
+    live_link: 'https://dota2-heros.netlify.app',
+    github_link: 'https://github.com/K0ppai/dota2_heros',
+    responsive: 'Responsive',
+    tech: ['React', 'Redux', 'TailwindCss', 'Rest API'],
+    built_date: 'August 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+  {
+    id: 2,
+    title: 'SiriBox',
+    description:
+      'SiriBox is a website that showcases a collection of movies and TV shows. It serves as the capstone project for the Microverse JavaScript curriculum. Developed using JavaScript, HTML, CSS, and Webpack, it utilizes API data to display content. Users can interact by liking and commenting on the website and filter shows according to genres.',
+    image: siribox,
+    live_link: 'https://siribox.netlify.app',
+    github_link: 'https://github.com/K0ppai/SiriBox',
+    tech: ['JavaScript', 'Bootstrap', 'Rest API'],
+    responsive: 'Responsive',
+    built_date: 'July 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+  {
+    id: 3,
+    title: 'Leaderboard',
+    description:
+      'Leaderboard is an app that you can use to input your scores. It displays all of the user inputs from anywhere from best score to worst score.',
+    image: leaderboard,
+    live_link: 'https://leaderboard-list.netlify.app',
+    github_link: 'https://github.com/K0ppai/leaderboard-list-app',
+    tech: ['JavaScript', 'Bootstrap', 'POST API'],
+    responsive: 'Responsive',
+    built_date: 'June 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+  {
+    id: 4,
+    title: 'Space Travellers',
+    description:
+      'Space Travellers is a web application.Users can interact with the application by joining a mission, leaving a mission,reserving rockets and viewing the list of missions and rockets.',
+    image: spaceTravellers,
+    live_link: 'https://space-travellers-koppai.netlify.app',
+    github_link: 'https://github.com/K0ppai/space_travelers',
+    tech: ['React', 'Redux', 'Rest API'],
+    responsive: 'Desktop',
+    built_date: 'July 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+  {
+    id: 5,
+    title: 'Bookstore',
+    description:
+      '[Bookstore] is a web application that allows users to add and remove books from a Book list. The project was built with React.js.',
+    image: bookstore,
+    live_link: 'https://bookstore-koppai.netlify.app',
+    github_link: 'https://github.com/K0ppai/bookstore_app',
+    tech: ['React', 'Redux', 'Rest API'],
+    responsive: 'Desktop',
+    built_date: 'July 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+  {
+    id: 6,
+    title: 'Todo List',
+    description: 'This is project 1',
+    image: todo,
+    live_link: 'https://todo-koppai.netlify.app',
+    github_link: 'https://github.com/K0ppai/to-do-list-app',
+    tech: ['JavaScript', 'Local Storage'],
+    responsive: 'Responsive',
+    built_date: 'June 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+  {
+    id: 7,
+    title: 'Awesome Books',
+    description: 'This is project 1',
+    image: awesomeBooks,
+    live_link: 'https://awesomebooks-koppai.netlify.app',
+    github_link: 'https://github.com/K0ppai/awesome-books-ES6',
+    tech: ['JavaScript', 'Local Storage'],
+    responsive: 'Desktop',
+    built_date: 'June 2023',
+    development_type: 'Front-End Development',
+    goal: 'project goal',
+    key_feature: 'Project key feature',
+    lesson_learned: 'Lessons learned during building project',
+    
+  },
+];
+export default projectDatas;
