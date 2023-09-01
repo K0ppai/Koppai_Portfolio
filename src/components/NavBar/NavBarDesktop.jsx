@@ -62,10 +62,10 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   return (
     <nav
       className={`${
-        isNavExpanded ? 'w-[20vmax]' : 'w-[8vmax]'
-      } fixed right-0 top-0 z-[50] hidden h-[100vh]  text-text_light dark:text-text_dark md:block transition-all duration-500 ease-in-out`}
+        isNavExpanded ? 'w-[20vmax]' : 'w-[7.5vmax]'
+      } fixed right-0 top-0 z-[50] hidden h-[100vh]  text-text_light transition-all duration-500 ease-in-out dark:text-text_dark md:block`}
     >
-      <ul className="flex h-[100vh] flex-col  rounded-tl-3xl">
+      <ul className="flex h-[100vh] flex-col">
         <li
           className={`${
             darkMode ? 'bg-bg_dark' : 'bg-bg_light'
@@ -77,21 +77,21 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           >
             <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
-          <div className="flex w-full items-center justify-end gap-x-9 pr-9">
+          <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[2.5vmax]">
             {darkMode ? (
               <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Dark</span>
             ) : (
               <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Light</span>
             )}
             {darkMode ? (
-              <button className='my-[4vw]'>
+              <button className="my-[4vw]">
                 <BsFillMoonStarsFill
                   className="min-w-[24px] text-2xl text-primary_dark"
                   onClick={toggleDarkMode}
                 />
               </button>
             ) : (
-              <button className='my-[4vw]'>
+              <button className="my-[4vw]">
                 <ImSun
                   className="min-w-[24px] text-2xl text-primary_dark"
                   onClick={toggleDarkMode}
@@ -101,14 +101,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <li
-          className={`flex flex-grow flex-col items-center justify-center ${
+          className={`relative flex flex-grow flex-col items-center justify-center ${
             darkMode ? 'bg-bg_dark' : 'bg-bg_light'
           } ${
             activeSection === 'about-me' &&
-            'rounded-br-2xl rounded-tr-2xl bg-primary_light bg-transparent bg-opacity-[20%] py-[4vw]'
+            'bg-green-300 py-[4vw]'
           }`}
         >
-          <div className="flex w-full items-center justify-end gap-x-9 pr-9">
+          <b className={`bg-red-600 rounded-bl-[24px] -top-[24px] bg-red absolute h-[24px] w-full`} />
+          <b />
+          <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[2.5vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>About</span>
             <a href="#about-me" onClick={() => handleNavigation('about-me')}>
               {activeSection === 'about-me' ? (
@@ -120,14 +122,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <li
-          className={`flex flex-grow flex-col items-center justify-center ${
+          className={`relative flex flex-grow flex-col items-center justify-center ${
             darkMode ? 'bg-bg_dark' : 'bg-bg_light'
           } ${
             activeSection === 'projects' &&
-            'rounded-br-2xl rounded-tr-2xl bg-primary_light bg-transparent bg-opacity-[20%] py-[4vw]'
+            'bg-green-300 py-[4vw]'
           }`}
         >
-          <div className="flex w-full items-center justify-end gap-x-9 pr-9">
+          <b className={`bg-red-600 +rounded-bl-[24px] -top-[24px] bg-red absolute h-[24px] w-full`} />
+          <b />
+          <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[2.5vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Projects</span>
             <a href="#projects" onClick={() => handleNavigation('projects')}>
               {activeSection === 'projects' ? (
@@ -139,14 +143,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <li
-          className={`flex flex-grow flex-col items-center justify-center ${
+          className={`relative flex flex-grow flex-col items-center justify-center ${
             darkMode ? 'bg-bg_dark' : 'bg-bg_light'
           } ${
             activeSection === 'contact' &&
-            'rounded-br-2xl rounded-tr-2xl bg-primary_light bg-transparent bg-opacity-[20%] py-[4vw]'
+            'bg-green-300 py-[4vw]'
           }`}
         >
-          <div className="flex w-full items-center justify-end gap-x-9 pr-9">
+          <b className={`bg-red-600 +rounded-bl-[24px] -top-[24px] bg-red absolute h-[24px] w-full`} />
+          <b />
+          <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[2.5vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Contact</span>
             <a href="#contact" onClick={() => handleNavigation('contact')}>
               {activeSection === 'contact' ? (
@@ -163,7 +169,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             darkMode ? 'bg-bg_dark' : 'bg-bg_light'
           } flex flex-grow flex-col items-center justify-center`}
         >
-          <div className="flex w-full items-center justify-end gap-x-9 pr-9">
+          <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[2.5vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Get My Resume</span>
             <BsFileEarmarkText className="my-[4vw] min-w-[24px] text-2xl text-primary_dark" />
           </div>
@@ -175,7 +181,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
 
 export default NavBarDesktop;
 
-NavBarDesktop.PropTypes = {
+NavBarDesktop.propTypes = {
   darkMode: PropTypes.bool.isRequired,
   toggleDarkMode: PropTypes.func.isRequired,
 };
