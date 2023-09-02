@@ -67,9 +67,9 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
     >
       <ul className="flex h-[100vh] flex-col">
         <li
-          className={`${
-            darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
-          } relative flex flex-grow flex-col items-center justify-center`}
+          className={`${darkMode ? 'bg-bg_dark' : 'bg-bg_dark'} 
+          ${activeSection === 'about-me' ? 'rounded-bl-[25px]' : ''}
+          relative flex flex-grow flex-col items-center justify-center`}
         >
           <button
             onClick={handleNavExpand}
@@ -103,12 +103,14 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <li
           className={`relative flex flex-grow flex-col items-center justify-center ${
             darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
-          } ${activeSection === 'about-me' && 'bg-bg_light py-[4vw]'}`}
+          } 
+          ${activeSection === 'projects' ? 'rounded-bl-[25px]' : ''}
+          ${activeSection === 'about-me' && 'bg-transparent py-[4vw]'}`}
         >
           {activeSection === 'about-me' ? (
             <>
-              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-bg_light`} />
-              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-bg_light`} />
+              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-transparent`} />
+              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-transparent`} />
             </>
           ) : (
             <></>
@@ -125,14 +127,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <li
-          className={`relative flex flex-grow flex-col items-center justify-center ${
-            darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
-          } ${activeSection === 'projects' && 'bg-bg_light py-[4vw]'}`}
+          className={`relative flex flex-grow flex-col items-center justify-center 
+          ${darkMode ? 'bg-bg_dark' : 'bg-bg_dark'} 
+          ${activeSection === 'about-me' ? 'rounded-tl-[25px]' : ''}
+          ${activeSection === 'contact' ? 'rounded-bl-[25px]' : ''}
+          ${activeSection === 'projects' && 'bg-transparent py-[4vw]'}`}
         >
           {activeSection === 'projects' ? (
             <>
-              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-bg_light`} />
-              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-bg_light`} />
+              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-transparent`} />
+              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-transparent`} />
             </>
           ) : (
             <></>
@@ -151,12 +155,14 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <li
           className={`relative flex flex-grow flex-col items-center justify-center ${
             darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
-          } ${activeSection === 'contact' && 'bg-bg_light py-[4vw]'}`}
+          } ${activeSection === 'projects' ? 'rounded-tl-[25px]' : ''} ${
+            activeSection === 'contact' && 'bg-transparent py-[4vw]'
+          }`}
         >
           {activeSection === 'contact' ? (
             <>
-              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-bg_light`} />
-              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-bg_light`} />
+              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-transparent`} />
+              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-transparent`} />
             </>
           ) : (
             <></>
@@ -174,8 +180,8 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
-          className={`${
-            darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
+          className={`${darkMode ? 'bg-bg_dark' : 'bg-bg_dark'} ${
+            activeSection === 'contact' ? 'rounded-tl-[25px]' : ''
           } flex flex-grow flex-col items-center justify-center`}
         >
           <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[1.8vmax]">
