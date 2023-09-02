@@ -129,8 +129,14 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
           } ${activeSection === 'projects' && 'bg-bg_light py-[4vw]'}`}
         >
-          <b className={`+rounded-bl-[24px] bg-red absolute -top-[24px] h-[24px] w-full `} />
-          <b />
+          {activeSection === 'about-me' ? (
+            <>
+              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-bg_light`} />
+              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-bg_light`} />
+            </>
+          ) : (
+            <></>
+          )}
           <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[1.8vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Projects</span>
             <a href="#projects" onClick={() => handleNavigation('projects')}>
@@ -147,10 +153,14 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
           } ${activeSection === 'contact' && 'bg-bg_light py-[4vw]'}`}
         >
-          <b
-            className={`+rounded-bl-[24px] bg-red absolute -top-[24px] h-[24px] w-full bg-red-600`}
-          />
-          <b />
+          {activeSection === 'contact' ? (
+            <>
+              <b className={`bt absolute -top-[24px] h-[24px] w-full bg-bg_light`} />
+              <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-bg_light`} />
+            </>
+          ) : (
+            <></>
+          )}
           <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[1.8vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Contact</span>
             <a href="#contact" onClick={() => handleNavigation('contact')}>
