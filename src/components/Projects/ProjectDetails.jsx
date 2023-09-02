@@ -20,7 +20,7 @@ const ProjectDetails = ({ darkMode }) => {
   const prevProjectTitle = projectDatas[prevProjectIndex].title;
 
   return (
-    <section className="pb-20">
+    <section className="pb-20  md:px-[20vmax]">
       <h1 className="py-4 text-center text-4xl font-semibold">
         {projectDatas[currentProjectIndex].title.toUpperCase()}
       </h1>

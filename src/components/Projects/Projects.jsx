@@ -7,7 +7,10 @@ import PropTypes from 'prop-types';
 
 const Projects = ({ darkMode }) => {
   return (
-    <section className="bg-bg_card_white_light px-4 md:px-[20vmax] dark:bg-bg_card_pale_dark" id="projects">
+    <section
+      className="bg-bg_card_white_light px-4 dark:bg-bg_card_pale_dark md:px-[20vmax]"
+      id="projects"
+    >
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
@@ -19,7 +22,7 @@ const Projects = ({ darkMode }) => {
             key={projectData.id}
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex flex-col overflow-hidden rounded-xl bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light`}
+            } flex flex-col rounded-xl bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light`}
           >
             <Link to={`/projects/${projectData.id}`} className="h-full">
               {/* <div className="mx-auto my-4 h-1 w-[25%] rounded bg-accent_dark dark:bg-bg_card_dark" /> */}

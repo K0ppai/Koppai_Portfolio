@@ -33,14 +33,16 @@
   width: 55vw;
   margin-left: -40px;
 }
+
 .horizontal-grid{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 90%;
-  overflow-x: auto;
+  overflow: auto;
   overscroll-behavior-inline: contain;
-  column-gap: 5vmin;
+  gap: 5vmin;
 }
+
 .horizontal-grid::-webkit-scrollbar {
   display: none;
 }
