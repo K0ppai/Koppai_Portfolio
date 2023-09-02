@@ -38,7 +38,7 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 90%;
-  overflow: auto;
+  overflow-x: hidden;
   overscroll-behavior-inline: contain;
   gap: 5vmin;
 }

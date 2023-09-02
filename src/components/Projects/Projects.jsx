@@ -22,7 +22,7 @@ const Projects = ({ darkMode }) => {
             key={projectData.id}
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex flex-col rounded-xl bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light`}
+            } flex flex-col overflow-hidden rounded-xl bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light`}
           >
             <Link to={`/projects/${projectData.id}`} className="h-full">
               {/* <div className="mx-auto my-4 h-1 w-[25%] rounded bg-accent_dark dark:bg-bg_card_dark" /> */}
