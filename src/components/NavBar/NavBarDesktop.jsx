@@ -129,7 +129,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
           } ${activeSection === 'projects' && 'bg-bg_light py-[4vw]'}`}
         >
-          {activeSection === 'about-me' ? (
+          {activeSection === 'projects' ? (
             <>
               <b className={`bt absolute -top-[24px] h-[24px] w-full bg-bg_light`} />
               <b className={`bb absolute -bottom-[24px] z-[99] h-[24px] w-full bg-bg_light`} />
