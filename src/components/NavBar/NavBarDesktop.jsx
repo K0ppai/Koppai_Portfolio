@@ -67,7 +67,8 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
     >
       <ul className="flex h-[100vh] flex-col">
         <li
-          className={`${darkMode ? 'bg-bg_dark' : 'bg-bg_dark'} 
+          className={`
+          ${darkMode ? 'bg-bg_card_white_light' : 'bg-bg_dark'} 
           ${activeSection === 'about-me' ? 'rounded-bl-[25px]' : ''}
           relative flex flex-grow flex-col items-center justify-center`}
         >
@@ -101,9 +102,8 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <li
-          className={`relative flex flex-grow flex-col items-center justify-center ${
-            darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
-          } 
+          className={`relative flex flex-grow flex-col items-center justify-center 
+          ${darkMode ? 'bg-bg_card_white_light' : 'bg-bg_dark'} 
           ${activeSection === 'projects' ? 'rounded-bl-[25px]' : ''}
           ${activeSection === 'about-me' && 'bg-transparent py-[4vw]'}`}
         >
@@ -128,7 +128,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${darkMode ? 'bg-bg_dark' : 'bg-bg_dark'} 
+          ${darkMode ? 'bg-bg_card_white_light' : 'bg-bg_dark'} 
           ${activeSection === 'about-me' ? 'rounded-tl-[25px]' : ''}
           ${activeSection === 'contact' ? 'rounded-bl-[25px]' : ''}
           ${activeSection === 'projects' && 'bg-transparent py-[4vw]'}`}
@@ -153,11 +153,10 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <li
-          className={`relative flex flex-grow flex-col items-center justify-center ${
-            darkMode ? 'bg-bg_dark' : 'bg-bg_dark'
-          } ${activeSection === 'projects' ? 'rounded-tl-[25px]' : ''} ${
-            activeSection === 'contact' && 'bg-transparent py-[4vw]'
-          }`}
+          className={`relative flex flex-grow flex-col items-center justify-center 
+          ${darkMode ? 'bg-bg_card_white_light' : 'bg-bg_dark'} 
+          ${activeSection === 'projects' ? 'rounded-tl-[25px]' : ''} 
+          ${activeSection === 'contact' && 'bg-transparent py-[4vw]'}`}
         >
           {activeSection === 'contact' ? (
             <>
@@ -180,9 +179,10 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
-          className={`${darkMode ? 'bg-bg_dark' : 'bg-bg_dark'} ${
-            activeSection === 'contact' ? 'rounded-tl-[25px]' : ''
-          } flex flex-grow flex-col items-center justify-center`}
+          className={`
+          ${darkMode ? 'bg-bg_card_white_light' : 'bg-bg_dark'} 
+          ${activeSection === 'contact' ? 'rounded-tl-[25px]' : ''} 
+          flex flex-grow flex-col items-center justify-center`}
         >
           <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[1.8vmax]">
             <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Get My Resume</span>
