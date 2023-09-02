@@ -1,0 +1,21 @@
+.bt:nth-child(1)::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: black;
+border-bottom-left-radius: 24px;
+}
+
+.bb::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: black;
+border-top-left-radius: 24px;
+}
