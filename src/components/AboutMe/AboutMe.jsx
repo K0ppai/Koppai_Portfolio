@@ -111,7 +111,8 @@ const AboutMe = ({ darkMode }) => {
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-5">
+        <p className='mb-8'>Technologies that I&apos;ve been working on recently.</p>
+        <div className="flex flex-wrap items-center justify-center gap-5 md:gap-x-16 md:gap-y-8">
           {techs.map((tech) => (
             <div
               key={tech.id}
