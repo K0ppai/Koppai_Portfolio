@@ -79,20 +79,20 @@ a:focus,a:active,button:focus,button:active,button {
       box-shadow: var(--shadow-elevation-medium);
     }
   
-    .shadow-drop-light:hover {
+    /* .shadow-drop-light:hover {
       box-shadow: var(--shadow-elevation-high);
       transition: all 0.3s ease-in-out;
     }
-  
+   */
     .shadow-drop-dark {
       box-shadow: var(--shadow-elevation-medium-dark);
     }
   
-    .shadow-drop-dark:hover {
+    /* .shadow-drop-dark:hover {
       box-shadow: var(--shadow-elevation-medium-dark);
       transition: all 0.3s ease-in-out;
     }
-  
+   */
     .shadow-drop-primary {
       box-shadow: var(--shadow-elevation-medium-primary);
     }
