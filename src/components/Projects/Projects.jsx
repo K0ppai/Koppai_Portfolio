@@ -13,7 +13,7 @@ const Projects = ({ darkMode }) => {
     >
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Projects</h1>
-        <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
+        <div className="ml-2 h-[1px] w-[12vmin] md:w-[48px] bg-gray-400" />
       </div>
       <h2 className="text-4xl font-bold">Latest Work</h2>
       <div className="horizontal-grid pb-20 pt-10">
@@ -22,10 +22,9 @@ const Projects = ({ darkMode }) => {
             key={projectData.id}
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex flex-col overflow-hidden rounded-xl bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light`}
+            } flex flex-col overflow-hidden rounded-xl bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:rounded-2xl`}
           >
             <Link to={`/projects/${projectData.id}`} className="h-full">
-              {/* <div className="mx-auto my-4 h-1 w-[25%] rounded bg-accent_dark dark:bg-bg_card_dark" /> */}
               <div className="relative h-full">
                 <img src={projectData.image} alt="dota" className="h-full" />
                 <div className="absolute inset-0 bg-black opacity-[60%]" />

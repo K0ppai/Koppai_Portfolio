@@ -8,7 +8,7 @@ const Contact = ({ darkMode }) => {
     >
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Contact Me</h1>
-        <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
+        <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
       </div>
       <h2 className="text-4xl font-semibold">Let&apos;s build something together</h2>
       <form

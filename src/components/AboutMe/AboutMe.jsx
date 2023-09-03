@@ -36,8 +36,8 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
-      <div className="color-change-2x h-[35vmin] md:h-[25vmin] w-screen" />
-      <div className="relative -top-[17.5vmin] md:-top-[5vmax] px-4 md:px-[20vmax]">
+      <div className="color-change-2x h-[35vmin] w-screen md:h-[25vmin]" />
+      <div className="relative -top-[17.5vmin] px-4 md:-top-[5vmax] md:px-[20vmax]">
         {/* Profile Image */}
         <figure className="relative flex w-[35vmin] flex-col">
           <img
@@ -89,9 +89,9 @@ const AboutMe = ({ darkMode }) => {
         <article>
           <div className="flex items-center py-8">
             <h1 className="text-2xl text-gray-400">About Me</h1>
-            <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
+            <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
           </div>
-          <p className='text-justify'>
+          <p className="text-justify">
             Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
             aesthetic websites using React & Redux and TailwindCss. Spending 789+ hours mastering
             algorithms, data structures, and front-end development while simultaneously developing
@@ -106,10 +106,10 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      <div className="bg-bg_card_white_light px-4 md:px-[20vmax] py-10 dark:bg-bg_card_pale_dark">
+      <div className="bg-bg_card_white_light px-4 py-10 dark:bg-bg_card_pale_dark md:px-[20vmax]">
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
-          <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400" />
+          <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
         </div>
         <div className="flex flex-wrap items-center justify-center gap-5">
           {techs.map((tech) => (
