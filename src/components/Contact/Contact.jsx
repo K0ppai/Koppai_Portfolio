@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 const Contact = ({ darkMode }) => {
   return (
     <section
-      className="bg-secondary_pale_light px-4 pb-20 pt-10 dark:bg-bg_card_dark dark:text-secondary_pale_light md:px-[20vmax]"
+      className="bg-bg_light px-4 pb-20 pt-10 dark:bg-bg_card_dark dark:text-secondary_pale_light md:px-[20vmax]"
       id="contact"
     >
       <div className="flex items-center py-8">
-        <h1 className="text-2xl text-gray-400">Contact Me</h1>
-        <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
+        <h1 className="text-2xl text-gray-500">Contact Me</h1>
+        <div className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]" />
       </div>
       <h2 className="text-4xl font-semibold">Let&apos;s build something together</h2>
       <form
@@ -43,7 +43,7 @@ const Contact = ({ darkMode }) => {
           type="submit"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-          } rounded-full bg-secondary_light text-lg py-4 font-semibold dark:bg-secondary_dark`}
+          } rounded-full bg-primary_dark text-lg py-4 font-semibold dark:text-text_light`}
         >
           Get In Touch
         </button>
