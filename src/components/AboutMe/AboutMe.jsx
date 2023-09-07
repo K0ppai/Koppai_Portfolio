@@ -37,7 +37,7 @@ const AboutMe = ({ darkMode }) => {
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
       <div className="color-change-2x h-[35vmin] w-screen md:h-[25vmin]" />
-      <div className="relative -top-[17.5vmin] px-4 md:-top-[5vmax] md:px-[20vmax]">
+      <div className="relative -top-[17.5vmin] px-[5vmin] md:-top-[5vmax] md:px-[20vmax]">
         {/* Profile Image */}
         <figure className="relative flex w-[35vmin] flex-col">
           <img
@@ -106,7 +106,7 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      <div className="bg-bg_card_white_light px-4 py-10 dark:bg-bg_card_pale_dark md:px-[20vmax]">
+      <div className="bg-bg_card_white_light px-[5vmin] py-10 dark:bg-bg_card_pale_dark md:px-[20vmax]">
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />

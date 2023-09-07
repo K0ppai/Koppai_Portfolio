@@ -58,12 +58,12 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
       <div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-        } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-lg px-2 py-2  text-text_light backdrop-blur-[0.3rem] md:bg-bg_light dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[0.5rem]`}
+        } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-lg px-2 py-2  text-text_light backdrop-blur-[0.3rem] md:bg-bg_light dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[0.5rem] md:hidden`}
       >
         <a
           href="#about-me"
           className={`flex flex-col items-center justify-center md:w-full ${
-            activeSection === 'about-me' && 'rounded-md md:rounded-tr-3xl md:rounded-br-3xl md:rounded-none bg-primary_light bg-opacity-[20%] p-[4vw]'
+            activeSection === 'about-me' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('about-me')}
         >
@@ -76,7 +76,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         <a
           href="#projects"
           className={`flex flex-col items-center justify-center md:w-full ${
-            activeSection === 'projects' && 'rounded-md md:rounded-tr-3xl md:rounded-br-3xl md:rounded-none bg-primary_light bg-opacity-[20%] p-[4vw]'
+            activeSection === 'projects' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('projects')}
         >
@@ -102,7 +102,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         <a
           href="#contact"
           className={`flex flex-col items-center justify-center md:w-full ${
-            activeSection === 'contact' && 'rounded-md md:rounded-tr-3xl md:rounded-br-3xl md:rounded-none bg-primary_light bg-opacity-[20%] p-[4vw]'
+            activeSection === 'contact' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('contact')}
         >
