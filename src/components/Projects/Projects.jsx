@@ -13,10 +13,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 const Projects = ({ darkMode }) => {
   return (
-    <section
-      className="px-4 md:px-[20vmax]"
-      id="projects"
-    >
+    <section className="px-4 md:px-[20vmax]" id="projects">
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
@@ -29,7 +26,7 @@ const Projects = ({ darkMode }) => {
         centeredSlides={true}
         loop={true}
         slidesPerView={1.5}
-        spaceBetween={30}
+        spaceBetween={35}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -38,6 +35,14 @@ const Projects = ({ darkMode }) => {
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
         modules={[EffectCoverflow, Pagination, Navigation]}
+        breakpoints={{
+          768: {
+            spaceBetween: 70,
+          },
+          1024: {
+            spaceBetween: 80,
+          },
+        }}
       >
         {projectDatas.map((projectData) => (
           <SwiperSlide key={projectData.id}>
@@ -100,7 +105,7 @@ const Projects = ({ darkMode }) => {
           </SwiperSlide>
         ))}
         <div className="slider-controler">
-          <div className="swiper-pagination"></div>
+          <div className="swiper-pagination" />
         </div>
       </Swiper>
     </section>
