@@ -106,12 +106,12 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      <div className="bg-bg_card_white_light px-[5vmin] py-10 dark:bg-bg_card_pale_dark md:px-[20vmax]">
+      <div className="px-[5vmin] py-10 md:px-[20vmax]">
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
         </div>
-        <p className='mb-8'>Technologies that I&apos;ve been working on recently.</p>
+        <p className="mb-8">Technologies that I&apos;ve been working on recently.</p>
         <div className="flex flex-wrap items-center justify-center gap-5 md:gap-x-16 md:gap-y-8">
           {techs.map((tech) => (
             <div

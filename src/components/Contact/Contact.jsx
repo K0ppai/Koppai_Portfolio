@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Contact = ({ darkMode }) => {
   return (
     <section
-      className="bg-bg_light px-4 pb-20 pt-10 dark:bg-bg_card_dark dark:text-secondary_pale_light md:px-[20vmax]"
+      className="dark:text-secondary_pale_light md:px-[20vmax]"
       id="contact"
     >
       <div className="flex items-center py-8">
@@ -14,7 +14,7 @@ const Contact = ({ darkMode }) => {
       <form
         action="https://formspree.io/f/moqzrddp"
         method="post"
-        className="my-6 flex flex-col gap-y-4"
+        className="py-6 flex flex-col gap-y-4"
       >
         <input
           className="p-3 px-3 dark:bg-bg_card_pale_dark"
@@ -43,7 +43,7 @@ const Contact = ({ darkMode }) => {
           type="submit"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-          } rounded-lg bg-primary_dark text-lg py-4 font-semibold dark:text-text_light`}
+          } rounded-md bg-primary_dark text-secondary_pale_light w-[20%] text-lg py-2 font-semibold dark:text-text_light`}
         >
           Get In Touch
         </button>

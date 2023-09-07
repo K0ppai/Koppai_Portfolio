@@ -63,18 +63,22 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
     <nav
       className={`${
         isNavExpanded ? 'w-[15vmax]' : 'w-[6vmax]'
-      } fixed right-0 top-0 z-[50] hidden h-[100vh]  text-text_light transition-all duration-500 ease-in-out dark:text-text_dark md:block`}
+      } fixed right-0 top-0 z-[50] hidden rounded-xl text-text_light transition-all duration-500 ease-in-out  dark:text-text_dark md:block`}
     >
       <ul className="flex h-[100vh] flex-col">
         <li
           className={`
-          ${darkMode ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark' : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'} 
-          ${activeSection === 'about-me' ? 'rounded-bl-[25px]' : ''}
-          relative flex flex-grow flex-col items-center justify-center`}
+          ${
+            darkMode
+              ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark'
+              : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'
+          } 
+          ${activeSection === 'about-me' ? 'rounded-bl-[8px]' : ''}
+          relative flex flex-grow flex-col items-center justify-center rounded-tl-lg`}
         >
           <button
             onClick={handleNavExpand}
-            className={`z-99 top-[value here] absolute -left-[16px] rounded-full bg-primary_dark p-[2px] text-[30px] text-white`}
+            className={`z-99 absolute -left-[16px] rounded-full bg-primary_dark p-[2px] text-[30px] text-white`}
           >
             <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
@@ -103,8 +107,12 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${darkMode ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark' : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'} 
-          ${activeSection === 'projects' ? 'rounded-bl-[25px]' : ''}
+          ${
+            darkMode
+              ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark'
+              : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'
+          } 
+          ${activeSection === 'projects' ? 'rounded-bl-[8px]' : ''}
           ${activeSection === 'about-me' && 'bg-transparent py-[4vw]'}`}
         >
           {activeSection === 'about-me' ? (
@@ -128,9 +136,13 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${darkMode ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark' : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'} 
-          ${activeSection === 'about-me' ? 'rounded-tl-[25px]' : ''}
-          ${activeSection === 'contact' ? 'rounded-bl-[25px]' : ''}
+          ${
+            darkMode
+              ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark'
+              : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'
+          } 
+          ${activeSection === 'about-me' ? 'rounded-tl-[8px]' : ''}
+          ${activeSection === 'contact' ? 'rounded-bl-[8px]' : ''}
           ${activeSection === 'projects' && 'bg-transparent py-[4vw]'}`}
         >
           {activeSection === 'projects' ? (
@@ -154,8 +166,12 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${darkMode ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark' : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'} 
-          ${activeSection === 'projects' ? 'rounded-tl-[25px]' : ''} 
+          ${
+            darkMode
+              ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark'
+              : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'
+          } 
+          ${activeSection === 'projects' ? 'rounded-tl-[8px]' : ''} 
           ${activeSection === 'contact' && 'bg-transparent py-[4vw]'}`}
         >
           {activeSection === 'contact' ? (
@@ -180,12 +196,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
           className={`
-          ${darkMode ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark' : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'} 
-          ${activeSection === 'contact' ? 'rounded-tl-[25px]' : ''} 
-          flex flex-grow flex-col items-center justify-center`}
+          ${
+            darkMode
+              ? 'bg-bg_card_pale_light bg-opacity-20 text-bg_dark'
+              : 'bg-bg_card_pale_light bg-opacity-50 text-bg_dark'
+          } 
+          ${activeSection === 'contact' ? 'rounded-tl-[8px]' : ''} 
+          flex flex-grow flex-col items-center justify-center rounded-bl-lg`}
         >
           <div className="flex w-full items-center justify-end gap-x-[2.5vmax] pr-[1.8vmax]">
-            <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Get My Resume</span>
+            <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Resume</span>
             <BsFileEarmarkText className="my-[4vw] min-w-[24px] text-2xl text-text_light dark:text-text_dark" />
           </div>
         </NavLink>
