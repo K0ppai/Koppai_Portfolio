@@ -45,7 +45,7 @@ const AboutMe = ({ darkMode }) => {
             alt="Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } box-border w-[35vmin] rounded-[50%] border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
+            } box-border w-[35vmin] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
           />
         </figure>
         <div className="mt-3 flex items-center justify-between">
@@ -68,7 +68,7 @@ const AboutMe = ({ darkMode }) => {
           <button
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex items-center justify-center rounded-xl bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
+            } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
             onClick={openModal}
           >
             <span className="px-1">connect</span>

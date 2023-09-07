@@ -43,7 +43,7 @@ const Contact = ({ darkMode }) => {
           type="submit"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-          } rounded-full bg-primary_dark text-lg py-4 font-semibold dark:text-text_light`}
+          } rounded-lg bg-primary_dark text-lg py-4 font-semibold dark:text-text_light`}
         >
           Get In Touch
         </button>
