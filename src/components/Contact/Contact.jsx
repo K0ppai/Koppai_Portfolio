@@ -14,7 +14,7 @@ const Contact = ({ darkMode }) => {
       <form
         action="https://formspree.io/f/moqzrddp"
         method="post"
-        className="flex flex-col gap-y-4 py-6"
+        className="flex md:w-[50%] flex-col gap-y-4 py-6"
       >
         <input
           className="p-3 px-3 dark:bg-bg_card_pale_dark"

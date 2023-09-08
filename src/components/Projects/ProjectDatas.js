@@ -13,7 +13,7 @@ const projectDatas = [
     id: 1,
     title: 'Dota2 Heros',
     description:
-      'Dota2_Heros is a responsive web application that allows users to learn about Dota2 heros.Users can search for heros and learn about their abilities and stats.This project was built with React.js and Redux.',
+      'Dota2 Heroes" is a responsive web application designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
     image: dota2Heros,
     live_link: 'https://dota2-heros.netlify.app',
     github_link: 'https://github.com/K0ppai/dota2_heros',
@@ -21,10 +21,11 @@ const projectDatas = [
     tech: ['React', 'Redux', 'TailwindCss', 'Rest API'],
     built_date: 'August 2023',
     development_type: 'Front-End Development',
-    goal: 'project goal',
-    key_feature: 'Project key feature',
-    lesson_learned: 'Lessons learned during building project',
-    
+    goal: 'The goal of this project was to use react components, react props, react router, connect react and redux, handle events in a react app, write integration tests with a react testing library, use styles in a react app, use react life cycle methods, apply react best practices and language style guides in code, use store, actions and reducers in react.',
+    key_feature:
+      'This app provides search feature which allows users to have the capability to search for their favorite heroes by name. One of the standout features that I take great pride in is the hero animation, which you can experience when visiting the hero detail page.',
+    lesson_learned:
+      'One of the notable challenges I encountered during this project was implementing real-time dynamic rendering. Ensuring that the app updated and displayed results as users typed hero names was a complex task. However, this project served as a valuable learning experience, equipping me with the skills to master dynamic rendering in web applications.',
   },
   {
     id: 2,
@@ -41,7 +42,6 @@ const projectDatas = [
     goal: 'project goal',
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
-    
   },
   {
     id: 3,
@@ -58,7 +58,6 @@ const projectDatas = [
     goal: 'project goal',
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
-    
   },
   {
     id: 4,
@@ -75,7 +74,6 @@ const projectDatas = [
     goal: 'project goal',
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
-    
   },
   {
     id: 5,
@@ -92,7 +90,6 @@ const projectDatas = [
     goal: 'project goal',
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
-    
   },
   {
     id: 6,
@@ -108,7 +105,6 @@ const projectDatas = [
     goal: 'project goal',
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
-    
   },
   {
     id: 7,
@@ -124,7 +120,6 @@ const projectDatas = [
     goal: 'project goal',
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
-    
   },
 ];
 export default projectDatas;

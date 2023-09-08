@@ -65,7 +65,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         isNavExpanded ? 'w-[120px]' : 'w-[45px]'
       } fixed right-0 top-1/2 z-[50] hidden -translate-y-1/2 transform rounded-xl text-text_light transition-all duration-500 ease-in-out dark:text-text_dark lg:block`}
     >
-      <ul className="flex h-[80vh] flex-col lg:h-[50vh]">
+      <ul className="flex h-[80vh] flex-col lg:h-[60vh]">
         <li
           className={`
           ${
