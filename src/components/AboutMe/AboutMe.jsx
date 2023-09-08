@@ -5,6 +5,7 @@ import './AboutMe.css';
 import { useState } from 'react';
 import Connect from './Connect';
 import ReactModal from 'react-modal';
+import { VscVerifiedFilled } from 'react-icons/vsc';
 
 const AboutMe = ({ darkMode }) => {
   const [hoveredTech, setHoveredTech] = useState(null);
@@ -36,7 +37,7 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
-      <div className="bg-primary_dark h-[35vmin] w-screen md:h-[25vmin]" />
+      <div className="h-[20vh] w-screen bg-primary_dark md:h-[20vh]" />
       <div className="relative -top-[17.5vmin] px-[5vmin] md:-top-[5vmax] md:px-[10vmax]">
         {/* Profile Image */}
         <figure className="relative flex w-[35vmin] flex-col">
@@ -63,7 +64,8 @@ const AboutMe = ({ darkMode }) => {
               </text>
             </svg> */}
             <h1 className="text-4xl font-extrabold">Koppai</h1>
-            <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" />
+            {/* <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" /> */}
+            <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
           </div>
           <button
             className={`${
@@ -78,10 +80,10 @@ const AboutMe = ({ darkMode }) => {
         {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
         <div className="mt-2 flex">
-          <span className="mr-2 rounded-full bg-bg_card_pale_light px-4 py-[0.2rem] text-primary_dark">
+          <span className="mr-2 rounded-md border-2 border-primary_dark px-4 py-[0.1rem] text-primary_dark">
             Front End
           </span>
-          <span className="mr-2 rounded-full bg-secondary_pale_light px-4 py-[0.2rem] text-green-400">
+          <span className="mr-2 rounded-md border-2 border-green-400 px-4 py-[0.1rem] text-green-400">
             Remote
           </span>
         </div>
