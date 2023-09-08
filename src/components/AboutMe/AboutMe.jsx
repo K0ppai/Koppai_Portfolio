@@ -1,4 +1,4 @@
-import { matrix } from '@/assets/images/images';
+import { profile } from '@/assets/images/images';
 import PropTypes from 'prop-types';
 import { techs } from '@/assets/Techs/Techs';
 import './AboutMe.css';
@@ -42,7 +42,7 @@ const AboutMe = ({ darkMode }) => {
         {/* Profile Image */}
         <figure className="relative flex w-[35vmin] flex-col">
           <img
-            src={matrix}
+            src={profile}
             alt="Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
@@ -63,7 +63,7 @@ const AboutMe = ({ darkMode }) => {
                 Koppai
               </text>
             </svg> */}
-            <h1 className="text-4xl font-extrabold">Koppai</h1>
+            <span className="text-4xl font-extrabold">Koppai</span>
             {/* <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" /> */}
             <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
           </div>

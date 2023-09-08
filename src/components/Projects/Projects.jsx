@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
+// import { v4 as id } from 'uuid';
 
 const Projects = ({ darkMode }) => {
   return (
@@ -19,7 +20,7 @@ const Projects = ({ darkMode }) => {
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
       </div>
-      <h2 className="text-4xl font-bold">Latest Work</h2>
+      <h2 className="text-4xl font-bold">Portfolio</h2>
       <Swiper
         className="pb-20 pt-10"
         effect={'coverflow'}
@@ -103,21 +104,21 @@ const Projects = ({ darkMode }) => {
                 </div>
                 {/* Techs */}
                 {/* <div className="flex flex-wrap items-center justify-center px-2 py-3">
-              {projectData.tech.map((tech) => (
-                <span
-                  key={id()}
-                  className="mx-1 rounded px-2 py-1 font-bold text-accent_dark dark:bg-bg_card_dark dark:text-text_dark"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div> */}
+                  {projectData.tech.map((tech) => (
+                    <span
+                      key={id()}
+                      className="mx-1 rounded px-2 py-1 font-bold text-accent_dark dark:bg-bg_card_dark dark:text-text_dark"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div> */}
                 {/* See More Btn */}
                 {/* <div className="flex justify-center">
-              <button className="my-4 rounded-md bg-primary_light px-12 pb-3 text-lg font-bold text-secondary_pale_light dark:bg-secondary_dark dark:text-secondary_pale_light">
-                <Link to={`/projects/${projectData.id}`}>See More</Link>
-              </button>
-            </div> */}
+                  <button className="my-4 rounded-md bg-primary_light px-12 pb-3 text-lg font-bold text-secondary_pale_light dark:bg-secondary_dark dark:text-secondary_pale_light">
+                    <Link to={`/projects/${projectData.id}`}>See More</Link>
+                  </button>
+                </div> */}
               </Link>
             </div>
           </SwiperSlide>

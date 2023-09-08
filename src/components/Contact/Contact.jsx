@@ -14,23 +14,25 @@ const Contact = ({ darkMode }) => {
       <form
         action="https://formspree.io/f/moqzrddp"
         method="post"
-        className="flex md:w-[50%] flex-col gap-y-4 py-6"
+        className="flex flex-col gap-y-4 py-6"
       >
-        <input
-          className="p-3 px-3 dark:bg-bg_card_pale_dark"
-          name="FullName"
-          type="text"
-          placeholder="Full Name"
-          maxLength={30}
-          required
-        />
-        <input
-          className="p-3 px-3 dark:bg-bg_card_pale_dark"
-          name="Email"
-          type="email"
-          placeholder="Email address"
-          required
-        />
+        <div className="flex-col gap-y-4 flex md:flex-row md:justify-between">
+          <input
+            className="p-3 px-3 md:w-[49%] dark:bg-bg_card_pale_dark"
+            name="FullName"
+            type="text"
+            placeholder="Full Name"
+            maxLength={30}
+            required
+          />
+          <input
+            className="p-3 px-3 md:w-[49%] dark:bg-bg_card_pale_dark"
+            name="Email"
+            type="email"
+            placeholder="Email address"
+            required
+          />
+        </div>
         <textarea
           className="p-3 px-3 dark:bg-bg_card_pale_dark"
           name="Message"
@@ -43,9 +45,9 @@ const Contact = ({ darkMode }) => {
           type="submit"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-          } w-[40%] rounded-md bg-primary_dark py-2 text-lg font-semibold text-secondary_pale_light dark:text-text_light md:w-[35%]`}
+          } w-[40%] rounded-md bg-primary_dark py-2 text-lg font-semibold text-secondary_pale_light dark:text-text_light md:w-[49%]`}
         >
-          Get In Touch
+          Start Collaboration
         </button>
       </form>
     </section>

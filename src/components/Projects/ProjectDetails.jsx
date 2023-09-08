@@ -20,17 +20,20 @@ const ProjectDetails = ({ darkMode }) => {
   const prevProjectTitle = projectDatas[prevProjectIndex].title;
 
   return (
-    <section className="pb-20  md:px-[20vmax]">
-      <h1 className="py-4 text-center text-4xl font-sans font-semibold">
+    <section className="pb-[20vh] md:px-[10vmax]">
+      <h1 className="py-6 text-center font-sans text-4xl font-bold">
         {projectDatas[currentProjectIndex].title.toUpperCase()}
       </h1>
-      <h2 className="pb-3 text-center text-lg text-gray-400">
+      <h2 className="pb-6 text-center text-lg text-gray-400">
         {projectDatas[currentProjectIndex].development_type}
       </h2>
-      <img
-        src={projectDatas[currentProjectIndex].image}
-        alt={`${projectDatas[currentProjectIndex].title}-image`}
-      />
+      <div className='h-[2px] mb-6 rounded-full w-14 bg-gray-400 m-auto'/>
+      <figure>
+        <img
+          src={projectDatas[currentProjectIndex].image}
+          alt={`${projectDatas[currentProjectIndex].title}-image`}
+        />
+      </figure>
       {/* Source/Live Buttons */}
       <div className="my-2 mb-8 flex justify-between">
         <a
@@ -41,8 +44,8 @@ const ProjectDetails = ({ darkMode }) => {
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
           }`}
         >
-          <span className="ml-[7vmin] text-2xl">Source</span>
-          <FiGithub className="ml-[7vmin] text-3xl" />
+          <span className="ml-[7vmin] text-2xl lg:ml-[8vmax]">Source</span>
+          <FiGithub className="ml-[7vmin] text-3xl lg:ml-[8vmax]" />
         </a>
         <a
           href={projectDatas[currentProjectIndex].live_link}
@@ -52,20 +55,17 @@ const ProjectDetails = ({ darkMode }) => {
             darkMode ? 'shadow-drop-secondary-dark' : 'shadow-drop-secondary-light'
           }`}
         >
-          <span className="mr-[7vmin] text-2xl">Live</span>
-          <RxExternalLink className="mr-[7vmin] text-3xl" />
+          <span className="mr-[7vmin] text-2xl lg:mr-[8vmax]">Live</span>
+          <RxExternalLink className="mr-[7vmin] text-3xl lg:mr-[8vmax]" />
         </a>
       </div>
 
       <div className="px-4">
         <div>
-          <h3 className="text-xl font-sans font-semibold mb-5">TECHS</h3>
+          <h3 className="mb-5 font-sans text-xl font-bold">TECHS</h3>
           <ul className="list-disc pl-4">
             {projectDatas[currentProjectIndex].tech.map((tech) => (
-              <li
-                key={id()}
-                className="text-text_light dark:text-secondary_pale_light"
-              >
+              <li key={id()} className="text-text_light dark:text-secondary_pale_light">
                 {tech}
               </li>
             ))}
@@ -73,20 +73,20 @@ const ProjectDetails = ({ darkMode }) => {
         </div>
         {/* Project Informations */}
         <article className="my-4">
-          <h2 className="text-xl font-sans font-semibold mb-5">INTRODUCTION</h2>
-          <p className='mb-8'>{projectDatas[currentProjectIndex].description}</p>
+          <h2 className="mb-5 font-sans text-xl font-bold">INTRODUCTION</h2>
+          <p className="mb-8">{projectDatas[currentProjectIndex].description}</p>
         </article>
         <article>
-          <h2 className="text-xl font-sans font-semibold mb-5">PURPOSE AND GOAL</h2>
-          <p className='mb-8'>{projectDatas[currentProjectIndex].goal}</p>
+          <h2 className="mb-5 font-sans text-xl font-bold">PURPOSE AND GOAL</h2>
+          <p className="mb-8">{projectDatas[currentProjectIndex].goal}</p>
         </article>
         <article>
-          <h2 className="text-xl font-sans font-semibold mb-5">SPOTLIGHT</h2>
-          <p className='mb-8'>{projectDatas[currentProjectIndex].key_feature}</p>
+          <h2 className="mb-5 font-sans text-xl font-bold">SPOTLIGHT</h2>
+          <p className="mb-8">{projectDatas[currentProjectIndex].key_feature}</p>
         </article>
         <article>
-          <h2 className="text-xl font-sans font-semibold mb-5">LESSON LEARNED</h2>
-          <p className='mb-8'>{projectDatas[currentProjectIndex].lesson_learned}</p>
+          <h2 className="mb-5 font-sans text-xl font-bold">LESSON LEARNED</h2>
+          <p className="mb-8">{projectDatas[currentProjectIndex].lesson_learned}</p>
         </article>
         {/* Next/Previous Buttons */}
         <div className="flex px-4">
