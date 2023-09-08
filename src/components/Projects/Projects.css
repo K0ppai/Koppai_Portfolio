@@ -60,6 +60,13 @@
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .swiper-slide {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
 .swiper-pagination {
   position: relative;
   bottom: 1rem;

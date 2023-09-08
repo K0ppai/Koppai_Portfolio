@@ -13,7 +13,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 const Projects = ({ darkMode }) => {
   return (
-    <section className="px-[5vmin] md:px-[5vmax]" id="projects">
+    <section className="px-[5vmin] md:px-[10vmax]" id="projects">
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Contact = ({ darkMode }) => {
   return (
     <section
-      className="px-[5vmin] pb-[12vh] dark:text-secondary_pale_light md:px-[20vmax]"
+      className="px-[5vmin] pb-[12vh] dark:text-secondary_pale_light md:px-[10vmax]"
       id="contact"
     >
       <div className="flex items-center py-8">
