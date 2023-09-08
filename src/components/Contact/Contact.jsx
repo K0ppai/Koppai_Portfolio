@@ -2,10 +2,7 @@ import PropTypes from 'prop-types';
 
 const Contact = ({ darkMode }) => {
   return (
-    <section
-      className="dark:text-secondary_pale_light md:px-[20vmax]"
-      id="contact"
-    >
+    <section className="px-[5vmin] pb-[12vh] dark:text-secondary_pale_light md:px-[20vmax]" id="contact">
       <div className="flex items-center py-8">
         <h1 className="text-2xl text-gray-500">Contact Me</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]" />
@@ -14,7 +11,7 @@ const Contact = ({ darkMode }) => {
       <form
         action="https://formspree.io/f/moqzrddp"
         method="post"
-        className="py-6 flex flex-col gap-y-4"
+        className="flex flex-col gap-y-4 py-6"
       >
         <input
           className="p-3 px-3 dark:bg-bg_card_pale_dark"
@@ -43,7 +40,7 @@ const Contact = ({ darkMode }) => {
           type="submit"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-          } rounded-md bg-primary_dark text-secondary_pale_light w-[20%] text-lg py-2 font-semibold dark:text-text_light`}
+          } w-[40%] rounded-md bg-primary_dark py-2 text-lg font-semibold text-secondary_pale_light dark:text-text_light`}
         >
           Get In Touch
         </button>
