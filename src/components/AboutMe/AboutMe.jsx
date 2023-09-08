@@ -91,7 +91,7 @@ const AboutMe = ({ darkMode }) => {
             <h1 className="text-2xl text-gray-400">About Me</h1>
             <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
           </div>
-          <p className="text-justify">
+          <p className="sm:text-justify">
             Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
             aesthetic websites using React & Redux and TailwindCss. Spending 789+ hours mastering
             algorithms, data structures, and front-end development while simultaneously developing
