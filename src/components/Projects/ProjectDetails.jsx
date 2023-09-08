@@ -16,9 +16,6 @@ const ProjectDetails = ({ darkMode }) => {
   const nextProjectIndex = (currentProjectIndex + 1) % projectDatas.length;
   const prevProjectIndex = (currentProjectIndex - 1 + projectDatas.length) % projectDatas.length;
 
-  const nextProjectTitle = projectDatas[nextProjectIndex].title;
-  const prevProjectTitle = projectDatas[prevProjectIndex].title;
-
   return (
     <section className="pb-[20vh] md:px-[10vmax]">
       <h1 className="py-6 text-center font-sans text-4xl font-bold">
@@ -27,7 +24,7 @@ const ProjectDetails = ({ darkMode }) => {
       <h2 className="pb-6 text-center text-lg text-gray-400">
         {projectDatas[currentProjectIndex].development_type}
       </h2>
-      <div className='h-[2px] mb-6 rounded-full w-14 bg-gray-400 m-auto'/>
+      <div className="m-auto mb-6 h-[2px] w-14 rounded-full bg-gray-400" />
       <figure>
         <img
           src={projectDatas[currentProjectIndex].image}
@@ -91,17 +88,25 @@ const ProjectDetails = ({ darkMode }) => {
         {/* Next/Previous Buttons */}
         <div className="flex px-4">
           {currentProjectIndex !== 0 && (
-            <Link to={`/projects/${projectDatas[prevProjectIndex].id}`} className="me-auto">
+            <Link
+              to={`/projects/${projectDatas[prevProjectIndex].id}`}
+              className="me-auto"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:text-bg_card_white_light">
                 <BsArrowLeft className="mr-1 text-2xl text-text_light dark:text-bg_card_white_light" />
-                <span className="pl-2">{prevProjectTitle}</span>
+                <span className="pl-2">Prev</span>
               </button>
             </Link>
           )}
           {currentProjectIndex !== projectDatas.length - 1 && (
-            <Link to={`/projects/${projectDatas[nextProjectIndex].id}`} className="ms-auto">
+            <Link
+              to={`/projects/${projectDatas[nextProjectIndex].id}`}
+              className="ms-auto"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:text-bg_card_white_light">
-                <span className="pr-2">{nextProjectTitle}</span>
+                <span className="pr-2">Next</span>
                 <BsArrowRight className="ml-1 text-2xl text-text_light dark:text-bg_card_white_light" />
               </button>
             </Link>
