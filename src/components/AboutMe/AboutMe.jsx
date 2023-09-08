@@ -80,10 +80,10 @@ const AboutMe = ({ darkMode }) => {
         {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
         <div className="mt-2 flex">
-          <span className="mr-2 rounded-md border-2 border-orange-500 dark:border-orange-400 dark:text-orange-400 px-4 py-[0.1rem] text-orange-500">
+          <span className="mr-2 rounded-md border-2 border-primary_dark px-4 py-[0.1rem] text-primary_dark dark:border-orange-400 dark:text-orange-400">
             Front End
           </span>
-          <span className="mr-2 rounded-md border-2 dark:border-green-400 border-green-500 px-4 py-[0.1rem] text-green-500 dark:text-green-400">
+          <span className="mr-2 rounded-md border-2 border-green-500 px-4 py-[0.1rem] text-green-500 dark:border-green-400 dark:text-green-400">
             Remote
           </span>
         </div>
@@ -108,13 +108,13 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </article>
       </div>
-      <div className="px-[5vmin] py-10 md:px-[10vmax]">
+      <div className="px-[5vmin] pt-10 md:px-[10vmax]">
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
         </div>
         <p className="mb-8">Technologies that I&apos;ve been working on recently.</p>
-        <div className="flex flex-wrap items-center justify-center gap-5 md:gap-x-16 md:gap-y-8">
+        <div className="mt-20 flex flex-wrap items-center justify-center gap-5 md:gap-x-32 md:gap-y-8">
           {techs.map((tech) => (
             <div
               key={tech.id}
