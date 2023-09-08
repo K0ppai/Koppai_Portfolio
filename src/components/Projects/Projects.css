@@ -55,6 +55,11 @@
   justify-content: center;
 }
 
+.swiper-slide {
+  border-radius: 7px;
+  overflow: hidden;
+}
+
 .swiper-pagination {
   position: relative;
   bottom: 1rem;
