@@ -15,7 +15,7 @@ import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
 const Projects = ({ darkMode }) => {
   return (
     <section className="px-[5vmin] md:px-[10vmax]" id="projects">
-      <div className="flex items-center py-8">
+      <div className="flex items-center py-8 pt-20">
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
       </div>
@@ -65,7 +65,11 @@ const Projects = ({ darkMode }) => {
                 darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
               } flex h-[50vmin] flex-col overflow-hidden bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
             >
-              <Link to={`/projects/${projectData.id}`} className="h-full w-full">
+              <Link
+                to={`/projects/${projectData.id}`}
+                className="h-full w-full"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <div className="relative h-full">
                   <img src={projectData.image} alt="dota" className="h-full w-full" />
                   <div className="absolute inset-0 bg-black opacity-[60%]" />
@@ -118,12 +122,12 @@ const Projects = ({ darkMode }) => {
             </div>
           </SwiperSlide>
         ))}
-        <div className='relative top-8 flex items-center justify-center'>
-          <MdOutlineNavigateBefore className="swiper-button-prev text-primary_dark relative top-3" />
+        <div className="relative top-8 flex items-center justify-center">
+          <MdOutlineNavigateBefore className="swiper-button-prev relative top-3 text-primary_dark" />
           <div className="slider-controler">
             <div className="swiper-pagination" />
           </div>
-          <MdOutlineNavigateNext className="swiper-button-next text-primary_dark relative top-3" />
+          <MdOutlineNavigateNext className="swiper-button-next relative top-3 text-primary_dark" />
         </div>
       </Swiper>
     </section>
