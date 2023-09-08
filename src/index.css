@@ -21,7 +21,7 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-a:focus,a:active,button:focus,button:active,button {
+a:focus,a:active,button:focus,button:active,button,.swiper-button-prev,.swiper-button-next {
   -webkit-tap-highlight-color: transparent !important;
   outline: none !important;
 }

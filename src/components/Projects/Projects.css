@@ -49,10 +49,16 @@
 
 .slider-controler {
   position: relative;
-  top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  position: unset;
 }
 
 .swiper-slide {
@@ -68,8 +74,7 @@
 }
 
 .swiper-pagination {
-  position: relative;
-  bottom: 1rem;
+  width: 200px!important;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

@@ -80,10 +80,10 @@ const AboutMe = ({ darkMode }) => {
         {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
         <div className="mt-2 flex">
-          <span className="mr-2 rounded-md border-2 border-primary_dark px-4 py-[0.1rem] text-primary_dark">
+          <span className="mr-2 rounded-md border-2 border-orange-500 dark:border-orange-400 dark:text-orange-400 px-4 py-[0.1rem] text-orange-500">
             Front End
           </span>
-          <span className="mr-2 rounded-md border-2 border-green-400 px-4 py-[0.1rem] text-green-400">
+          <span className="mr-2 rounded-md border-2 dark:border-green-400 border-green-500 px-4 py-[0.1rem] text-green-500 dark:text-green-400">
             Remote
           </span>
         </div>

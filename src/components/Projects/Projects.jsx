@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
 
 const Projects = ({ darkMode }) => {
   return (
@@ -34,6 +35,11 @@ const Projects = ({ darkMode }) => {
           modifier: 2.5,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         breakpoints={{
           500: {
@@ -53,11 +59,11 @@ const Projects = ({ darkMode }) => {
         }}
       >
         {projectDatas.map((projectData) => (
-          <SwiperSlide key={projectData.id} className=''>
+          <SwiperSlide key={projectData.id} className="">
             <div
               className={`${
                 darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-              } flex flex-col overflow-hidden h-[50vmin] md:h-[30vmax] lg:h-[70vmin] bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:rounded-xl`}
+              } flex h-[50vmin] flex-col overflow-hidden bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
             >
               <Link to={`/projects/${projectData.id}`} className="h-full w-full">
                 <div className="relative h-full">
@@ -112,8 +118,12 @@ const Projects = ({ darkMode }) => {
             </div>
           </SwiperSlide>
         ))}
-        <div className="slider-controler">
-          <div className="swiper-pagination" />
+        <div className='relative top-8 flex items-center justify-center'>
+          <MdOutlineNavigateBefore className="swiper-button-prev text-primary_dark relative top-3" />
+          <div className="slider-controler">
+            <div className="swiper-pagination" />
+          </div>
+          <MdOutlineNavigateNext className="swiper-button-next text-primary_dark relative top-3" />
         </div>
       </Swiper>
     </section>
