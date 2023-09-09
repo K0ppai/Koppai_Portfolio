@@ -45,7 +45,7 @@ const Contact = ({ darkMode }) => {
           type="submit"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-          } w-[40%] rounded-md bg-primary_dark py-2 text-lg font-semibold text-secondary_pale_light dark:text-text_light md:w-[49%]`}
+          } rounded-md bg-primary_dark py-2 text-lg font-semibold text-secondary_pale_light dark:text-text_light md:w-[49%]`}
         >
           Start Collaboration
         </button>
