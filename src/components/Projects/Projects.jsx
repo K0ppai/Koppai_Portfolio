@@ -17,24 +17,50 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 
 const Projects = ({ darkMode }) => {
   const projectRef = useRef(null);
-  const isInView = useInView(projectRef, { once: true });
+  const titleRef = useRef(null);
+  const projectsInView = useInView(projectRef, { once: true });
+  const titleInView = useInView(titleRef, { once: true });
   const projectControls = useAnimation();
   const titleControls = useAnimation();
-  
 
   useEffect(() => {
-    if (isInView) {
+    if (projectsInView) {
       projectControls.start('visible');
     }
-  }, [isInView]);
+    if (titleInView) {
+      titleControls.start('visible');
+    }
+  }, [projectsInView, titleInView, projectControls, titleControls]);
 
   return (
     <section className="px-[5vmin] md:px-[10vmax]" id="projects">
-      <div className="flex items-center py-8 pt-20">
+      <motion.div
+        className="flex items-center py-8 pt-20"
+        ref={projectRef}
+        variants={{
+          hidden: { opacity: 0, x: '-100vw' },
+          visible: { opacity: 1, x: '0' },
+        }}
+        initial="hidden"
+        animate={titleControls}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className="text-2xl text-gray-400">Projects</h1>
         <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
-      </div>
-      <h2 className="text-4xl font-bold">Portfolio</h2>
+      </motion.div>
+      <motion.h2
+        className="text-4xl font-bold"
+        ref={projectRef}
+        initial="hidden"
+        animate={projectControls}
+        variants={{
+          hidden: { opacity: 0, y: 150 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
+        Portfolio
+      </motion.h2>
       <Swiper
         className="pb-20 pt-10"
         effect={'coverflow'}
@@ -73,7 +99,7 @@ const Projects = ({ darkMode }) => {
           },
         }}
       >
-        {projectDatas.map((projectData, index) => (
+        {projectDatas.map((projectData) => (
           <SwiperSlide key={projectData.id}>
             <motion.div
               className={`${
@@ -83,10 +109,10 @@ const Projects = ({ darkMode }) => {
               initial="hidden"
               animate={projectControls}
               variants={{
-                visible: { opacity: 1, y: 0},
-                hidden: { opacity: 0, y: 150},
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 350 },
               }}
-              transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeInOut' }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
               <Link
                 to={`/projects/${projectData.id}`}

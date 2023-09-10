@@ -138,14 +138,15 @@ const AboutMe = ({ darkMode }) => {
         </div>
         {/* About Me */}
         <motion.article
-          initial={{ y: '100vh' }}
-          animate={{ y: 0 }}
+          initial={{ y: '100vh', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}
         >
-          <motion.div className="flex items-center py-8" 
-          initial={{ x: '-100vw' }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          <motion.div
+            className="flex items-center py-8"
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ duration: 1, delay: 1.5 }}
           >
             <h1 className="text-2xl text-gray-400">About Me</h1>
             <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
