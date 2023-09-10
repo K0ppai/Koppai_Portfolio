@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Connect from './Connect';
 import ReactModal from 'react-modal';
 import { VscVerifiedFilled } from 'react-icons/vsc';
+import { motion } from 'framer-motion';
 
 const AboutMe = ({ darkMode }) => {
   const [hoveredTech, setHoveredTech] = useState(null);
@@ -37,20 +38,38 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
-      <div className="h-[20vh] w-screen bg-primary_dark md:h-[20vh]" />
-      <div className="relative -top-[17.5vmin] px-[5vmin] md:-top-[5vmax] md:px-[10vmax]">
+      <motion.div
+        className="h-[20vh] w-screen bg-primary_dark md:h-[20vh]"
+        initial={{ y: '-100vh', opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      />
+      <motion.div
+        className="relative -top-[17.5vmin] px-[5vmin] md:-top-[5vmax] md:px-[10vmax]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         {/* Profile Image */}
         <figure className="relative flex w-[35vmin] flex-col">
-          <img
+          <motion.img
             src={profile}
             alt="Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             } box-border w-[35vmin] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
           />
         </figure>
         <div className="mt-3 flex items-center justify-between">
-          <div className="flex items-center">
+          <motion.div
+            className="flex items-center"
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
             {/* <svg className="h-[4vmax] w-[27vmin]">
               <text
                 x="50%"
@@ -66,29 +85,54 @@ const AboutMe = ({ darkMode }) => {
             <span className="text-4xl font-extrabold">Koppai</span>
             {/* <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" /> */}
             <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
-          </div>
-          <button
+          </motion.div>
+          <motion.button
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
             onClick={openModal}
+            whileHover={{ scale: 1.05 }}
+            initial={{ x: '50vw', opacity: 0 }}
+            animate={{ x: 0 , opacity : 1}}
+            transition={{ duration: 1,delay: 1}}
           >
-            <span className="px-1">connect</span>
-          </button>
+            <span className="px-1">Connect</span>
+          </motion.button>
         </div>
-        <p className="mt-2 text-gray-400">Front-End Developer</p>
+        <motion.p
+          className="mt-2 text-gray-400"
+          initial={{ x: '-100vw' }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Front-End Developer
+        </motion.p>
         {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
         <div className="mt-2 flex">
-          <span className="mr-2 rounded-md border-2 border-primary_dark px-4 py-[0.1rem] text-primary_dark dark:border-orange-400 dark:text-orange-400">
+          <motion.span
+            className="mr-2 rounded-md border-2 border-primary_dark px-4 py-[0.1rem] text-primary_dark dark:border-orange-400 dark:text-orange-400"
+            initial={{ y: '100vh' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
             Front End
-          </span>
-          <span className="mr-2 rounded-md border-2 border-green-500 px-4 py-[0.1rem] text-green-500 dark:border-green-400 dark:text-green-400">
+          </motion.span>
+          <motion.span
+            className="mr-2 rounded-md border-2 border-green-500 px-4 py-[0.1rem] text-green-500 dark:border-green-400 dark:text-green-400"
+            initial={{ y: '100vh' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.7, delay: 0.7 }}
+          >
             Remote
-          </span>
+          </motion.span>
         </div>
         {/* About Me */}
-        <article>
+        <motion.article
+          initial={{ y: '100vh' }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+        >
           <div className="flex items-center py-8">
             <h1 className="text-2xl text-gray-400">About Me</h1>
             <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
@@ -106,8 +150,8 @@ const AboutMe = ({ darkMode }) => {
             development school located in the US that uses pair programming and project building to
             teach development.
           </p>
-        </article>
-      </div>
+        </motion.article>
+      </motion.div>
       <div className="px-[5vmin] pt-10 md:px-[10vmax]">
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>

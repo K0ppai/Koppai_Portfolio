@@ -11,6 +11,7 @@ import { ImSun } from 'react-icons/im';
 import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -55,10 +56,13 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <nav className="flex justify-center">
-      <div
+      <motion.div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-        } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] md:w-[75vw] items-center justify-center rounded-lg px-2 py-2  text-text_light backdrop-blur-[1rem] dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[1rem] lg:hidden lg:bg-bg_light`}
+        } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-lg px-2 py-2 text-text_light  backdrop-blur-[1rem] dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[1rem] md:w-[75vw] lg:hidden lg:bg-bg_light`}
+        initial={{ y: 100}}
+        animate={{ y: 0}}
+        transition={{ duration: 0.5,delay: 1, ease: 'easeInOut' }}
       >
         <a
           href="#about-me"
@@ -86,10 +90,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
             <BsGrid className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
-        <button
-          className="flex flex-col items-center justify-center"
-          onClick={toggleDarkMode}
-        >
+        <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
           {darkMode ? (
             <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark" />
           ) : (
@@ -115,7 +116,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
             <BsSend className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
-      </div>
+      </motion.div>
     </nav>
   );
 };

@@ -13,6 +13,7 @@ import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -60,7 +61,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   }, [sections]);
 
   return (
-    <nav
+    <motion.nav
       className={`${
         isNavExpanded ? 'w-[120px]' : 'w-[45px]'
       } fixed right-0 top-1/2 z-[50] hidden -translate-y-1/2 transform rounded-xl text-text_light transition-all duration-500 ease-in-out dark:text-text_dark lg:block`}
@@ -210,7 +211,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </NavLink>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 
