@@ -2,15 +2,24 @@ import { profile } from '@/assets/images/images';
 import PropTypes from 'prop-types';
 import { techs } from '@/assets/Techs/Techs';
 import './AboutMe.css';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Connect from './Connect';
 import ReactModal from 'react-modal';
 import { VscVerifiedFilled } from 'react-icons/vsc';
-import { motion } from 'framer-motion';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const AboutMe = ({ darkMode }) => {
   const [hoveredTech, setHoveredTech] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const skillRef = useRef(null);
+  const isInView = useInView(skillRef, { once: true });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible');
+    }
+  }, [isInView]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -92,9 +101,9 @@ const AboutMe = ({ darkMode }) => {
             } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
             onClick={openModal}
             whileHover={{ scale: 1.05 }}
-            initial={{ x: '50vw', opacity: 0 }}
-            animate={{ x: 0 , opacity : 1}}
-            transition={{ duration: 1,delay: 1}}
+            initial={{ x: '100vw', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
           >
             <span className="px-1">Connect</span>
           </motion.button>
@@ -133,10 +142,14 @@ const AboutMe = ({ darkMode }) => {
           animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
         >
-          <div className="flex items-center py-8">
+          <motion.div className="flex items-center py-8" 
+          initial={{ x: '-100vw' }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          >
             <h1 className="text-2xl text-gray-400">About Me</h1>
             <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
-          </div>
+          </motion.div>
           <p className="sm:text-justify">
             Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
             aesthetic websites using React & Redux and TailwindCss. Spending 789+ hours mastering
@@ -152,7 +165,18 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </motion.article>
       </motion.div>
-      <div className="px-[5vmin] pt-10 md:px-[10vmax]">
+      {/* Skills section */}
+      <motion.section
+        className="px-[5vmin] pt-10 md:px-[10vmax]"
+        ref={skillRef}
+        variants={{
+          hidden: { opacity: 0, x: '-100vw' },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{ duration: 1 }}
+      >
         <div className="flex items-center py-8">
           <h1 className="text-2xl text-gray-400">My Skills</h1>
           <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
@@ -170,7 +194,7 @@ const AboutMe = ({ darkMode }) => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.section>
     </section>
   );
 };

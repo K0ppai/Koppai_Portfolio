@@ -11,9 +11,23 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
+import { useRef, useEffect } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 // import { v4 as id } from 'uuid';
 
 const Projects = ({ darkMode }) => {
+  const projectRef = useRef(null);
+  const isInView = useInView(projectRef, { once: true });
+  const projectControls = useAnimation();
+  const titleControls = useAnimation();
+  
+
+  useEffect(() => {
+    if (isInView) {
+      projectControls.start('visible');
+    }
+  }, [isInView]);
+
   return (
     <section className="px-[5vmin] md:px-[10vmax]" id="projects">
       <div className="flex items-center py-8 pt-20">
@@ -59,12 +73,20 @@ const Projects = ({ darkMode }) => {
           },
         }}
       >
-        {projectDatas.map((projectData) => (
-          <SwiperSlide key={projectData.id} className="">
-            <div
+        {projectDatas.map((projectData, index) => (
+          <SwiperSlide key={projectData.id}>
+            <motion.div
               className={`${
                 darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
               } flex h-[50vmin] flex-col overflow-hidden bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
+              ref={projectRef}
+              initial="hidden"
+              animate={projectControls}
+              variants={{
+                visible: { opacity: 1, y: 0},
+                hidden: { opacity: 0, y: 150},
+              }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeInOut' }}
             >
               <Link
                 to={`/projects/${projectData.id}`}
@@ -120,7 +142,7 @@ const Projects = ({ darkMode }) => {
                   </button>
                 </div> */}
               </Link>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
         <div className="relative top-8 flex items-center justify-center">

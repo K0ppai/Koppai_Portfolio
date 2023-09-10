@@ -13,7 +13,7 @@ import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -21,6 +21,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const navigate = useNavigate();
   const sections = ['about-me', 'projects', 'contact'];
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+
 
   const handleIntersection = (entries) => {
     entries.forEach((entry) => {
@@ -65,14 +66,15 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
       className={`${
         isNavExpanded ? 'w-[120px]' : 'w-[45px]'
       } fixed right-0 top-1/2 z-[50] hidden -translate-y-1/2 transform rounded-xl text-text_light transition-all duration-500 ease-in-out dark:text-text_dark lg:block`}
+      initial={{ x: '100vw', y: '-50%', opacity: 0 }}
+      animate={{ x: 0, y: '-50%', opacity: 1 }}
+      transition={{ duration: 0.5, delay: 1.5, ease: 'easeInOut' }}
     >
-      <ul className="flex h-[80vh] flex-col lg:h-[60vh]">
+      <motion.ul className="flex h-[80vh] flex-col lg:h-[60vh]">
         <li
           className={`
           ${
-            darkMode
-              ? 'bg-bg_card_pale_dark text-text_dark'
-              : 'bg-bg_card_white_light text-bg_dark'
+            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
           } 
           ${activeSection === 'about-me' ? 'rounded-bl-[6px]' : ''}
           relative flex flex-grow flex-col items-center justify-center rounded-tl-md`}
@@ -109,12 +111,10 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
           ${
-            darkMode
-              ? 'bg-bg_card_pale_dark text-text_dark'
-              : 'bg-bg_card_white_light text-bg_dark'
+            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
           } 
           ${activeSection === 'projects' ? 'rounded-bl-[6px]' : ''}
-          ${activeSection === 'about-me' && 'bg-bg_light dark:bg-bg_dark py-[4vh]'}`}
+          ${activeSection === 'about-me' && 'bg-bg_light py-[4vh] dark:bg-bg_dark'}`}
         >
           {activeSection === 'about-me' ? (
             <>
@@ -138,13 +138,11 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
           ${
-            darkMode
-              ? 'bg-bg_card_pale_dark text-text_dark'
-              : 'bg-bg_card_white_light text-bg_dark'
+            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
           } 
           ${activeSection === 'about-me' ? 'rounded-tl-[6px]' : ''}
           ${activeSection === 'contact' ? 'rounded-bl-[6px]' : ''}
-          ${activeSection === 'projects' && 'bg-bg_light dark:bg-bg_dark py-[4vh]'}`}
+          ${activeSection === 'projects' && 'bg-bg_light py-[4vh] dark:bg-bg_dark'}`}
         >
           {activeSection === 'projects' ? (
             <>
@@ -168,12 +166,10 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
           ${
-            darkMode
-              ? 'bg-bg_card_pale_dark text-text_dark'
-              : 'bg-bg_card_white_light text-bg_dark'
+            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
           } 
           ${activeSection === 'projects' ? 'rounded-tl-[6px]' : ''} 
-          ${activeSection === 'contact' && 'bg-bg_light dark:bg-bg_dark py-[4vh]'}`}
+          ${activeSection === 'contact' && 'bg-bg_light py-[4vh] dark:bg-bg_dark'}`}
         >
           {activeSection === 'contact' ? (
             <>
@@ -198,9 +194,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
           className={`
           ${
-            darkMode
-              ? 'bg-bg_card_pale_dark text-text_dark'
-              : 'bg-bg_card_white_light text-bg_dark'
+            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
           } 
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 
           flex flex-grow flex-col items-center justify-center rounded-bl-md`}
@@ -210,7 +204,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             <BsFileEarmarkText className="my-[4vh] min-w-[24px] text-lg text-text_light dark:text-text_dark" />
           </div>
         </NavLink>
-      </ul>
+      </motion.ul>
     </motion.nav>
   );
 };

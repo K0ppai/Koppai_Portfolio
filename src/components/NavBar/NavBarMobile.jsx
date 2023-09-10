@@ -12,6 +12,7 @@ import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -60,12 +61,16 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
         } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-lg px-2 py-2 text-text_light  backdrop-blur-[1rem] dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[1rem] md:w-[75vw] lg:hidden lg:bg-bg_light`}
-        initial={{ y: 100}}
-        animate={{ y: 0}}
-        transition={{ duration: 0.5,delay: 1, ease: 'easeInOut' }}
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
       >
-        <a
-          href="#about-me"
+        <Link
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+          to="#about-me"
           className={`flex flex-col items-center justify-center ${
             activeSection === 'about-me' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
@@ -76,9 +81,13 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <AiOutlineHome className="mx-[4vw] text-2xl text-primary_dark" />
           )}
-        </a>
-        <a
-          href="#projects"
+        </Link>
+        <Link
+          to="#projects"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
           className={`flex flex-col items-center justify-center ${
             activeSection === 'projects' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
@@ -89,7 +98,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <BsGrid className="mx-[4vw] text-2xl text-primary_dark" />
           )}
-        </a>
+        </Link>
         <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
           {darkMode ? (
             <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark" />
@@ -103,8 +112,12 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         >
           <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
         </NavLink>
-        <a
-          href="#contact"
+        <Link
+          to="#contact"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
           className={`flex flex-col items-center justify-center ${
             activeSection === 'contact' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
@@ -115,7 +128,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <BsSend className="mx-[4vw] text-2xl text-primary_dark" />
           )}
-        </a>
+        </Link>
       </motion.div>
     </nav>
   );
