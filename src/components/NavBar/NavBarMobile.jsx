@@ -58,11 +58,11 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
       <div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-        } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-lg px-2 py-2  text-text_light backdrop-blur-[1rem] dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[1rem] lg:hidden lg:bg-bg_light`}
+        } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] md:w-[75vw] items-center justify-center rounded-lg px-2 py-2  text-text_light backdrop-blur-[1rem] dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[1rem] lg:hidden lg:bg-bg_light`}
       >
         <a
           href="#about-me"
-          className={`flex flex-col items-center justify-center md:w-full ${
+          className={`flex flex-col items-center justify-center ${
             activeSection === 'about-me' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('about-me')}
@@ -70,12 +70,12 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           {activeSection === 'about-me' ? (
             <AiFillHome className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <AiOutlineHome className="mx-[4vw] text-2xl text-primary_dark md:my-[4vw]" />
+            <AiOutlineHome className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
         <a
           href="#projects"
-          className={`flex flex-col items-center justify-center md:w-full ${
+          className={`flex flex-col items-center justify-center ${
             activeSection === 'projects' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('projects')}
@@ -83,28 +83,28 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           {activeSection === 'projects' ? (
             <BsFillGridFill className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <BsGrid className="mx-[4vw] text-2xl text-primary_dark md:my-[4vw]" />
+            <BsGrid className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
         <button
-          className="flex flex-col items-center justify-center md:w-full"
+          className="flex flex-col items-center justify-center"
           onClick={toggleDarkMode}
         >
           {darkMode ? (
-            <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark md:my-[4vw]" />
+            <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark" />
           ) : (
-            <ImSun className="mx-[4vw] text-2xl text-primary_dark md:my-[4vw]" />
+            <ImSun className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </button>
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
-          className="flex flex-col items-center justify-center md:w-full"
+          className="flex flex-col items-center justify-center"
         >
-          <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark md:my-[4vw]" />
+          <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
         </NavLink>
         <a
           href="#contact"
-          className={`flex flex-col items-center justify-center md:w-full ${
+          className={`flex flex-col items-center justify-center ${
             activeSection === 'contact' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
           onClick={() => handleNavigation('contact')}
@@ -112,7 +112,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           {activeSection === 'contact' ? (
             <BsFillSendFill className="mx-0 text-2xl text-primary_dark" />
           ) : (
-            <BsSend className="mx-[4vw] text-2xl text-primary_dark md:my-[4vw]" />
+            <BsSend className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </a>
       </div>
