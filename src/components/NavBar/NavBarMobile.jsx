@@ -61,9 +61,9 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
         } md:bg-opacity-none fixed bottom-4 z-30 flex w-[90vw] items-center justify-center rounded-lg px-2 py-2 text-text_light  backdrop-blur-[1rem] dark:bg-bg_dark dark:bg-opacity-30 dark:text-text_dark dark:backdrop-blur-[1rem] md:w-[75vw] lg:hidden lg:bg-bg_light`}
-        initial={{ y: 100 }}
+        initial={{ y: '100vw' }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
+        transition={{ duration: 0.5, delay: 2.5, ease: 'easeInOut' }}
       >
         <Link
           spy={true}

@@ -67,8 +67,8 @@ const AboutMe = ({ darkMode }) => {
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             } box-border w-[35vmin] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
-            initial={{ x: '-100vw' }}
-            animate={{ x: 0 }}
+            initial={{ x: '-100vw', display: 'none' }}
+            animate={{ x: 0, display: 'block' }}
             transition={{ duration: 0.5 }}
           />
         </figure>
@@ -101,8 +101,8 @@ const AboutMe = ({ darkMode }) => {
             } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
             onClick={openModal}
             whileHover={{ scale: 1.05 }}
-            initial={{ x: '100vw', opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ x: 500}}
+            animate={{ x: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
             <span className="px-1">Connect</span>
