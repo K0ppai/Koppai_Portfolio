@@ -27,19 +27,22 @@ const Projects = ({ darkMode }) => {
     if (projectsInView) {
       projectControls.start('visible');
     }
+  }, [projectsInView, projectControls]);
+
+  useEffect(() => {
     if (titleInView) {
       titleControls.start('visible');
     }
-  }, [projectsInView, titleInView, projectControls, titleControls]);
+  }, [titleInView, titleControls]);
 
   return (
     <section className="px-[5vmin] md:px-[10vmax]" id="projects">
       <motion.div
         className="flex items-center py-8 pt-20"
-        ref={projectRef}
+        ref={titleRef}
         variants={{
-          hidden: { opacity: 0, x: '-100vw' },
-          visible: { opacity: 1, x: '0' },
+          hidden: { x: '-80vw' },
+          visible: { x: 0 },
         }}
         initial="hidden"
         animate={titleControls}
@@ -54,7 +57,7 @@ const Projects = ({ darkMode }) => {
         initial="hidden"
         animate={projectControls}
         variants={{
-          hidden: { opacity: 0, y: 150 },
+          hidden: { opacity: 0, y: 0 },
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -110,7 +113,7 @@ const Projects = ({ darkMode }) => {
               animate={projectControls}
               variants={{
                 visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 350 },
+                hidden: { opacity: 0, y: 150 },
               }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
