@@ -86,6 +86,7 @@ const ProjectDetails = ({ darkMode }) => {
           <img
             src={projectDatas[currentProjectIndex].image}
             alt={`${projectDatas[currentProjectIndex].title}-image`}
+            className='w-full'
           />
         </motion.figure>
         {/* Source/Live Buttons */}

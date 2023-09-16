@@ -63,7 +63,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   return (
     <motion.nav
       className={`${
-        isNavExpanded ? 'w-[120px]' : 'w-[45px]'
+        isNavExpanded ? 'w-[120px] 2xl:w-[150px]' : 'w-[45px] 2xl:w-[55px]'
       } fixed right-0 top-1/2 z-[50] hidden -translate-y-1/2 transform rounded-xl text-text_light transition-all duration-500 ease-in-out dark:text-text_dark lg:block`}
       initial={{ x: '100vw', y: '-50%', opacity: 0 }}
       animate={{ x: 0, y: '-50%', opacity: 1 }}
