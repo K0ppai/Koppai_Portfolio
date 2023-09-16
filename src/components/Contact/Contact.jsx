@@ -6,7 +6,7 @@ import { inputAnimationVariants, textAreaAnimationVariants } from '@/assets/Anim
 const Contact = ({ darkMode }) => {
   return (
     <section
-      className="px-[5vmin] pb-[12vh] dark:text-secondary_pale_light md:px-[13vmax]"
+      className="px-[5vmin] pb-[12vh] dark:text-secondary_pale_light md:px-[13vmax] 2xl:px-[20vmax]"
       id="contact"
     >
       <div className="flex items-center py-8">

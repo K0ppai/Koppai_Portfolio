@@ -20,7 +20,7 @@ const ProjectDetails = ({ darkMode }) => {
   const prevProjectIndex = (currentProjectIndex - 1 + projectDatas.length) % projectDatas.length;
 
   return (
-    <section className="px-4 pb-[20vh] md:px-[10vmax] lg:px-[15vmax]">
+    <section className="px-4 pb-[20vh] md:px-[10vmax] lg:px-[15vmax] 2xl:px-[20vmax]">
       <motion.h1
         className="py-6 text-center font-sans text-4xl font-bold"
         initial={{
