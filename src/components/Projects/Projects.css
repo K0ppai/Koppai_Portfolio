@@ -1,8 +1,9 @@
 .slide-right {
-  animation: slide-right 1.1s cubic-bezier(0.600, -0.280, 0.735, 0.045) infinite alternate both;
+  animation: slide-right 1.1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate both;
 }
+
 .slide-left {
-  animation: slide-left 1.1s cubic-bezier(0.600, -0.280, 0.735, 0.045) infinite alternate both;
+  animation: slide-left 1.1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate both;
 }
 
 @keyframes slide-right {
@@ -14,6 +15,7 @@
     transform: translateX(3vmin);
   }
 }
+
 @keyframes slide-left {
   0% {
     transform: translateX(0);
@@ -28,13 +30,14 @@
   clip-path: polygon(0 0, 100% 0, calc(100% - 50px) 100%, 0 100%);
   width: 55vw;
 }
+
 .right {
   clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
   width: 55vw;
   margin-left: -40px;
 }
 
-.horizontal-grid{
+.horizontal-grid {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 90%;
@@ -56,8 +59,8 @@
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal{
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   position: unset;
 }
 
@@ -74,11 +77,11 @@
 }
 
 .swiper-pagination {
-  width: 200px!important;
+  width: 200px !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  filter: drop-shadow(0 8px 24px rgba(18, 28, 53, 0.1));
   background-color: green;
 }
 
