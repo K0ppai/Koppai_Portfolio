@@ -39,6 +39,18 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
+      {/* <svg className="h-[4vmax] w-[27vmin]">
+        <text
+          x="50%"
+          y="50%"
+          dy=".35em"
+          textAnchor="middle"
+          id="name"
+          className="text-4xl font-extrabold"
+        >
+          Koppai
+        </text>
+      </svg> */}
       <motion.div
         className="h-[20vh] w-screen bg-primary_dark md:h-[20vh]"
         initial={{ y: '-100vh', opacity: 0 }}
@@ -71,18 +83,6 @@ const AboutMe = ({ darkMode }) => {
             animate={{ x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* <svg className="h-[4vmax] w-[27vmin]">
-              <text
-                x="50%"
-                y="50%"
-                dy=".35em"
-                textAnchor="middle"
-                id="name"
-                className="text-4xl font-extrabold"
-              >
-                Koppai
-              </text>
-            </svg> */}
             <span className="text-4xl font-extrabold">Koppai</span>
             {/* <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" /> */}
             <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
