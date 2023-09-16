@@ -4,12 +4,17 @@ import RemoteGif from './Remote.json';
 const titleAnimationVariants = {
   initial: {
     opacity: 0,
-    x: -200,
+    x: -100,
   },
   whileInView: {
     opacity: 1,
     x: 0,
     transition: { duration: 0.5, delay: 0.5 },
+  },
+  whileInView2: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, delay: 1 },
   },
   viewport: {
     once: true,

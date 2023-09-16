@@ -36,7 +36,7 @@ const Projects = ({ darkMode }) => {
       <motion.h2
         className="text-4xl font-bold"
         initial={titleAnimationVariants.initial}
-        whileInView={titleAnimationVariants.whileInView}
+        whileInView={titleAnimationVariants.whileInView2}
         viewport={titleAnimationVariants.viewport}
       >
         Portfolio
