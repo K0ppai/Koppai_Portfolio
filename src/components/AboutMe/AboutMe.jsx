@@ -66,7 +66,7 @@ const AboutMe = ({ darkMode }) => {
         transition={{ duration: 1, delay: 0.5 }}
       />
       <motion.div
-        className="relative -top-[17.5vmin] px-[5vmin] md:-top-[5vmax] md:px-[10vmax]"
+        className="relative -top-[17.5vmin] px-[5vmin] md:-top-[5vmax] md:px-[13vmax]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -168,7 +168,7 @@ const AboutMe = ({ darkMode }) => {
         </motion.article>
       </motion.div>
       {/* Skills section */}
-      <section className="px-[5vmin] md:px-[10vmax]">
+      <section className="px-[5vmin] md:px-[13vmax]">
         <div className="flex items-center py-8">
           <motion.h1
             className="text-2xl text-gray-500"

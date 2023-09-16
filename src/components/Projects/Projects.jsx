@@ -16,7 +16,7 @@ import { titleAnimationVariants } from '@/assets/Animations/Animations';
 
 const Projects = ({ darkMode }) => {
   return (
-    <section className="px-[5vmin] md:px-[10vmax]" id="projects">
+    <section className="px-[5vmin] md:px-[13vmax]" id="projects">
       <div className="flex items-center py-8 pt-20">
         <motion.h1
           className="text-2xl text-gray-500"
