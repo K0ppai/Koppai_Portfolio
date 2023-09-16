@@ -77,7 +77,16 @@
   transition-delay: calc(0.1s * var(--i));
   transform: rotate(0deg) translateX(calc(80vw/2));
 }
+
+
 @media screen and (min-width: 768px) {
+  #connect .rotate {
+    transform-origin: calc(50vh/2);
+    transform: rotate(0deg) translateX(calc(45vh/2));
+  }
+}
+
+@media screen and (min-width: 1024px) {
   #connect .rotate {
     transform-origin: calc(80vh/2);
     transform: rotate(0deg) translateX(calc(70vh/2));
