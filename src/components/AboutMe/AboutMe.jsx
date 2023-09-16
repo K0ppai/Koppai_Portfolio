@@ -39,18 +39,26 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
       </ReactModal>
-      {/* <svg className="h-[4vmax] w-[27vmin]">
-        <text
-          x="50%"
-          y="50%"
-          dy=".35em"
-          textAnchor="middle"
-          id="name"
-          className="text-4xl font-extrabold"
-        >
-          Koppai
-        </text>
-      </svg> */}
+      {/* <ReactModal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
+        overlayClassName="fixed inset-0 bg-black backdrop-blur-[0.1rem] bg-opacity-40 z-50"
+        closeTimeoutMS={600}
+      >
+        <svg className="h-[4vmax] w-[27vmin]">
+          <text
+            x="50%"
+            y="50%"
+            dy=".35em"
+            textAnchor="middle"
+            id="name"
+            className="text-4xl font-extrabold"
+          >
+            Koppai
+          </text>
+        </svg>
+      </ReactModal> */}
       <motion.div
         className="h-[20vh] w-screen bg-primary_dark md:h-[20vh]"
         initial={{ y: '-100vh', opacity: 0 }}
@@ -87,18 +95,19 @@ const AboutMe = ({ darkMode }) => {
             {/* <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" /> */}
             <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
           </motion.div>
-          <motion.button
-            className={`${
-              darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
-            onClick={openModal}
-            whileHover={{ scale: 1.05 }}
+          <motion.div
             initial={{ x: '50vw' }}
-            animate={{ x: 0 }}
-            transition={{ duration: 1, delay: 1, ease: 'easeIn' }}
+            animate={{ x: 0, transition: { duration: 1, delay: 1, ease: 'easeIn' } }}
           >
-            <span className="px-1">Connect</span>
-          </motion.button>
+            <motion.button
+              className={`${
+                darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
+              } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
+              onClick={openModal}
+            >
+              Connect
+            </motion.button>
+          </motion.div>
         </div>
         <motion.p
           className="mt-2 text-gray-400"
@@ -140,8 +149,8 @@ const AboutMe = ({ darkMode }) => {
             animate={{ x: 0 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <h1 className="text-2xl text-gray-400">About Me</h1>
-            <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
+            <h1 className="text-2xl text-gray-500">About Me</h1>
+            <div className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]" />
           </motion.div>
           <p className="sm:text-justify">
             Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
@@ -159,10 +168,10 @@ const AboutMe = ({ darkMode }) => {
         </motion.article>
       </motion.div>
       {/* Skills section */}
-      <section className="px-[5vmin] pt-10 md:px-[10vmax]">
+      <section className="px-[5vmin] md:px-[10vmax]">
         <div className="flex items-center py-8">
           <motion.h1
-            className="text-2xl text-gray-400"
+            className="text-2xl text-gray-500"
             initial={titleAnimationVariants.initial}
             whileInView={titleAnimationVariants.whileInView}
             viewport={titleAnimationVariants.viewport}
@@ -170,7 +179,7 @@ const AboutMe = ({ darkMode }) => {
             My Skills
           </motion.h1>
           <motion.div
-            className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]"
+            className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]"
             initial={titleAnimationVariants.initial}
             whileInView={titleAnimationVariants.whileInView}
             viewport={titleAnimationVariants.viewport}

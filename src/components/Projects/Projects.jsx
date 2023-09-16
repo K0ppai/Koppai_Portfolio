@@ -19,7 +19,7 @@ const Projects = ({ darkMode }) => {
     <section className="px-[5vmin] md:px-[10vmax]" id="projects">
       <div className="flex items-center py-8 pt-20">
         <motion.h1
-          className="text-2xl text-gray-400"
+          className="text-2xl text-gray-500"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}
@@ -27,7 +27,7 @@ const Projects = ({ darkMode }) => {
           Projects
         </motion.h1>
         <motion.div
-          className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]"
+          className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}
