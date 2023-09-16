@@ -13,7 +13,7 @@ import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
-import { motion  } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -21,7 +21,6 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const navigate = useNavigate();
   const sections = ['about-me', 'projects', 'contact'];
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
 
   const handleIntersection = (entries) => {
     entries.forEach((entry) => {
@@ -87,9 +86,29 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </button>
           <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
             {darkMode ? (
-              <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Dark</span>
+              <motion.span
+                className={`${isNavExpanded ? 'block' : 'hidden'}`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                viewport={{
+                  once: false
+                }}
+              >
+                Dark
+              </motion.span>
             ) : (
-              <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Light</span>
+              <motion.span
+                className={`${isNavExpanded ? 'block' : 'hidden'}`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                viewport={{
+                  once: false
+                }}
+              >
+                Light
+              </motion.span>
             )}
             {darkMode ? (
               <button className="my-[4vh]">
@@ -125,7 +144,17 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             <></>
           )}
           <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
-            <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>About</span>
+            <motion.span
+              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.3, ease: 'easeInOut' }}
+              viewport={{
+                once: false
+              }}
+            >
+              About
+            </motion.span>
             <a href="#about-me" onClick={() => handleNavigation('about-me')}>
               {activeSection === 'about-me' ? (
                 <AiFillHome className="mx-0 min-w-[24px] text-lg text-text_light dark:text-text_dark" />
@@ -153,7 +182,17 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             <></>
           )}
           <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
-            <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Projects</span>
+            <motion.span
+              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5, ease: 'easeInOut' }}
+              viewport={{
+                once: false
+              }}
+            >
+              Projects
+            </motion.span>
             <a href="#projects" onClick={() => handleNavigation('projects')}>
               {activeSection === 'projects' ? (
                 <BsFillGridFill className="mx-0 min-w-[24px] text-lg text-text_light dark:text-text_dark" />
@@ -180,7 +219,17 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             <></>
           )}
           <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
-            <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Contact</span>
+            <motion.span
+              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.7, ease: 'easeInOut' }}
+              viewport={{
+                once: false
+              }}
+            >
+              Contact
+            </motion.span>
             <a href="#contact" onClick={() => handleNavigation('contact')}>
               {activeSection === 'contact' ? (
                 <BsFillSendFill className="mx-0 min-w-[24px] text-lg text-text_light dark:text-text_dark" />
@@ -200,7 +249,17 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           flex flex-grow flex-col items-center justify-center rounded-bl-md`}
         >
           <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
-            <span className={`${isNavExpanded ? 'block' : 'hidden'}`}>Resume</span>
+            <motion.span
+              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.9, ease: 'easeInOut' }}
+              viewport={{
+                once: false
+              }}
+            >
+              Resume
+            </motion.span>
             <BsFileEarmarkText className="my-[4vh] min-w-[24px] text-lg text-text_light dark:text-text_dark" />
           </div>
         </NavLink>

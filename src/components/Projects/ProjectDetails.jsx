@@ -20,7 +20,7 @@ const ProjectDetails = ({ darkMode }) => {
   const prevProjectIndex = (currentProjectIndex - 1 + projectDatas.length) % projectDatas.length;
 
   return (
-    <section className="px-4 pb-[20vh] md:px-[15vmax]">
+    <section className="px-4 pb-[20vh] md:px-[10vmax] lg:px-[15vmax]">
       <motion.h1
         className="py-6 text-center font-sans text-4xl font-bold"
         initial={{
@@ -94,7 +94,7 @@ const ProjectDetails = ({ darkMode }) => {
             href={projectDatas[currentProjectIndex].github_link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`left flex items-center justify-start border-y-2 border-gray-500 bg-primary_light py-2 dark:border-bg_card_pale_light ${
+            className={`left flex items-center justify-start bg-primary_light py-2 dark:border-bg_card_pale_light ${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             }`}
             initial={{
@@ -110,14 +110,14 @@ const ProjectDetails = ({ darkMode }) => {
               once: true,
             }}
           >
-            <span className="ml-[7vmin] text-2xl lg:ml-[8vmax]">SOURCE</span>
-            <FiGithub className="ml-[7vmin] text-3xl lg:ml-[8vmax]" />
+            <span className="ml-[5vmin] text-xl lg:ml-[8vmax]">SOURCE</span>
+            <FiGithub className="ml-[5vmin] text-2xl lg:ml-[8vmax]" />
           </motion.a>
           <motion.a
             href={projectDatas[currentProjectIndex].live_link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`right flex items-center justify-end border-y-2 border-gray-500 bg-green-500 py-2 dark:border-bg_card_pale_light ${
+            className={`right flex items-center justify-end bg-green-500 py-2 dark:border-bg_card_pale_light ${
               darkMode ? 'shadow-drop-secondary-dark' : 'shadow-drop-secondary-light'
             }`}
             initial={{
@@ -133,8 +133,8 @@ const ProjectDetails = ({ darkMode }) => {
               once: true,
             }}
           >
-            <span className="mr-[7vmin] text-2xl lg:mr-[8vmax]">LIVE</span>
-            <RxExternalLink className="mr-[7vmin] text-3xl lg:mr-[8vmax]" />
+            <span className="mr-[5vmin] text-xl lg:mr-[8vmax]">LIVE</span>
+            <RxExternalLink className="mr-[5vmin] text-2xl lg:mr-[8vmax]" />
           </motion.a>
         </div>
       </motion.div>
@@ -142,18 +142,9 @@ const ProjectDetails = ({ darkMode }) => {
       <div>
         <motion.h2
           className="mb-5 font-sans text-xl font-bold"
-          initial={{
-            opacity: 0,
-            x: -50,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{ duration: 0.5, delay: 1 }}
+          initial={titleAnimationVariants.initial}
+          whileInView={titleAnimationVariants.whileInView}
+          viewport={titleAnimationVariants.viewport}
         >
           TECHS
         </motion.h2>
