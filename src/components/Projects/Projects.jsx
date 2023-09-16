@@ -11,56 +11,33 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
-import { useRef, useEffect } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
-// import { v4 as id } from 'uuid';
+import { motion } from 'framer-motion';
+import { titleAnimationVariants } from '@/assets/Animations/Animations';
 
 const Projects = ({ darkMode }) => {
-  const projectRef = useRef(null);
-  const titleRef = useRef(null);
-  const projectsInView = useInView(projectRef, { once: true });
-  const titleInView = useInView(titleRef, { once: true });
-  const projectControls = useAnimation();
-  const titleControls = useAnimation();
-
-  useEffect(() => {
-    if (projectsInView) {
-      projectControls.start('visible');
-    }
-  }, [projectsInView, projectControls]);
-
-  useEffect(() => {
-    if (titleInView) {
-      titleControls.start('visible');
-    }
-  }, [titleInView, titleControls]);
-
   return (
     <section className="px-[5vmin] md:px-[10vmax]" id="projects">
-      <motion.div
-        className="flex items-center py-8 pt-20"
-        ref={titleRef}
-        variants={{
-          hidden: { x: '-80vw' },
-          visible: { x: 0 },
-        }}
-        initial="hidden"
-        animate={titleControls}
-        transition={{ duration: 0.5 }}
-      >
-        <h1 className="text-2xl text-gray-400">Projects</h1>
-        <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
-      </motion.div>
+      <div className="flex items-center py-8 pt-20">
+        <motion.h1
+          className="text-2xl text-gray-400"
+          initial={titleAnimationVariants.initial}
+          whileInView={titleAnimationVariants.whileInView}
+          viewport={titleAnimationVariants.viewport}
+        >
+          Projects
+        </motion.h1>
+        <motion.div
+          className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]"
+          initial={titleAnimationVariants.initial}
+          whileInView={titleAnimationVariants.whileInView}
+          viewport={titleAnimationVariants.viewport}
+        />
+      </div>
       <motion.h2
         className="text-4xl font-bold"
-        ref={projectRef}
-        initial="hidden"
-        animate={projectControls}
-        variants={{
-          hidden: { opacity: 0, y: 0 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        initial={titleAnimationVariants.initial}
+        whileInView={titleAnimationVariants.whileInView}
+        viewport={titleAnimationVariants.viewport}
       >
         Portfolio
       </motion.h2>
@@ -102,20 +79,27 @@ const Projects = ({ darkMode }) => {
           },
         }}
       >
-        {projectDatas.map((projectData) => (
+        {projectDatas.map((projectData, index) => (
           <SwiperSlide key={projectData.id}>
             <motion.div
               className={`${
                 darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
               } flex h-[50vmin] flex-col overflow-hidden bg-transparent text-text_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
-              ref={projectRef}
-              initial="hidden"
-              animate={projectControls}
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 150 },
+              initial={{
+                opacity: 0,
+                y: 100,
               }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              custom={index}
+              whileInView={(index) => ({
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: index * 0.2,
+                },
+              })}
+              viewport={{
+                once: true,
+              }}
             >
               <Link
                 to={`/projects/${projectData.id}`}

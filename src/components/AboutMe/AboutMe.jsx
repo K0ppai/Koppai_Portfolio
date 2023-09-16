@@ -2,24 +2,16 @@ import { profile } from '@/assets/images/images';
 import PropTypes from 'prop-types';
 import { techs } from '@/assets/Techs/Techs';
 import './AboutMe.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Connect from './Connect';
 import ReactModal from 'react-modal';
 import { VscVerifiedFilled } from 'react-icons/vsc';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { titleAnimationVariants } from '@/assets/Animations/Animations';
 
 const AboutMe = ({ darkMode }) => {
   const [hoveredTech, setHoveredTech] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const skillRef = useRef(null);
-  const isInView = useInView(skillRef, { once: true });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start('visible');
-    }
-  }, [isInView]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -101,9 +93,9 @@ const AboutMe = ({ darkMode }) => {
             } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
             onClick={openModal}
             whileHover={{ scale: 1.05 }}
-            initial={{ x: 500}}
+            initial={{ x: '50vw' }}
             animate={{ x: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 1, ease: 'easeIn' }}
           >
             <span className="px-1">Connect</span>
           </motion.button>
@@ -167,35 +159,59 @@ const AboutMe = ({ darkMode }) => {
         </motion.article>
       </motion.div>
       {/* Skills section */}
-      <motion.section
-        className="px-[5vmin] pt-10 md:px-[10vmax]"
-        ref={skillRef}
-        variants={{
-          hidden: { opacity: 0, x: '-100vw' },
-          visible: { opacity: 1, x: 0 },
-        }}
-        initial="hidden"
-        animate={controls}
-        transition={{ duration: 1 }}
-      >
+      <section className="px-[5vmin] pt-10 md:px-[10vmax]">
         <div className="flex items-center py-8">
-          <h1 className="text-2xl text-gray-400">My Skills</h1>
-          <div className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]" />
+          <motion.h1
+            className="text-2xl text-gray-400"
+            initial={titleAnimationVariants.initial}
+            whileInView={titleAnimationVariants.whileInView}
+            viewport={titleAnimationVariants.viewport}
+          >
+            My Skills
+          </motion.h1>
+          <motion.div
+            className="ml-2 h-[1px] w-[12vmin] bg-gray-400 md:w-[48px]"
+            initial={titleAnimationVariants.initial}
+            whileInView={titleAnimationVariants.whileInView}
+            viewport={titleAnimationVariants.viewport}
+          />
         </div>
-        <p className="mb-8">Technologies that I&apos;ve been working on recently.</p>
-        <div className="mt-20 flex flex-wrap items-center justify-center gap-5 md:gap-x-32 md:gap-y-8">
-          {techs.map((tech) => (
-            <div
+        <motion.p
+          className="mb-8"
+          initial={titleAnimationVariants.initial}
+          whileInView={titleAnimationVariants.whileInView}
+          viewport={titleAnimationVariants.viewport}
+        >
+          Technologies that I&apos;ve been working on recently.
+        </motion.p>
+        <ul className="mt-20 flex flex-wrap items-center justify-center gap-5 md:gap-x-32 md:gap-y-8">
+          {techs.map((tech, index) => (
+            <motion.li
               key={tech.id}
               className="group"
               onMouseEnter={() => setHoveredTech(tech.id)}
               onMouseLeave={() => setHoveredTech(null)}
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              custom={index}
+              whileInView={(index) => ({
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: index * 0.1,
+                },
+              })}
+              viewport={{
+                once: true,
+              }}
             >
               {hoveredTech === tech.id ? tech.hoverElement : tech.originalElement}
-            </div>
+            </motion.li>
           ))}
-        </div>
-      </motion.section>
+        </ul>
+      </section>
     </section>
   );
 };

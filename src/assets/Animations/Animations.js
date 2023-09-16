@@ -1,4 +1,35 @@
 import ReactGif from './React.json';
 import RemoteGif from './Remote.json';
 
-export { ReactGif, RemoteGif };
+const titleAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, delay: 0.5 },
+  },
+  viewport: {
+    once: true,
+  },
+};
+
+const liAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  whileInView: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.1,
+    },
+  }),
+  viewport: {
+    once: true,
+  },
+};
+export { ReactGif, RemoteGif, titleAnimationVariants, liAnimationVariants };
