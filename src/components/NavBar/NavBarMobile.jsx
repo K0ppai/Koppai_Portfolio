@@ -12,7 +12,6 @@ import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
 
 const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
@@ -65,12 +64,8 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, delay: 2.5, ease: 'easeInOut' }}
       >
-        <Link
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
-          to="#about-me"
+        <a
+          href="#about-me"
           className={`flex flex-col items-center justify-center ${
             activeSection === 'about-me' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
@@ -81,13 +76,9 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <AiOutlineHome className="mx-[4vw] text-2xl text-primary_dark" />
           )}
-        </Link>
-        <Link
-          to="#projects"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
+        </a>
+        <a
+          href="#projects"
           className={`flex flex-col items-center justify-center ${
             activeSection === 'projects' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
@@ -98,7 +89,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <BsGrid className="mx-[4vw] text-2xl text-primary_dark" />
           )}
-        </Link>
+        </a>
         <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
           {darkMode ? (
             <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark" />
@@ -107,17 +98,13 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           )}
         </button>
         <NavLink
-          to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
           className="flex flex-col items-center justify-center"
         >
           <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
         </NavLink>
-        <Link
-          to="#contact"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
+        <a
+          href="#contact"
           className={`flex flex-col items-center justify-center ${
             activeSection === 'contact' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
@@ -128,7 +115,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <BsSend className="mx-[4vw] text-2xl text-primary_dark" />
           )}
-        </Link>
+        </a>
       </motion.div>
     </nav>
   );
