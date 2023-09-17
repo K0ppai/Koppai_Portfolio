@@ -147,7 +147,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.3, ease: 'easeInOut' }}
+              transition={{ duration: 0.3, delay: 0.1, ease: 'easeInOut' }}
               viewport={{
                 once: false,
               }}
@@ -186,7 +186,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.5, ease: 'easeInOut' }}
+              transition={{ duration: 0.3, delay: 0.2, ease: 'easeInOut' }}
               viewport={{
                 once: false,
               }}
@@ -224,7 +224,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.7, ease: 'easeInOut' }}
+              transition={{ duration: 0.3, delay: 0.3, ease: 'easeInOut' }}
               viewport={{
                 once: false,
               }}
@@ -252,7 +252,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.9, ease: 'easeInOut' }}
+              transition={{ duration: 0.3, delay: 0.4, ease: 'easeInOut' }}
               viewport={{
                 once: false,
               }}

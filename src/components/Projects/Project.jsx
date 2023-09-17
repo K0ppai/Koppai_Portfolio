@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { FiGithub } from 'react-icons/fi';
-import { RxExternalLink } from 'react-icons/rx';
+import { FiExternalLink } from 'react-icons/fi';
+import { BsArrow90DegLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { BsArrowRight } from 'react-icons/bs';
 
 const Project = ({ projectData, index, darkMode }) => {
   const [isHover, setIsHover] = useState(false);
@@ -41,17 +41,18 @@ const Project = ({ projectData, index, darkMode }) => {
             isHover ? 'lg:top-0' : 'lg:top-[100%]'
           }`}
         >
-          <div className="absolute inset-0 bg-black opacity-[65%]" />
+          <div className="absolute inset-0 bg-black opacity-[70%]" />
           <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
             <motion.button
-              className="absolute bottom-4 right-4 rounded-[4px] border-2 border-secondary_pale_light px-2 py-1 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
+              className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] border-2 border-secondary_pale_light px-2 py-1 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
               whileHover={{
+                scale: 1.05,
                 color: '#e38b26',
                 borderColor: '#e38b26',
               }}
             >
-              See More
-              <BsArrowRight className="ml-1 inline-block xl:text-2xl" />
+              <span>See More</span>
+              <BsArrow90DegLeft className="ml-1 rotate-90 text-base xl:text-2xl" />
             </motion.button>
           </Link>
           <h2 className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl">
@@ -66,6 +67,7 @@ const Project = ({ projectData, index, darkMode }) => {
               onClick={(e) => e.stopPropagation()}
               whileHover={{
                 color: '#e38b26',
+                scale: 1.1,
               }}
             >
               <FiGithub className="text-xl xl:text-2xl" />
@@ -77,9 +79,10 @@ const Project = ({ projectData, index, darkMode }) => {
               onClick={(e) => e.stopPropagation()}
               whileHover={{
                 color: '#e38b26',
+                scale: 1.1,
               }}
             >
-              <RxExternalLink className="text-xl xl:text-2xl" />
+              <FiExternalLink className="text-xl xl:text-2xl" />
             </motion.a>
           </div>
           <span className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl">

@@ -94,7 +94,7 @@ const ProjectDetails = ({ darkMode }) => {
             href={projectDatas[currentProjectIndex].github_link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`left flex items-center justify-start bg-primary_light py-2 dark:border-bg_card_pale_light ${
+            className={`left flex items-center justify-start bg-primary_dark py-2 text-secondary_pale_light dark:bg-primary_light ${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             }`}
             initial={{
@@ -109,6 +109,9 @@ const ProjectDetails = ({ darkMode }) => {
             viewport={{
               once: true,
             }}
+            whileHover={{ scale: 1.05, color: 'black' }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
             <span className="ml-[5vmin] text-xl lg:ml-[5.5vmax]">SOURCE</span>
             <FiGithub className="ml-[5vmin] text-2xl lg:ml-[5.5vmax]" />
@@ -117,7 +120,7 @@ const ProjectDetails = ({ darkMode }) => {
             href={projectDatas[currentProjectIndex].live_link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`right flex items-center justify-end bg-green-500 py-2 dark:border-bg_card_pale_light ${
+            className={`right flex items-center justify-end bg-green-500 py-2 text-secondary_pale_light dark:bg-green-500 ${
               darkMode ? 'shadow-drop-secondary-dark' : 'shadow-drop-secondary-light'
             }`}
             initial={{
@@ -132,6 +135,9 @@ const ProjectDetails = ({ darkMode }) => {
             viewport={{
               once: true,
             }}
+            whileHover={{ scale: 1.05, color: 'black' }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
             <span className="mr-[5vmin] text-xl lg:mr-[5.5vmax]">LIVE</span>
             <RxExternalLink className="mr-[5vmin] text-2xl lg:mr-[5.5vmax]" />
@@ -244,10 +250,18 @@ const ProjectDetails = ({ darkMode }) => {
             className="me-auto"
             onClick={() => window.scrollTo(0, 0)}
           >
-            <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:text-bg_card_white_light">
-              <BsArrowLeft className="mr-1 text-2xl text-text_light dark:text-bg_card_white_light" />
+            <motion.button
+              className="flex items-center rounded-md border-2 border-primary_dark px-4 py-2 text-primary_dark"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: '#e38b26',
+                color: `${darkMode ? '#030c17' : '#f1f7fd'}`,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <BsArrowLeft className="mr-1 text-2xl" />
               <span className="pl-2">Prev</span>
-            </button>
+            </motion.button>
           </Link>
         )}
         {currentProjectIndex !== projectDatas.length - 1 && (
@@ -256,10 +270,18 @@ const ProjectDetails = ({ darkMode }) => {
             className="ms-auto"
             onClick={() => window.scrollTo(0, 0)}
           >
-            <button className="flex items-center rounded-md bg-primary_dark px-4 py-2 text-text_light dark:text-bg_card_white_light">
+            <motion.button
+              className="flex items-center rounded-md border-2 border-primary_dark px-4 py-2 text-primary_dark"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: '#e38b26',
+                color: `${darkMode ? '#030c17' : '#f1f7fd'}`,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
               <span className="pr-2">Next</span>
-              <BsArrowRight className="ml-1 text-2xl text-text_light dark:text-bg_card_white_light" />
-            </button>
+              <BsArrowRight className="ml-1 text-2xl" />
+            </motion.button>
           </Link>
         )}
       </div>

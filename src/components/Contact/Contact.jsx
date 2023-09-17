@@ -85,6 +85,9 @@ const Contact = ({ darkMode }) => {
           initial={textAreaAnimationVariants.initial}
           whileInView={textAreaAnimationVariants.whileInView}
           viewport={textAreaAnimationVariants.viewport}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 10 }}
         >
           Start Collaboration
         </motion.button>

@@ -79,8 +79,8 @@ const AboutMe = ({ darkMode }) => {
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             } box-border w-[35vmin] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
-            initial={{ x: '-100vw', display: 'none' }}
-            animate={{ x: 0, display: 'block' }}
+            initial={{ x: '-100vw', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           />
         </figure>
@@ -102,8 +102,11 @@ const AboutMe = ({ darkMode }) => {
             <motion.button
               className={`${
                 darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-              } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light transition duration-150 dark:text-text_light`}
+              } flex items-center justify-center rounded-md bg-primary_dark px-4 py-[0.4rem] text-xl font-semibold text-secondary_pale_light dark:text-text_light`}
               onClick={openModal}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               Connect
             </motion.button>
