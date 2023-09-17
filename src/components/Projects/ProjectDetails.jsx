@@ -19,7 +19,7 @@ const ProjectDetails = ({ darkMode }) => {
   const prevProjectIndex = (currentProjectIndex - 1 + projectDatas.length) % projectDatas.length;
 
   return (
-    <section className="px-4 pb-[20vh] md:px-[10vmax] lg:px-[15vmax] 2xl:px-[20vmax]">
+    <section className="px-4 pb-[20vh] md:px-[10vmax] lg:px-[22vmax]">
       <motion.h1
         className="py-6 text-center font-sans text-4xl font-bold"
         initial={{
@@ -85,7 +85,7 @@ const ProjectDetails = ({ darkMode }) => {
           <img
             src={projectDatas[currentProjectIndex].image}
             alt={`${projectDatas[currentProjectIndex].title}-image`}
-            className='w-full'
+            className="w-full"
           />
         </motion.figure>
         {/* Source/Live Buttons */}
@@ -110,8 +110,8 @@ const ProjectDetails = ({ darkMode }) => {
               once: true,
             }}
           >
-            <span className="ml-[5vmin] text-xl lg:ml-[8vmax]">SOURCE</span>
-            <FiGithub className="ml-[5vmin] text-2xl lg:ml-[8vmax]" />
+            <span className="ml-[5vmin] text-xl lg:ml-[5.5vmax]">SOURCE</span>
+            <FiGithub className="ml-[5vmin] text-2xl lg:ml-[5.5vmax]" />
           </motion.a>
           <motion.a
             href={projectDatas[currentProjectIndex].live_link}
@@ -133,8 +133,8 @@ const ProjectDetails = ({ darkMode }) => {
               once: true,
             }}
           >
-            <span className="mr-[5vmin] text-xl lg:mr-[8vmax]">LIVE</span>
-            <RxExternalLink className="mr-[5vmin] text-2xl lg:mr-[8vmax]" />
+            <span className="mr-[5vmin] text-xl lg:mr-[5.5vmax]">LIVE</span>
+            <RxExternalLink className="mr-[5vmin] text-2xl lg:mr-[5.5vmax]" />
           </motion.a>
         </div>
       </motion.div>
