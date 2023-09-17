@@ -17,42 +17,42 @@ const Connect = ({ closeModal, isModalOpen }) => {
       id: 1,
       url: 'mailto:psthu.koppai@gmail.com',
       icon: (
-        <BiLogoGmail className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin]" />
+        <BiLogoGmail className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin] lg:text-[12vmin]" />
       ),
     },
     {
       id: 2,
       url: 'https://wa.me/+959796679793',
       icon: (
-        <BiLogoWhatsapp className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin]" />
+        <BiLogoWhatsapp className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin] lg:text-[12vmin]" />
       ),
     },
     {
       id: 3,
       url: 'https://discord.com/users/665938913256275980',
       icon: (
-        <BiLogoDiscordAlt className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin]" />
+        <BiLogoDiscordAlt className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin] lg:text-[12vmin]" />
       ),
     },
     {
       id: 4,
       url: 'https://twitter.com/_koppai_',
       icon: (
-        <BiLogoTwitter className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin]" />
+        <BiLogoTwitter className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin] lg:text-[12vmin]" />
       ),
     },
     {
       id: 5,
       url: 'https://www.linkedin.com/in/paingsoe-thu/',
       icon: (
-        <BiLogoLinkedin className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin]" />
+        <BiLogoLinkedin className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin] lg:text-[12vmin]" />
       ),
     },
     {
       id: 6,
       url: 'https://github.com/K0ppai',
       icon: (
-        <BiLogoGithub className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin]" />
+        <BiLogoGithub className="rounded-full bg-bg_card_white_light p-4 text-[17vmin] md:text-[10vmin] lg:text-[12vmin]" />
       ),
     },
   ];

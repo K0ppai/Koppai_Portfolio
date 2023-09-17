@@ -13,7 +13,7 @@ const Project = ({ projectData, index, darkMode }) => {
     <motion.div
       className={`${
         darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-      } flex h-[50vmin] flex-col overflow-hidden bg-transparent text-secondary_pale_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
+      } flex h-[55vmin] flex-col overflow-hidden bg-transparent text-secondary_pale_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
       initial={{
         opacity: 0,
         y: 100,
@@ -41,22 +41,24 @@ const Project = ({ projectData, index, darkMode }) => {
             isHover ? 'lg:top-0' : 'lg:top-[100%]'
           }`}
         >
-          <div className="absolute inset-0 bg-black opacity-[80%]" />
+          <div className="absolute inset-0 bg-black opacity-[65%]" />
           <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
             <motion.button
-              className="absolute bottom-4 right-4 rounded-[4px] border-2 border-secondary_pale_light px-2 py-1"
+              className="absolute bottom-4 right-4 rounded-[4px] border-2 border-secondary_pale_light px-2 py-1 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
               whileHover={{
                 color: '#e38b26',
                 borderColor: '#e38b26',
               }}
             >
               See More
-              <BsArrowRight className="ml-1 inline-block" />
+              <BsArrowRight className="ml-1 inline-block xl:text-2xl" />
             </motion.button>
           </Link>
-          <h2 className="absolute left-4 top-3 text-xl font-bold ">{projectData.title}</h2>
+          <h2 className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl">
+            {projectData.title}
+          </h2>
           {/* <h2 className="absolute right-4 top-4 text-sm ">{projectData.built_date}</h2> */}
-          <div className="absolute right-4 top-4 flex w-[20%] justify-between md:w-[15%]">
+          <div className="absolute right-4 top-4 flex w-[20%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10">
             <motion.a
               href={projectData.github_link}
               target="_blank"
@@ -66,7 +68,7 @@ const Project = ({ projectData, index, darkMode }) => {
                 color: '#e38b26',
               }}
             >
-              <FiGithub className="text-2xl " />
+              <FiGithub className="text-xl xl:text-2xl" />
             </motion.a>
             <motion.a
               href={projectData.live_link}
@@ -77,10 +79,12 @@ const Project = ({ projectData, index, darkMode }) => {
                 color: '#e38b26',
               }}
             >
-              <RxExternalLink className="text-2xl " />
+              <RxExternalLink className="text-xl xl:text-2xl" />
             </motion.a>
           </div>
-          <span className="absolute bottom-4 left-4 text-lg ">{projectData.responsive}</span>
+          <span className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl">
+            {projectData.responsive}
+          </span>
         </motion.div>
         {/* Techs */}
         {/* <div className="flex flex-wrap items-center justify-center px-2 py-3">
