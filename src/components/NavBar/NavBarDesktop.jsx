@@ -72,15 +72,13 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
       <motion.ul className="flex h-[80vh] flex-col lg:h-[60vh]">
         <li
           className={`
-          ${
-            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
-          } 
+          bg-gray-200 bg-opacity-90 dark:bg-gray-900 
           ${activeSection === 'about-me' ? 'rounded-bl-[6px]' : ''}
           relative flex flex-grow flex-col items-center justify-center rounded-tl-md`}
         >
           <button
             onClick={handleNavExpand}
-            className={`z-99 absolute -left-[10px] rounded-full bg-primary_dark p-[0.5px] text-[20px] text-white`}
+            className={`z-99 absolute -left-[10px] rounded-full bg-primary_dark text-text_dark dark:text-text_light p-[0.5px] text-[20px]`}
           >
             <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
@@ -92,7 +90,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 viewport={{
-                  once: false
+                  once: false,
                 }}
               >
                 Dark
@@ -104,7 +102,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 viewport={{
-                  once: false
+                  once: false,
                 }}
               >
                 Light
@@ -113,14 +111,14 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             {darkMode ? (
               <button className="my-[4vh]">
                 <BsFillMoonStarsFill
-                  className="min-w-[24px] text-lg text-text_light dark:text-text_dark"
+                  className="min-w-[24px] text-lg text-primary_dark"
                   onClick={toggleDarkMode}
                 />
               </button>
             ) : (
               <button className="my-[4vh]">
                 <ImSun
-                  className="min-w-[24px] text-lg text-text_light dark:text-text_dark"
+                  className="min-w-[24px] text-lg text-primary_dark"
                   onClick={toggleDarkMode}
                 />
               </button>
@@ -129,11 +127,12 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${
-            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
-          } 
           ${activeSection === 'projects' ? 'rounded-bl-[6px]' : ''}
-          ${activeSection === 'about-me' && 'bg-bg_light py-[4vh] dark:bg-bg_dark'}`}
+          ${
+            activeSection === 'about-me'
+              ? 'bg-bg_light py-[4vh] dark:bg-bg_dark'
+              : 'bg-gray-200 bg-opacity-90 dark:bg-gray-900'
+          }`}
         >
           {activeSection === 'about-me' ? (
             <>
@@ -150,28 +149,29 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.3, ease: 'easeInOut' }}
               viewport={{
-                once: false
+                once: false,
               }}
             >
               About
             </motion.span>
             <a href="#about-me" onClick={() => handleNavigation('about-me')}>
               {activeSection === 'about-me' ? (
-                <AiFillHome className="mx-0 min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+                <AiFillHome className="mx-0 min-w-[24px] text-lg text-primary_dark" />
               ) : (
-                <AiOutlineHome className="my-[4vh] min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+                <AiOutlineHome className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
               )}
             </a>
           </div>
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${
-            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
-          } 
           ${activeSection === 'about-me' ? 'rounded-tl-[6px]' : ''}
           ${activeSection === 'contact' ? 'rounded-bl-[6px]' : ''}
-          ${activeSection === 'projects' && 'bg-bg_light py-[4vh] dark:bg-bg_dark'}`}
+          ${
+            activeSection === 'projects'
+              ? 'bg-bg_light py-[4vh] dark:bg-bg_dark'
+              : 'bg-gray-200 bg-opacity-90 dark:bg-gray-900'
+          }`}
         >
           {activeSection === 'projects' ? (
             <>
@@ -188,27 +188,28 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.5, ease: 'easeInOut' }}
               viewport={{
-                once: false
+                once: false,
               }}
             >
               Projects
             </motion.span>
             <a href="#projects" onClick={() => handleNavigation('projects')}>
               {activeSection === 'projects' ? (
-                <BsFillGridFill className="mx-0 min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+                <BsFillGridFill className="mx-0 min-w-[24px] text-lg text-primary_dark" />
               ) : (
-                <BsGrid className="my-[4vh] min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+                <BsGrid className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
               )}
             </a>
           </div>
         </li>
         <li
           className={`relative flex flex-grow flex-col items-center justify-center 
-          ${
-            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
-          } 
           ${activeSection === 'projects' ? 'rounded-tl-[6px]' : ''} 
-          ${activeSection === 'contact' && 'bg-bg_light py-[4vh] dark:bg-bg_dark'}`}
+          ${
+            activeSection === 'contact'
+              ? 'bg-bg_light py-[4vh] dark:bg-bg_dark'
+              : 'bg-gray-200 bg-opacity-90 dark:bg-gray-900'
+          }`}
         >
           {activeSection === 'contact' ? (
             <>
@@ -225,16 +226,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.7, ease: 'easeInOut' }}
               viewport={{
-                once: false
+                once: false,
               }}
             >
               Contact
             </motion.span>
             <a href="#contact" onClick={() => handleNavigation('contact')}>
               {activeSection === 'contact' ? (
-                <BsFillSendFill className="mx-0 min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+                <BsFillSendFill className="mx-0 min-w-[24px] text-lg text-primary_dark" />
               ) : (
-                <BsSend className="my-[4vh] min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+                <BsSend className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
               )}
             </a>
           </div>
@@ -242,9 +243,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         <NavLink
           to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
           className={`
-          ${
-            darkMode ? 'bg-bg_card_pale_dark text-text_dark' : 'bg-bg_card_white_light text-bg_dark'
-          } 
+          bg-gray-200 bg-opacity-90 dark:bg-gray-900 
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 
           flex flex-grow flex-col items-center justify-center rounded-bl-md`}
         >
@@ -255,12 +254,12 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.9, ease: 'easeInOut' }}
               viewport={{
-                once: false
+                once: false,
               }}
             >
               Resume
             </motion.span>
-            <BsFileEarmarkText className="my-[4vh] min-w-[24px] text-lg text-text_light dark:text-text_dark" />
+            <BsFileEarmarkText className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
           </div>
         </NavLink>
       </motion.ul>
