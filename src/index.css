@@ -35,6 +35,11 @@ h6 {
   font-family: sans-serif;
 }
 
+::selection {
+  background-color: #bfefaf;
+  color: #030c17;
+}
+
 a:focus,
 a:active,
 button,

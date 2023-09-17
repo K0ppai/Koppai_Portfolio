@@ -34,13 +34,14 @@ const Projects = ({ darkMode }) => {
         />
       </div>
       <motion.h2
-        className="text-4xl font-bold"
+        className="text-3xl font-bold"
         initial={titleAnimationVariants.initial}
         whileInView={titleAnimationVariants.whileInView2}
         viewport={titleAnimationVariants.viewport}
       >
-        Portfolio
+        Highlighted Projects
       </motion.h2>
+      <p className='mt-10 text-lg'></p>
       <Swiper
         className="pb-20 pt-10"
         effect={'coverflow'}
@@ -109,7 +110,7 @@ const Projects = ({ darkMode }) => {
                 <div className="relative h-full">
                   <img src={projectData.image} alt="dota" className="h-full w-full" />
                   <div className="absolute inset-0 bg-black opacity-[60%]" />
-                  <h2 className="absolute left-4 top-3 text-2xl font-bold text-accent_dark dark:text-secondary_pale_light">
+                  <h2 className="absolute left-4 top-3 text-xl font-bold text-accent_dark dark:text-secondary_pale_light">
                     {projectData.title}
                   </h2>
                   <h2 className="absolute right-4 top-4 text-sm text-accent_dark dark:text-secondary_pale_light">

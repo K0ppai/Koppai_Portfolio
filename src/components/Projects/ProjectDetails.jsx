@@ -5,7 +5,6 @@ import { FiGithub } from 'react-icons/fi';
 import { RxExternalLink } from 'react-icons/rx';
 import './Projects.css';
 import PropTypes from 'prop-types';
-import { v4 as id } from 'uuid';
 import { motion } from 'framer-motion';
 import { titleAnimationVariants } from '@/assets/Animations/Animations';
 import { liAnimationVariants } from '@/assets/Animations/Animations';
@@ -105,7 +104,7 @@ const ProjectDetails = ({ darkMode }) => {
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { duration: 0.5, delay: 2 },
+              transition: { duration: 0.5, delay: 1 },
             }}
             viewport={{
               once: true,
@@ -128,7 +127,7 @@ const ProjectDetails = ({ darkMode }) => {
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { duration: 0.5, delay: 2 },
+              transition: { duration: 0.5, delay: 1 },
             }}
             viewport={{
               once: true,
@@ -152,7 +151,7 @@ const ProjectDetails = ({ darkMode }) => {
         <ul className="list-disc pl-4">
           {projectDatas[currentProjectIndex].tech.map((tech, index) => (
             <motion.li
-              key={id()}
+              key={index}
               className="text-text_light dark:text-secondary_pale_light"
               custom={index}
               initial={liAnimationVariants.initial}

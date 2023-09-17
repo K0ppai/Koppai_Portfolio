@@ -26,7 +26,7 @@ const Contact = ({ darkMode }) => {
         />
       </div>
       <motion.h2
-        className="text-4xl font-semibold"
+        className="text-3xl font-semibold"
         initial={titleAnimationVariants.initial}
         whileInView={titleAnimationVariants.whileInView2}
         viewport={titleAnimationVariants.viewport}
@@ -62,12 +62,17 @@ const Contact = ({ darkMode }) => {
           />
         </div>
         <motion.textarea
-          className="p-3 px-3 dark:bg-bg_card_pale_dark"
+          className="h-[250px] p-3 px-3 dark:bg-bg_card_pale_dark"
           name="Message"
           cols="11"
           rows="5"
           placeholder="What's on your mind?"
           required
+          resize="none"
+          style={{
+            userSelect: 'none',
+            resize: 'none',
+          }}
           initial={textAreaAnimationVariants.initial}
           whileInView={textAreaAnimationVariants.whileInView}
           viewport={textAreaAnimationVariants.viewport}
