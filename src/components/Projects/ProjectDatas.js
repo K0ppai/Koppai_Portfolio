@@ -12,7 +12,7 @@ const projectDatas = [
     id: 1,
     title: 'Dota2 Heros',
     description:
-      'Dota2 Heroes" is a responsive web application designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
+      '"DOTA2 HEROS" is a responsive website designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
     image: dota2Heros,
     live_link: 'https://dota2-heros.netlify.app',
     github_link: 'https://github.com/K0ppai/dota2_heros',
@@ -30,7 +30,7 @@ const projectDatas = [
     id: 2,
     title: 'SiriBox',
     description:
-      'SiriBox is a website that showcases a collection of movies and TV shows. It serves as the capstone project for the Microverse JavaScript curriculum. Developed using JavaScript, HTML, CSS, and Webpack, it utilizes API data to display content. Users can interact by liking and commenting on the website and filter shows according to genres.',
+      'SiriBox is a responsive website that exhibits TV shows and series. It utilizes the TVmaze API to obtain information about these shows. This project is developed using Pure JavaScript, coupled with the Bootstrap CSS framework to enhance the overall appearance of the website. I collaborated with another developer on implementing the functionalities, while also investing time in refining the UI designs of the project.',
     image: siribox,
     live_link: 'https://siribox.netlify.app',
     github_link: 'https://github.com/K0ppai/SiriBox',
@@ -38,9 +38,11 @@ const projectDatas = [
     responsive: 'Responsive',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
-    goal: 'project goal',
-    key_feature: 'Project key feature',
-    lesson_learned: 'Lessons learned during building project',
+    goal: "The project's main goals were to use JavaScript for creating dynamic websites and developing basic single-page applications. This involved adopting the ES6 syntax and modular code structure. Additionally, it aimed to handle asynchronous tasks efficiently using callbacks and promises, optimize code bundling with Webpack, and maintain high coding standards by following best practices and style guides. This project implemented the AAA pattern for unit testing to ensure the reliability of the JavaScript app and followed Gitflow for organized version control. It also dealt with simple git conflicts, interacted with external APIs by referring to their documentation, and effectively processed data in JSON format. Prioritizing website responsiveness, making JavaScript code asynchronous was essential. We conducted code reviews to promote collaboration and uphold code quality among team members.",
+    key_feature:
+      'To enhance searchability, I included a filtering feature based on the genre of the shows. Users can make interactions by giving likes and comments on their favorite shows. By clicking the comment button, a pop-up window will appear with details such as the description, rating, IMDB ID, genre, type of show, and a form for adding new comments.',
+    lesson_learned:
+      "Reflecting on the project, I initially designed functions to send and retrieve data from the API and then update likes and comments on the shows. However, this approach caused a delay in displaying the added likes and comments when users interacted with the website. In hindsight, a more efficient approach would have been to first update the website's display (DOM) and then send the data to the API. To keep the likes and comments consistent, data fetching could have been implemented only when a user reloads the page. This would have improved the user experience by reducing delays in showing interactions.",
   },
   {
     id: 3,
