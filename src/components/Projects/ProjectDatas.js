@@ -48,17 +48,19 @@ const projectDatas = [
     id: 3,
     title: 'Leaderboard',
     description:
-      'Leaderboard is an app that you can use to input your scores. It displays all of the user inputs from anywhere from best score to worst score.',
+      "Leaderboard project is an another stepping stone in my web development journey. It's my first project where I've used asynchronous JavaScript functions. I've used Microverse's Leaderboard API service which enabled me to send and retrieve data via API.",
     image: leaderboard,
     live_link: 'https://leaderboard-list.netlify.app',
     github_link: 'https://github.com/K0ppai/leaderboard-list-app',
-    tech: ['JavaScript', 'Bootstrap', 'POST API'],
+    tech: ['JavaScript', 'Bootstrap', 'API'],
     responsive: 'Responsive',
     built_date: 'June 2023',
     development_type: 'Front-End Development',
-    goal: 'project goal',
-    key_feature: 'Project key feature',
-    lesson_learned: 'Lessons learned during building project',
+    goal: 'In this project, my main goals are to get comfortable with callbacks and promises in JavaScript, use the latest ES6 syntax, organize my code with ES6 modules, bundle everything neatly using Webpack, interact with APIs to send and receive data (following API documentation), work with JSON, make my JavaScript code asynchronous for smoother execution, and translate medium-fidelity wireframes into a user-friendly interface.',
+    key_feature:
+      "In this project, users can input their scores, which are then stored in the API. These scores are automatically sorted from the highest to the lowest, making it easy to see who's at the top. Plus, the website is designed to be responsive, so it looks and works great on all kinds of devices.",
+    lesson_learned:
+      "This project has been a fantastic learning experience for me. I've gained valuable skills in working with asynchronous functions and APIs. It's also introduced me to the concept of using medium-fidelity wireframes to plan and build projects.",
   },
   {
     id: 4,
