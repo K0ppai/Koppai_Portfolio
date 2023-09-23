@@ -84,7 +84,7 @@ const projectDatas = [
     id: 5,
     title: 'Bookstore',
     description:
-      '[Bookstore] is a web application that allows users to add and remove books from a Book list. The project was built with React.js.',
+      "",
     image: bookstore,
     live_link: 'https://bookstore-koppai.netlify.app',
     github_link: 'https://github.com/K0ppai/bookstore_app',
