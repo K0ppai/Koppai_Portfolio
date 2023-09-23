@@ -34,6 +34,7 @@ const AboutMe = ({ darkMode }) => {
     <section className="text-lg" id="about-me">
       <Modal
         isOpen={isModalOpen}
+        darkMode={darkMode}
         onRequestClose={closeModal}
         className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
         overlayClassName="fixed inset-0 bg-black backdrop-blur-[0.2rem] bg-opacity-40 z-50"
