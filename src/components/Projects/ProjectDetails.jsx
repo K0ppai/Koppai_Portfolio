@@ -19,7 +19,7 @@ const ProjectDetails = ({ darkMode }) => {
   const prevProjectIndex = (currentProjectIndex - 1 + projectDatas.length) % projectDatas.length;
 
   return (
-    <section className="px-4 pb-[20vh] md:px-[10vmax] lg:px-[22vmax] tracking-wider md:text-justify">
+    <section className="px-4 pb-[20vh] tracking-wider md:px-[10vmax] md:text-justify lg:px-[22vmax]">
       <motion.h1
         className="py-6 text-center font-sans text-4xl font-bold"
         initial={{
@@ -55,7 +55,9 @@ const ProjectDetails = ({ darkMode }) => {
         {projectDatas[currentProjectIndex].development_type}
       </motion.h2>
       <motion.div
-        className="rounded-t-md bg-gray-300 pt-4"
+        className={`${
+          darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
+        } rounded-t-md bg-gray-300  pt-4`}
         initial={{
           opacity: 0,
         }}

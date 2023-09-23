@@ -96,7 +96,7 @@ const AboutMe = ({ darkMode }) => {
             <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
           </motion.div>
           <motion.div
-            initial={{ x: '50vw' }}
+            initial={{ x: '100vw' }}
             animate={{ x: 0, transition: { duration: 1, delay: 1, ease: 'easeIn' } }}
           >
             <motion.button
