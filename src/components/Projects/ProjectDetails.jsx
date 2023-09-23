@@ -57,7 +57,7 @@ const ProjectDetails = ({ darkMode }) => {
       <motion.div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-        } rounded-t-md bg-gray-300  pt-4`}
+        } rounded-t-md mb-8 bg-gray-300 overflow-hidden `}
         initial={{
           opacity: 0,
         }}
@@ -69,7 +69,7 @@ const ProjectDetails = ({ darkMode }) => {
           once: true,
         }}
       >
-        <div className="m-auto mb-4 h-[3px] w-14 rounded-full bg-orange-400" />
+        {/* <div className="m-auto mb-4 h-[3px] w-14 rounded-full bg-orange-400" /> */}
         <motion.figure
           initial={{
             opacity: 0,
@@ -91,7 +91,7 @@ const ProjectDetails = ({ darkMode }) => {
           />
         </motion.figure>
         {/* Source/Live Buttons */}
-        <div className="mb-8 flex justify-between">
+        <div className="flex justify-between">
           <motion.a
             href={projectDatas[currentProjectIndex].github_link}
             target="_blank"
