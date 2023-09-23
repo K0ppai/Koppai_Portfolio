@@ -66,7 +66,7 @@ const projectDatas = [
     id: 4,
     title: 'Space Travellers',
     description:
-      'Space Travellers is a web application.Users can interact with the application by joining a mission, leaving a mission,reserving rockets and viewing the list of missions and rockets.',
+      'Space Travellers is a collaborative project I worked on with another developer, and my specific responsibility was handling the missions part. The website retrieves data from the SpaceX API to showcase missions and rockets. It consists of three main pages: one for browsing and reserving rockets, another for exploring and joining missions, and a third page to view reserved rockets and joined missions.',
     image: spaceTravellers,
     live_link: 'https://space-travellers-koppai.netlify.app',
     github_link: 'https://github.com/K0ppai/space_travelers',
@@ -74,9 +74,11 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
-    goal: 'project goal',
-    key_feature: 'Project key feature',
-    lesson_learned: 'Lessons learned during building project',
+    goal: "The project goals are to create a web application using React that incorporates key development techniques and best practices. This includes using React components and props to build a modular structure, implementing React Router for navigation, connecting React with Redux for state management, effectively handling events within the app, and writing unit tests with React Testing Library to ensure code reliability. Additionally, the project aims to apply styling to the React application, utilize React hooks for state and lifecycle management, follow React's best practices and coding style guidelines, and implement store, actions, and reducers to manage application data seamlessly.",
+    key_feature:
+      'On the Rockets page, users can explore detailed information about rockets and reserve their favorite ones. Similarly, on the Missions page, they can access mission details and join them.',
+    lesson_learned:
+      "This project has shown me how vital it is to communicate effectively and plan thoroughly before starting any development work. I've come to understand how crucial it is to have a clear discussion about our folder structure and where each team member will work in advance. This prevents any unnecessary duplication of effort and helps maintain a tidy project environment. Ultimately, it ensures that all team members are working together smoothly and are on the same page.",
   },
   {
     id: 5,
