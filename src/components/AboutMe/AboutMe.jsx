@@ -5,9 +5,12 @@ import './AboutMe.css';
 import { useState } from 'react';
 import Connect from './Connect';
 import ReactModal from 'react-modal';
+import Modal from 'react-modal';
 import { VscVerifiedFilled } from 'react-icons/vsc';
 import { motion } from 'framer-motion';
 import { titleAnimationVariants } from '@/assets/Animations/Animations';
+
+Modal.setAppElement('#root');
 
 const AboutMe = ({ darkMode }) => {
   const [hoveredTech, setHoveredTech] = useState(null);

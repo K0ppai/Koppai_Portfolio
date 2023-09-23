@@ -84,17 +84,17 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
   useEffect(() => {
     if (isModalOpen) {
       // Use a setTimeout to add the transition class after a brief delay
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         const rotateElems = document.querySelectorAll('#connect .rotate');
         rotateElems.forEach((elem) => {
           elem.classList.add('active');
         });
-      }, 10);
+      }, 0);
 
       // Cleanup function to clear the timeout when component unmounts or modal closes
-      return () => {
-        clearTimeout(timeout);
-      };
+      // return () => {
+      //   clearTimeout(timeout);
+      // };
     }
   }, [isModalOpen]);
 
