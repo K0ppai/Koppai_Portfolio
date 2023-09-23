@@ -4,7 +4,6 @@ import { techs } from '@/assets/Techs/Techs';
 import './AboutMe.css';
 import { useState } from 'react';
 import Connect from './Connect';
-import ReactModal from 'react-modal';
 import Modal from 'react-modal';
 import { VscVerifiedFilled } from 'react-icons/vsc';
 import { motion } from 'framer-motion';
@@ -33,7 +32,7 @@ const AboutMe = ({ darkMode }) => {
 
   return (
     <section className="text-lg" id="about-me">
-      <ReactModal
+      <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
@@ -41,7 +40,7 @@ const AboutMe = ({ darkMode }) => {
         closeTimeoutMS={600}
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} darkMode={darkMode} />
-      </ReactModal>
+      </Modal>
       {/* <ReactModal
         isOpen={isModalOpen}
         onRequestClose={closeModal}

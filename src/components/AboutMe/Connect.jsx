@@ -9,14 +9,9 @@ import {
 } from 'react-icons/bi';
 import './AboutMe.css';
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const Connect = ({ closeModal, isModalOpen, darkMode }) => {
-  const [isDarkMode, setIsDarkMode] = useState(darkMode);
-
-  useEffect(() => {
-    setIsDarkMode(darkMode);
-  }, [darkMode]);
 
   const socialMedias = [
     {
@@ -25,7 +20,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       icon: (
         <BiLogoGmail
           className={`bg-bg_light text-primary_dark ${
-            isDarkMode ? 'bg-bg_dark' : ''
+            darkMode ? 'bg-bg_dark' : ''
           } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
@@ -36,7 +31,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       icon: (
         <BiLogoWhatsapp
           className={`bg-bg_light text-primary_dark ${
-            isDarkMode ? 'bg-bg_dark' : ''
+            darkMode ? 'bg-bg_dark' : ''
           } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
@@ -47,7 +42,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       icon: (
         <BiLogoDiscordAlt
           className={`bg-bg_light text-primary_dark ${
-            isDarkMode ? 'bg-bg_dark' : ''
+            darkMode ? 'bg-bg_dark' : ''
           } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
@@ -58,7 +53,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       icon: (
         <BiLogoTwitter
           className={`bg-bg_light text-primary_dark ${
-            isDarkMode ? 'bg-bg_dark' : ''
+            darkMode ? 'bg-bg_dark' : ''
           } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
@@ -69,7 +64,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       icon: (
         <BiLogoLinkedin
           className={`bg-bg_light text-primary_dark ${
-            isDarkMode ? 'bg-bg_dark' : ''
+            darkMode ? 'bg-bg_dark' : ''
           } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
@@ -80,7 +75,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       icon: (
         <BiLogoGithub
           className={`bg-bg_light text-primary_dark ${
-            isDarkMode ? 'bg-bg_dark' : ''
+            darkMode ? 'bg-bg_dark' : ''
           } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
