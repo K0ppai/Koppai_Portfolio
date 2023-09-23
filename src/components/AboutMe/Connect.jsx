@@ -12,16 +12,13 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 
 const Connect = ({ closeModal, isModalOpen, darkMode }) => {
-
   const socialMedias = [
     {
       id: 1,
       url: 'mailto:psthu.koppai@gmail.com',
       icon: (
         <BiLogoGmail
-          className={`bg-bg_light text-primary_dark ${
-            darkMode ? 'bg-bg_dark' : ''
-          } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -30,9 +27,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://wa.me/+959796679793',
       icon: (
         <BiLogoWhatsapp
-          className={`bg-bg_light text-primary_dark ${
-            darkMode ? 'bg-bg_dark' : ''
-          } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -41,9 +36,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://discord.com/users/665938913256275980',
       icon: (
         <BiLogoDiscordAlt
-          className={`bg-bg_light text-primary_dark ${
-            darkMode ? 'bg-bg_dark' : ''
-          } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -52,9 +45,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://twitter.com/_koppai_',
       icon: (
         <BiLogoTwitter
-          className={`bg-bg_light text-primary_dark ${
-            darkMode ? 'bg-bg_dark' : ''
-          } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -63,9 +54,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://www.linkedin.com/in/paingsoe-thu/',
       icon: (
         <BiLogoLinkedin
-          className={`bg-bg_light text-primary_dark ${
-            darkMode ? 'bg-bg_dark' : ''
-          } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -74,9 +63,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://github.com/K0ppai',
       icon: (
         <BiLogoGithub
-          className={`bg-bg_light text-primary_dark ${
-            darkMode ? 'bg-bg_dark' : ''
-          } rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -101,13 +88,13 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
 
   return (
     <div
-      className="fixed left-[50%] top-[50%] flex w-[90vw] translate-x-[-50%] translate-y-[-50%] items-center justify-center md:w-[50vh] lg:w-[80vh]"
+      className={`${
+        darkMode ? 'dark' : ''
+      } fixed left-[50%] top-[50%] flex w-[90vw] translate-x-[-50%] translate-y-[-50%] items-center justify-center md:w-[50vh] lg:w-[80vh]`}
       id="connect"
     >
       <button
-        className={`absolute z-[999] flex h-[25vmin] w-[25vmin] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light ${
-          darkMode ? 'bg-bg_dark' : ''
-        } md:h-[15vmin] md:w-[15vmin]`}
+        className={`absolute z-[999] flex h-[25vmin] w-[25vmin] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light dark:bg-bg_dark md:h-[15vmin] md:w-[15vmin]`}
         onClick={closeModal}
       >
         <BiX className="text-[10vmin] text-primary_dark md:text-[9vmin] lg:text-[8vmin]" />
