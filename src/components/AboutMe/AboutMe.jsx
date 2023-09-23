@@ -34,10 +34,10 @@ const AboutMe = ({ darkMode }) => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
-        overlayClassName="fixed inset-0 bg-black backdrop-blur-[0.1rem] bg-opacity-40 z-50"
+        overlayClassName="fixed inset-0 bg-black backdrop-blur-[0.2rem] bg-opacity-40 z-50"
         closeTimeoutMS={600}
       >
-        <Connect closeModal={closeModal} isModalOpen={isModalOpen} />
+        <Connect closeModal={closeModal} isModalOpen={isModalOpen} darkMode={darkMode} />
       </ReactModal>
       {/* <ReactModal
         isOpen={isModalOpen}
