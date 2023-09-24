@@ -4,7 +4,7 @@ import {
   leaderboard,
   siribox,
   spaceTravellers,
-  todo,
+  // todo,
 } from '../../assets/images/images';
 
 const projectDatas = [
@@ -96,20 +96,20 @@ const projectDatas = [
     key_feature: 'Project key feature',
     lesson_learned: 'Lessons learned during building project',
   },
-  {
-    id: 6,
-    title: 'Todo List',
-    description: 'This is project 1',
-    image: todo,
-    live_link: 'https://todo-koppai.netlify.app',
-    github_link: 'https://github.com/K0ppai/to-do-list-app',
-    tech: ['JavaScript', 'Local Storage'],
-    responsive: 'Responsive',
-    built_date: 'June 2023',
-    development_type: 'Front-End Development',
-    goal: 'project goal',
-    key_feature: 'Project key feature',
-    lesson_learned: 'Lessons learned during building project',
-  },
+  // {
+  //   id: 6,
+  //   title: 'Todo List',
+  //   description: 'This is project 1',
+  //   image: todo,
+  //   live_link: 'https://todo-koppai.netlify.app',
+  //   github_link: 'https://github.com/K0ppai/to-do-list-app',
+  //   tech: ['JavaScript', 'Local Storage'],
+  //   responsive: 'Responsive',
+  //   built_date: 'June 2023',
+  //   development_type: 'Front-End Development',
+  //   goal: 'project goal',
+  //   key_feature: 'Project key feature',
+  //   lesson_learned: 'Lessons learned during building project',
+  // },
 ];
 export default projectDatas;
