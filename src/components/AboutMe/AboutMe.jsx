@@ -155,10 +155,10 @@ const AboutMe = ({ darkMode }) => {
             animate={{ x: 0 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <h1 className="text-2xl text-gray-500">About Me</h1>
-            <div className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]" />
+            <h1 className="text-2xl">About Me</h1>
+            <div className="ml-2 h-[1px] w-[12vmin] bg-bg_dark dark:bg-white md:w-[48px]" />
           </motion.div>
-          <p className="sm:text-justify">
+          <p className="text-gray-500 dark:text-gray-400 sm:text-justify">
             Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
             aesthetic websites using React & Redux and TailwindCss. Spending 789+ hours mastering
             algorithms, data structures, and front-end development while simultaneously developing
@@ -177,7 +177,7 @@ const AboutMe = ({ darkMode }) => {
       <section className="px-[5vmin] md:px-[13vmax] 2xl:px-[20vmax]">
         <div className="flex items-center py-8">
           <motion.h1
-            className="text-2xl text-gray-500"
+            className="text-2xl"
             initial={titleAnimationVariants.initial}
             whileInView={titleAnimationVariants.whileInView}
             viewport={titleAnimationVariants.viewport}
@@ -185,14 +185,14 @@ const AboutMe = ({ darkMode }) => {
             My Skills
           </motion.h1>
           <motion.div
-            className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]"
+            className="ml-2 h-[1px] w-[12vmin] bg-bg_dark dark:bg-white md:w-[48px]"
             initial={titleAnimationVariants.initial}
             whileInView={titleAnimationVariants.whileInView}
             viewport={titleAnimationVariants.viewport}
           />
         </div>
         <motion.p
-          className="mb-8"
+          className="mb-8 text-gray-500 dark:text-gray-400"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}

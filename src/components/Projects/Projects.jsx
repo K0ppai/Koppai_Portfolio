@@ -17,7 +17,7 @@ const Projects = ({ darkMode }) => {
     <section className="px-[5vmin] md:px-[13vmax] 2xl:px-[20vmax]" id="projects">
       <div className="flex items-center py-8 pt-20">
         <motion.h1
-          className="text-2xl text-gray-500"
+          className="text-2xl"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}
@@ -25,19 +25,19 @@ const Projects = ({ darkMode }) => {
           Projects
         </motion.h1>
         <motion.div
-          className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]"
+          className="ml-2 h-[1px] w-[12vmin] dark:bg-white bg-text_light md:w-[48px]"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}
         />
       </div>
       <motion.h2
-        className="text-3xl font-bold"
+        className="text-gray-400"
         initial={titleAnimationVariants.initial}
         whileInView={titleAnimationVariants.whileInView2}
         viewport={titleAnimationVariants.viewport}
       >
-        Highlighted Projects
+        My Highlighted Projects
       </motion.h2>
       <p className="mt-10 text-lg"></p>
       <Swiper

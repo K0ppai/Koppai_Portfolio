@@ -57,7 +57,7 @@ const ProjectDetails = ({ darkMode }) => {
       <motion.div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-        } rounded-t-md mb-8 bg-gray-300 overflow-hidden `}
+        } mb-8 overflow-hidden rounded-t-md bg-gray-300 text-gray-500 dark:text-gray-400 `}
         initial={{
           opacity: 0,
         }}
@@ -160,7 +160,7 @@ const ProjectDetails = ({ darkMode }) => {
           {projectDatas[currentProjectIndex].tech.map((tech, index) => (
             <motion.li
               key={index}
-              className="text-text_light dark:text-secondary_pale_light"
+              className="text-gray-500 dark:text-gray-400"
               custom={index}
               initial={liAnimationVariants.initial}
               whileInView={liAnimationVariants.whileInView}
@@ -182,7 +182,7 @@ const ProjectDetails = ({ darkMode }) => {
           INTRODUCTION
         </motion.h2>
         <motion.p
-          className="mb-8"
+          className="mb-8 text-gray-500 dark:text-gray-400"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
@@ -200,7 +200,7 @@ const ProjectDetails = ({ darkMode }) => {
           PURPOSE AND GOAL
         </motion.h2>
         <motion.p
-          className="mb-8"
+          className="mb-8 text-gray-500 dark:text-gray-400"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
@@ -218,7 +218,7 @@ const ProjectDetails = ({ darkMode }) => {
           SPOTLIGHT
         </motion.h2>
         <motion.p
-          className="mb-8"
+          className="mb-8 text-gray-500 dark:text-gray-400"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
@@ -236,7 +236,7 @@ const ProjectDetails = ({ darkMode }) => {
           LESSON LEARNED
         </motion.h2>
         <motion.p
-          className="mb-8"
+          className="mb-8 text-gray-500 dark:text-gray-400"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}

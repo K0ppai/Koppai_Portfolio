@@ -41,7 +41,7 @@ const Project = ({ projectData, index, darkMode }) => {
             isHover ? 'lg:top-0' : 'lg:top-[100%]'
           }`}
         >
-          <div className="absolute w-[120%] h-[120%] bg-black bg-opacity-60 lg:bg-opacity-70" />
+          <div className="absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80" />
           <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
             <motion.button
               className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] border-2 border-secondary_pale_light px-2 py-1 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"

@@ -11,7 +11,7 @@ const Contact = ({ darkMode }) => {
     >
       <div className="flex items-center py-8">
         <motion.h1
-          className="text-2xl text-gray-500"
+          className="text-2xl"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}
@@ -19,14 +19,14 @@ const Contact = ({ darkMode }) => {
           Contact Me
         </motion.h1>
         <motion.div
-          className="ml-2 h-[1px] w-[12vmin] bg-gray-500 md:w-[48px]"
+          className="ml-2 h-[1px] w-[12vmin] bg-text_dark md:w-[48px]"
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
           viewport={titleAnimationVariants.viewport}
         />
       </div>
       <motion.h2
-        className="text-3xl font-semibold"
+        className="text-gray-400"
         initial={titleAnimationVariants.initial}
         whileInView={titleAnimationVariants.whileInView2}
         viewport={titleAnimationVariants.viewport}
