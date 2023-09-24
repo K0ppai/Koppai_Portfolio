@@ -1,4 +1,4 @@
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   BsFileEarmarkText,
   BsFillMoonStarsFill,
@@ -97,12 +97,12 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
             <ImSun className="mx-[4vw] text-2xl text-primary_dark" />
           )}
         </button>
-        <NavLink
-          href="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
+        <a
+          href="https://docs.google.com/document/d/13VXPE2wM48DAPK3_WT7ezjwauV8LerirY-1tkKwVdzE/edit?usp=sharing"
           className="flex flex-col items-center justify-center"
         >
           <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
-        </NavLink>
+        </a>
         <a
           href="#contact"
           className={`flex flex-col items-center justify-center ${

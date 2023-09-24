@@ -78,7 +78,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         >
           <button
             onClick={handleNavExpand}
-            className={`z-99 absolute -left-[10px] rounded-full bg-primary_dark text-text_dark dark:text-text_light p-[0.5px] text-[20px]`}
+            className={`z-99 absolute -left-[10px] rounded-full bg-primary_dark p-[0.5px] text-[20px] text-text_dark dark:text-text_light`}
           >
             <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
@@ -241,7 +241,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <NavLink
-          to="https://drive.google.com/file/d/1ulRSgcJ64u2OVebKbS7-22qyLPuJrHi4/view?usp=drive_link"
+          to="https://docs.google.com/document/d/13VXPE2wM48DAPK3_WT7ezjwauV8LerirY-1tkKwVdzE/edit?usp=sharing"
           className={`
           bg-gray-200 bg-opacity-90 dark:bg-gray-900 
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 
