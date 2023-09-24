@@ -45,10 +45,9 @@ const Project = ({ projectData, index, darkMode }) => {
           <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
             <motion.button
               className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+              whileHover={{ scale: 1.03, color: '#030c17' }}
             >
-              <span>See More</span>
+              See More
               <BsArrow90DegLeft className="ml-1 rotate-90 text-base xl:text-2xl" />
             </motion.button>
           </Link>
