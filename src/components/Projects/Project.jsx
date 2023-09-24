@@ -44,12 +44,9 @@ const Project = ({ projectData, index, darkMode }) => {
           <div className="absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80" />
           <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
             <motion.button
-              className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] border-2 border-secondary_pale_light px-2 py-1 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
-              whileHover={{
-                scale: 1.05,
-                color: '#e38b26',
-                borderColor: '#e38b26',
-              }}
+              className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               <span>See More</span>
               <BsArrow90DegLeft className="ml-1 rotate-90 text-base xl:text-2xl" />
@@ -59,7 +56,7 @@ const Project = ({ projectData, index, darkMode }) => {
             {projectData.title}
           </h2>
           {/* <h2 className="absolute right-4 top-4 text-sm ">{projectData.built_date}</h2> */}
-          <div className="absolute right-4 top-4 flex w-[20%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10">
+          <div className="absolute right-4 top-4 flex w-[22%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10">
             <motion.a
               href={projectData.github_link}
               target="_blank"
@@ -70,7 +67,7 @@ const Project = ({ projectData, index, darkMode }) => {
                 scale: 1.1,
               }}
             >
-              <FiGithub className="text-xl xl:text-2xl" />
+              <FiGithub className="text-xl lg:text-[26px]" />
             </motion.a>
             <motion.a
               href={projectData.live_link}
@@ -82,7 +79,7 @@ const Project = ({ projectData, index, darkMode }) => {
                 scale: 1.1,
               }}
             >
-              <FiExternalLink className="text-xl xl:text-2xl" />
+              <FiExternalLink className="text-xl lg:text-[26px]" />
             </motion.a>
           </div>
           <span className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl">
