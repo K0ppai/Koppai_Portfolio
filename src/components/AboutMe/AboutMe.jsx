@@ -167,7 +167,7 @@ const AboutMe = ({ darkMode }) => {
             collaborate with international remote developers. Built over 9+ projects in just three
             months.
             <br />
-            Now I&apos;m learning back-end web development at Microverse, a remote software
+            Now I&apos;m diving into back-end technologies at Microverse, a remote software
             development school located in the US that uses pair programming and project building to
             teach development.
           </p>
