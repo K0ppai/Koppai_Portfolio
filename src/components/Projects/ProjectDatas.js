@@ -12,7 +12,7 @@ const projectDatas = [
     id: 1,
     title: 'Dota2 Heros',
     description:
-      '"DOTA2 HEROS" is a responsive website designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
+      'DOTA2 HEROS is a responsive website designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
     image: dota2Heros,
     live_link: 'https://dota2-heros.netlify.app',
     github_link: 'https://github.com/K0ppai/dota2_heros',
@@ -30,7 +30,7 @@ const projectDatas = [
     id: 2,
     title: 'SiriBox',
     description:
-      'SiriBox is a responsive website that exhibits TV shows and series. It utilizes the TVmaze API to obtain information about these shows. This project is developed using Pure JavaScript, coupled with the Bootstrap CSS framework to enhance the overall appearance of the website. I collaborated with another developer on implementing the functionalities, while also investing time in refining the UI designs of the project.',
+      'SIRIBOX is a responsive website that exhibits TV shows and series. It utilizes the TVmaze API to obtain information about these shows. This project is developed using Pure JavaScript, coupled with the Bootstrap CSS framework to enhance the overall appearance of the website. I collaborated with another developer on implementing the functionalities, while also investing time in refining the UI designs of the project.',
     image: siribox,
     live_link: 'https://siribox.netlify.app',
     github_link: 'https://github.com/K0ppai/SiriBox',
@@ -48,7 +48,7 @@ const projectDatas = [
     id: 3,
     title: 'Leaderboard',
     description:
-      "Leaderboard project is an another stepping stone in my web development journey. It's my first project where I've used asynchronous JavaScript functions. I've used Microverse's Leaderboard API service which enabled me to send and retrieve data via API.",
+      "LEADERBOARD project is an another stepping stone in my web development journey. It's my first project where I've used asynchronous JavaScript functions. I've used Microverse's Leaderboard API service which enabled me to send and retrieve data via API.",
     image: leaderboard,
     live_link: 'https://leaderboard-list.netlify.app',
     github_link: 'https://github.com/K0ppai/leaderboard-list-app',
@@ -66,7 +66,7 @@ const projectDatas = [
     id: 4,
     title: 'Space Travellers',
     description:
-      'Space Travellers is a collaborative project I worked on with another developer, and my specific responsibility was handling the missions part. The website retrieves data from the SpaceX API to showcase missions and rockets. It consists of three main pages: one for browsing and reserving rockets, another for exploring and joining missions, and a third page to view reserved rockets and joined missions.',
+      'SPACE TRAVELLERS is a collaborative project I worked on with another developer, and my specific responsibility was handling the missions part. The website retrieves data from the SpaceX API to showcase missions and rockets. It consists of three main pages: one for browsing and reserving rockets, another for exploring and joining missions, and a third page to view reserved rockets and joined missions.',
     image: spaceTravellers,
     live_link: 'https://space-travellers-koppai.netlify.app',
     github_link: 'https://github.com/K0ppai/space_travelers',
@@ -84,7 +84,7 @@ const projectDatas = [
     id: 5,
     title: 'Bookstore',
     description:
-      "",
+      'BOOKSTORE project has been a valuable learning experience for me as it taught me how to use React together with Redux. The app uses the Bookstore API provided by Microverse, which grants me the ability to perform essential operations such as retrieving books, adding new books along with their genres and authors, and removing books.',
     image: bookstore,
     live_link: 'https://bookstore-koppai.netlify.app',
     github_link: 'https://github.com/K0ppai/bookstore_app',
@@ -92,9 +92,11 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
-    goal: 'project goal',
-    key_feature: 'Project key feature',
-    lesson_learned: 'Lessons learned during building project',
+    goal: 'The project goals are to understand the concept of state management, use store, actions, and reducers in React, connect React and Redux, and connect an existing API via Redux to use the data for displaying content on the UI.',
+    key_feature:
+      'This app offers three key features: it allows you to view a list of books, add new books along with their genres and authors, and remove books from the list.',
+    lesson_learned:
+      'After finishing this project, I learned how to use Redux and React icons to make the user interface look better. In the middle of this project, my coding partner inspired me to explore the Tailwind CSS framework and implement dark mode on websites. All of this has helped me become a better frontend developer.',
   },
   // {
   //   id: 6,
