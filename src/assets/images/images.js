@@ -6,6 +6,6 @@ import leaderboard from './leaderboard1.png';
 import todo from './todo.png';
 import awesomeBooks from './awesome_books.png';
 import matrix from './matrix.png';
-import profile from './profile.jpg'
+import profile from './profile1.jpg'
 
 export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, todo, awesomeBooks, matrix,profile };
