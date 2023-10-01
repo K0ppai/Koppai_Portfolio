@@ -18,7 +18,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'mailto:psthu.koppai@gmail.com',
       icon: (
         <BiLogoGmail
-          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -27,7 +27,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://wa.me/+959796679793',
       icon: (
         <BiLogoWhatsapp
-          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -36,7 +36,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://discord.com/users/665938913256275980',
       icon: (
         <BiLogoDiscordAlt
-          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -45,7 +45,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://twitter.com/_koppai_',
       icon: (
         <BiLogoTwitter
-          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -54,7 +54,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://www.linkedin.com/in/paingsoe-thu/',
       icon: (
         <BiLogoLinkedin
-          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -63,7 +63,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://github.com/K0ppai',
       icon: (
         <BiLogoGithub
-          className={`bg-bg_light text-primary_dark dark:bg-bg_dark dark:bg-opacity-80 rounded-full bg-opacity-80 p-4 text-[17vmin] backdrop-blur-sm md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
         />
       ),
     },
@@ -71,18 +71,12 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
 
   useEffect(() => {
     if (isModalOpen) {
-      // Use a setTimeout to add the transition class after a brief delay
       setTimeout(() => {
         const rotateElems = document.querySelectorAll('#connect .rotate');
         rotateElems.forEach((elem) => {
           elem.classList.add('active');
         });
       }, 0);
-
-      // Cleanup function to clear the timeout when component unmounts or modal closes
-      // return () => {
-      //   clearTimeout(timeout);
-      // };
     }
   }, [isModalOpen]);
 

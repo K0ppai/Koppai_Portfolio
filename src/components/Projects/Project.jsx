@@ -54,7 +54,6 @@ const Project = ({ projectData, index, darkMode }) => {
           <h2 className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl">
             {projectData.title}
           </h2>
-          {/* <h2 className="absolute right-4 top-4 text-sm ">{projectData.built_date}</h2> */}
           <div className="absolute right-4 top-4 flex w-[22%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10">
             <motion.a
               href={projectData.github_link}
@@ -85,23 +84,6 @@ const Project = ({ projectData, index, darkMode }) => {
             {projectData.responsive}
           </span>
         </motion.div>
-        {/* Techs */}
-        {/* <div className="flex flex-wrap items-center justify-center px-2 py-3">
-                  {projectData.tech.map((tech) => (
-                    <span
-                      key={id()}
-                      className="mx-1 rounded px-2 py-1 font-bold text-accent_dark dark:bg-bg_card_dark dark:text-text_dark"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div> */}
-        {/* See More Btn */}
-        {/* <div className="flex justify-center">
-                  <button className="my-4 rounded-md bg-primary_light px-12 pb-3 text-lg font-bold text-secondary_pale_light dark:bg-secondary_dark dark:text-secondary_pale_light">
-                    <Link to={`/projects/${projectData.id}`}>See More</Link>
-                  </button>
-                </div> */}
       </div>
     </motion.div>
   );

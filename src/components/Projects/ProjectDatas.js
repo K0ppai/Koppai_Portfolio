@@ -4,7 +4,6 @@ import {
   leaderboard,
   siribox,
   spaceTravellers,
-  // todo,
 } from '../../assets/images/images';
 
 const projectDatas = [
@@ -98,20 +97,5 @@ const projectDatas = [
     lesson_learned:
       'After finishing this project, I learned how to use Redux and React icons to make the user interface look better. In the middle of this project, my coding partner inspired me to explore the Tailwind CSS framework and implement dark mode on websites. All of this has helped me become a better frontend developer.',
   },
-  // {
-  //   id: 6,
-  //   title: 'Todo List',
-  //   description: 'This is project 1',
-  //   image: todo,
-  //   live_link: 'https://todo-koppai.netlify.app',
-  //   github_link: 'https://github.com/K0ppai/to-do-list-app',
-  //   tech: ['JavaScript', 'Local Storage'],
-  //   responsive: 'Responsive',
-  //   built_date: 'June 2023',
-  //   development_type: 'Front-End Development',
-  //   goal: 'project goal',
-  //   key_feature: 'Project key feature',
-  //   lesson_learned: 'Lessons learned during building project',
-  // },
 ];
 export default projectDatas;
