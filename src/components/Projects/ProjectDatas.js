@@ -1,0 +1,101 @@
+import {
+  bookstore,
+  dota2Heros,
+  leaderboard,
+  siribox,
+  spaceTravellers,
+} from '../../assets/images/images';
+
+const projectDatas = [
+  {
+    id: 1,
+    title: 'Dota2 Heros',
+    description:
+      'DOTA2 HEROS is a responsive website designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
+    image: dota2Heros,
+    live_link: 'https://dota2-heros.netlify.app',
+    github_link: 'https://github.com/K0ppai/dota2_heros',
+    responsive: 'Responsive',
+    tech: ['React', 'Redux', 'TailwindCss', 'Rest API'],
+    built_date: 'August 2023',
+    development_type: 'Front-End Development',
+    goal: 'The goal of this project was to use react components, react props, react router, connect react and redux, handle events in a react app, write integration tests with a react testing library, use styles in a react app, use react life cycle methods, apply react best practices and language style guides in code, use store, actions and reducers in react.',
+    key_feature:
+      'This app provides search feature which allows users to have the capability to search for their favorite heroes by name. One of the standout features that I take great pride in is the hero animation, which you can experience when visiting the hero detail page.',
+    lesson_learned:
+      'One of the notable challenges I encountered during this project was implementing real-time dynamic rendering. Ensuring that the app updated and displayed results as users typed hero names was a complex task. However, this project served as a valuable learning experience, equipping me with the skills to master dynamic rendering in web applications.',
+  },
+  {
+    id: 2,
+    title: 'SiriBox',
+    description:
+      'SIRIBOX is a responsive website that exhibits TV shows and series. It utilizes the TVmaze API to obtain information about these shows. This project is developed using Pure JavaScript, coupled with the Bootstrap CSS framework to enhance the overall appearance of the website. I collaborated with another developer on implementing the functionalities, while also investing time in refining the UI designs of the project.',
+    image: siribox,
+    live_link: 'https://siribox.netlify.app',
+    github_link: 'https://github.com/K0ppai/SiriBox',
+    tech: ['JavaScript', 'Bootstrap', 'Rest API'],
+    responsive: 'Responsive',
+    built_date: 'July 2023',
+    development_type: 'Front-End Development',
+    goal: "The project's main goals were to use JavaScript for creating dynamic websites and developing basic single-page applications. This involved adopting the ES6 syntax and modular code structure. Additionally, it aimed to handle asynchronous tasks efficiently using callbacks and promises, optimize code bundling with Webpack, and maintain high coding standards by following best practices and style guides. This project implemented the AAA pattern for unit testing to ensure the reliability of the JavaScript app and followed Gitflow for organized version control. It also dealt with simple git conflicts, interacted with external APIs by referring to their documentation, and effectively processed data in JSON format. Prioritizing website responsiveness, making JavaScript code asynchronous was essential. We conducted code reviews to promote collaboration and uphold code quality among team members.",
+    key_feature:
+      'To enhance searchability, I included a filtering feature based on the genre of the shows. Users can make interactions by giving likes and comments on their favorite shows. By clicking the comment button, a pop-up window will appear with details such as the description, rating, IMDB ID, genre, type of show, and a form for adding new comments.',
+    lesson_learned:
+      "Reflecting on the project, I initially designed functions to send and retrieve data from the API and then update likes and comments on the shows. However, this approach caused a delay in displaying the added likes and comments when users interacted with the website. In hindsight, a more efficient approach would have been to first update the website's display (DOM) and then send the data to the API. To keep the likes and comments consistent, data fetching could have been implemented only when a user reloads the page. This would have improved the user experience by reducing delays in showing interactions.",
+  },
+  {
+    id: 3,
+    title: 'Leaderboard',
+    description:
+      "LEADERBOARD project is an another stepping stone in my web development journey. It's my first project where I've used asynchronous JavaScript functions. I've used Microverse's Leaderboard API service which enabled me to send and retrieve data via API.",
+    image: leaderboard,
+    live_link: 'https://leaderboard-list.netlify.app',
+    github_link: 'https://github.com/K0ppai/leaderboard-list-app',
+    tech: ['JavaScript', 'Bootstrap', 'API'],
+    responsive: 'Responsive',
+    built_date: 'June 2023',
+    development_type: 'Front-End Development',
+    goal: 'In this project, my main goals are to get comfortable with callbacks and promises in JavaScript, use the latest ES6 syntax, organize my code with ES6 modules, bundle everything neatly using Webpack, interact with APIs to send and receive data (following API documentation), work with JSON, make my JavaScript code asynchronous for smoother execution, and translate medium-fidelity wireframes into a user-friendly interface.',
+    key_feature:
+      "In this project, users can input their scores, which are then stored in the API. These scores are automatically sorted from the highest to the lowest, making it easy to see who's at the top. Plus, the website is designed to be responsive, so it looks and works great on all kinds of devices.",
+    lesson_learned:
+      "This project has been a fantastic learning experience for me. I've gained valuable skills in working with asynchronous functions and APIs. It's also introduced me to the concept of using medium-fidelity wireframes to plan and build projects.",
+  },
+  {
+    id: 4,
+    title: 'Space Travellers',
+    description:
+      'SPACE TRAVELLERS is a collaborative project I worked on with another developer, and my specific responsibility was handling the missions part. The website retrieves data from the SpaceX API to showcase missions and rockets. It consists of three main pages: one for browsing and reserving rockets, another for exploring and joining missions, and a third page to view reserved rockets and joined missions.',
+    image: spaceTravellers,
+    live_link: 'https://space-travellers-koppai.netlify.app',
+    github_link: 'https://github.com/K0ppai/space_travelers',
+    tech: ['React', 'Redux', 'Rest API'],
+    responsive: 'Desktop',
+    built_date: 'July 2023',
+    development_type: 'Front-End Development',
+    goal: "The project goals are to create a web application using React that incorporates key development techniques and best practices. This includes using React components and props to build a modular structure, implementing React Router for navigation, connecting React with Redux for state management, effectively handling events within the app, and writing unit tests with React Testing Library to ensure code reliability. Additionally, the project aims to apply styling to the React application, utilize React hooks for state and lifecycle management, follow React's best practices and coding style guidelines, and implement store, actions, and reducers to manage application data seamlessly.",
+    key_feature:
+      'On the Rockets page, users can explore detailed information about rockets and reserve their favorite ones. Similarly, on the Missions page, they can access mission details and join them.',
+    lesson_learned:
+      "This project has shown me how vital it is to communicate effectively and plan thoroughly before starting any development work. I've come to understand how crucial it is to have a clear discussion about our folder structure and where each team member will work in advance. This prevents any unnecessary duplication of effort and helps maintain a tidy project environment. Ultimately, it ensures that all team members are working together smoothly and are on the same page.",
+  },
+  {
+    id: 5,
+    title: 'Bookstore',
+    description:
+      'BOOKSTORE project has been a valuable learning experience for me as it taught me how to use React together with Redux. The app uses the Bookstore API provided by Microverse, which grants me the ability to perform essential operations such as retrieving books, adding new books along with their genres and authors, and removing books.',
+    image: bookstore,
+    live_link: 'https://bookstore-koppai.netlify.app',
+    github_link: 'https://github.com/K0ppai/bookstore_app',
+    tech: ['React', 'Redux', 'Rest API'],
+    responsive: 'Desktop',
+    built_date: 'July 2023',
+    development_type: 'Front-End Development',
+    goal: 'The project goals are to understand the concept of state management, use store, actions, and reducers in React, connect React and Redux, and connect an existing API via Redux to use the data for displaying content on the UI.',
+    key_feature:
+      'This app offers three key features: it allows you to view a list of books, add new books along with their genres and authors, and remove books from the list.',
+    lesson_learned:
+      'After finishing this project, I learned how to use Redux and React icons to make the user interface look better. In the middle of this project, my coding partner inspired me to explore the Tailwind CSS framework and implement dark mode on websites. All of this has helped me become a better frontend developer.',
+  },
+];
+export default projectDatas;
