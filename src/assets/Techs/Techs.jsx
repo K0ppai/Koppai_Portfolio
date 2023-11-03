@@ -17,86 +17,78 @@ import { v4 as id } from 'uuid';
 const techs = [
   {
     id: id(),
-    originalElement: <SiReact className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiReact className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiReact className="rotate-in-center text-[17vmin] text-[#00D8FF] md:text-[5.5vmax]" />
+      <SiReact className="rotate-in-center text-[#00350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiRedux className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiRedux className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiRedux className="rotate-in-center text-[17vmin] text-[#764ABC] md:text-[5.5vmax]" />
+      <SiRedux className="rotate-in-center text-[#76350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiJavascript className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiJavascript className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiJavascript className="rotate-in-center text-[17vmin] text-[#F7DF1E] md:text-[5.5vmax]" />
+      <SiJavascript className="rotate-in-center text-[#F7350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiHtml5 className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiHtml5 className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiHtml5 className="rotate-in-center text-[17vmin] text-[#e44f26] md:text-[5.5vmax]" />
+      <SiHtml5 className="rotate-in-center text-[#e4350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiCss3 className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiCss3 className="text-[400%] md:text-[350%]" />,
+    hoverElement: <SiCss3 className="rotate-in-center text-[#15350%d:text-[5.5vmax] text-[400%]" />,
+  },
+  {
+    id: id(),
+    originalElement: <SiTailwindcss className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiCss3 className="rotate-in-center text-[17vmin] text-[#1572B6] md:text-[5.5vmax]" />
+      <SiTailwindcss className="rotate-in-center text-[#06350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiTailwindcss className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiBootstrap className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiTailwindcss className="rotate-in-center text-[17vmin] text-[#06B6D4] md:text-[5.5vmax]" />
+      <SiBootstrap className="rotate-in-center text-[#7E350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiBootstrap className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiGit className="text-[400%] md:text-[350%]" />,
+    hoverElement: <SiGit className="rotate-in-center text-[#dd350%d:text-[5.5vmax] text-[400%]" />,
+  },
+  {
+    id: id(),
+    originalElement: <SiJest className="text-[400%] md:text-[350%]" />,
+    hoverElement: <SiJest className="rotate-in-center text-[#99350%d:text-[5.5vmax] text-[400%]" />,
+  },
+  {
+    id: id(),
+    originalElement: <SiRuby className="text-[400%] md:text-[350%]" />,
+    hoverElement: <SiRuby className="rotate-in-center text-[#da350%d:text-[5.5vmax] text-[400%]" />,
+  },
+  {
+    id: id(),
+    originalElement: <SiRubyonrails className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiBootstrap className="rotate-in-center text-[17vmin] text-[#7E13F8] md:text-[5.5vmax]" />
+      <SiRubyonrails className="rotate-in-center text-[#B2350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
   {
     id: id(),
-    originalElement: <SiGit className="text-[17vmin] md:text-[5.5vmax]" />,
+    originalElement: <SiPostgresql className="text-[400%] md:text-[350%]" />,
     hoverElement: (
-      <SiGit className="rotate-in-center text-[17vmin] text-[#dd4c35] md:text-[5.5vmax]" />
-    ),
-  },
-  {
-    id: id(),
-    originalElement: <SiJest className="text-[17vmin] md:text-[5.5vmax]" />,
-    hoverElement: (
-      <SiJest className="rotate-in-center text-[17vmin] text-[#99425b] md:text-[5.5vmax]" />
-    ),
-  },
-  {
-    id: id(),
-    originalElement: <SiRuby className="text-[17vmin] md:text-[5.5vmax]" />,
-    hoverElement: (
-      <SiRuby className="rotate-in-center text-[17vmin] text-[#FF0000] md:text-[5.5vmax]" />
-    ),
-  },
-  {
-    id: id(),
-    originalElement: <SiRubyonrails className="text-[17vmin] md:text-[5.5vmax]" />,
-    hoverElement: (
-      <SiRubyonrails className="rotate-in-center text-[17vmin] text-[#B22222] md:text-[5.5vmax]" />
-    ),
-  },
-  {
-    id: id(),
-    originalElement: <SiPostgresql className="text-[17vmin] md:text-[5.5vmax]" />,
-    hoverElement: (
-      <SiPostgresql className="rotate-in-center text-[17vmin] text-[#31648c] md:text-[5.5vmax]" />
+      <SiPostgresql className="rotate-in-center text-[#31350%d:text-[5.5vmax] text-[400%]" />
     ),
   },
 ];
