@@ -109,7 +109,6 @@ const AboutMe = ({ darkMode }) => {
               onClick={openModal}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               Connect
             </motion.button>
@@ -121,9 +120,8 @@ const AboutMe = ({ darkMode }) => {
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
         >
-          Front-End Developer
+          Full-Stack Developer
         </motion.p>
-        {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
         <div className="mt-2 flex">
           <motion.span
@@ -132,7 +130,7 @@ const AboutMe = ({ darkMode }) => {
             animate={{ y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            Front End
+            Full-Stack
           </motion.span>
           <motion.span
             className="mr-2 rounded-md border-2 border-green-500 px-4 py-[0.1rem] text-green-500 dark:border-green-400 dark:text-green-400"
@@ -160,16 +158,14 @@ const AboutMe = ({ darkMode }) => {
           </motion.div>
           <p className="text-gray-500 dark:text-gray-400 sm:text-justify">
             Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
-            aesthetic websites using React & Redux and TailwindCss. Spending 789+ hours mastering
-            algorithms, data structures, and front-end development while simultaneously developing
-            projects with JavaScript, React & Redux. Developing skills in remote pair programming
-            using GitHub, industry-standard git-flow, and daily standups to communicate and
-            collaborate with international remote developers. Built over 9+ projects in just three
-            months.
+            aesthetic websites using React & Redux and Ruby on Rails. Spending 1789+ hours mastering
+            algorithms, data structures, and full-stack development while simultaneously developing
+            projects with Ruby, Rails, JavaScript, React, and Redux. Developing skills in remote
+            pair programming using GitHub, industry-standard git-flow, and daily standups to
+            communicate and collaborate with international remote developers. Built over 16+ projects
+            in just six months.
             <br />
-            Now I&apos;m diving into back-end technologies at Microverse, a remote software
-            development school located in the US that uses pair programming and project building to
-            teach development.
+            Now I&apos;m ready to collaborate.
           </p>
         </motion.article>
       </motion.div>
@@ -199,7 +195,7 @@ const AboutMe = ({ darkMode }) => {
         >
           Technologies that I&apos;ve been working on recently.
         </motion.p>
-        <ul className="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-x-28 md:gap-y-8">
+        <ul className="mt-20 flex flex-wrap items-center justify-around gap-8 md:gap-x-28 lg:justify-center lg:gap-24 md:gap-y-8">
           {techs.map((tech, index) => (
             <motion.li
               key={tech.id}
