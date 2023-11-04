@@ -197,7 +197,7 @@ const AboutMe = ({ darkMode }) => {
         >
           Technologies that I&apos;ve been working on recently.
         </motion.p>
-        <ul className="mt-20 flex flex-wrap items-center justify-around gap-8 md:gap-x-28 md:gap-y-8 lg:justify-center lg:gap-24">
+        <ul className="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-x-20 md:gap-y-8 lg:justify-center lg:gap-x-16">
           {techs.map((tech, index) => (
             <motion.li
               key={tech.id}
