@@ -16,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', 'Rambla', sans-serif;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
