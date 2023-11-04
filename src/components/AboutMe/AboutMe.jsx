@@ -75,19 +75,19 @@ const AboutMe = ({ darkMode }) => {
         transition={{ duration: 1 }}
       >
         {/* Profile Image */}
-        <figure className="relative flex w-[35vmin] flex-col">
+        <figure className="relative flex flex-col">
           <motion.img
             src={profile}
             alt="Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-            } box-border w-[35vmin] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
+            } box-border w-[40%] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
             initial={{ x: '-100vw', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           />
         </figure>
-        <div className="mt-3 flex items-center justify-between">
+        <div className="mt-4 flex items-center justify-between">
           <motion.div
             className="flex items-center"
             initial={{ x: '-100vw' }}
@@ -109,30 +109,28 @@ const AboutMe = ({ darkMode }) => {
               onClick={openModal}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               Connect
             </motion.button>
           </motion.div>
         </div>
         <motion.p
-          className="mt-2 text-gray-400"
+          className="mt-4 text-gray-400"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
         >
-          Front-End Developer
+          US-Certified Developer
         </motion.p>
-        {/* <span className="my-1 text-gray-400">psthu.koppai@gmail.com</span> */}
         {/* Keywords */}
-        <div className="mt-2 flex">
+        <div className="mt-4 flex">
           <motion.span
             className="mr-2 rounded-md border-2 border-primary_dark px-4 py-[0.1rem] text-primary_dark dark:border-orange-400 dark:text-orange-400"
             initial={{ y: '100vh' }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            Front End
+            Full-Stack
           </motion.span>
           <motion.span
             className="mr-2 rounded-md border-2 border-green-500 px-4 py-[0.1rem] text-green-500 dark:border-green-400 dark:text-green-400"
@@ -159,17 +157,17 @@ const AboutMe = ({ darkMode }) => {
             <div className="ml-2 h-[1px] w-[12vmin] bg-bg_dark dark:bg-white md:w-[48px]" />
           </motion.div>
           <p className="text-gray-500 dark:text-gray-400 sm:text-justify">
-            Friends! I&apos;m a self-motivated front-end web developer enthusiastic about creating
-            aesthetic websites using React & Redux and TailwindCss. Spending 789+ hours mastering
-            algorithms, data structures, and front-end development while simultaneously developing
-            projects with JavaScript, React & Redux. Developing skills in remote pair programming
+            Heyy, my soon to be co-workers! I&apos;m
+            <span className="font-extrabold"> Paing Soe Thu</span>, but you can call me anytime 😉.
+            I&apos;m a self-motivated
+            <span className="font-extrabold"> full-stack </span>
+            web developer and a student of life enthusiastic about creating aesthetic websites using
+            React & Redux and Ruby on Rails. Spending 1789+ hours mastering algorithms, data
+            structures, and full-stack development while simultaneously developing projects with
+            Ruby, Rails, JavaScript, React, and Redux. Developing skills in remote pair programming
             using GitHub, industry-standard git-flow, and daily standups to communicate and
-            collaborate with international remote developers. Built over 9+ projects in just three
-            months.
-            <br />
-            Now I&apos;m diving into back-end technologies at Microverse, a remote software
-            development school located in the US that uses pair programming and project building to
-            teach development.
+            collaborate with international remote developers. Built over 16+ projects in just six
+            months. Now, how can I help you?
           </p>
         </motion.article>
       </motion.div>
@@ -199,7 +197,7 @@ const AboutMe = ({ darkMode }) => {
         >
           Technologies that I&apos;ve been working on recently.
         </motion.p>
-        <ul className="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-x-28 md:gap-y-8">
+        <ul className="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-x-20 md:gap-y-8 lg:justify-center lg:gap-x-16">
           {techs.map((tech, index) => (
             <motion.li
               key={tech.id}

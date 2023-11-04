@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { titleAnimationVariants } from '@/assets/Animations/Animations';
 import { motion } from 'framer-motion';
 import { inputAnimationVariants, textAreaAnimationVariants } from '@/assets/Animations/Animations';
+import Button from '../Button/Button';
 
 const Contact = ({ darkMode }) => {
   return (
@@ -77,8 +78,9 @@ const Contact = ({ darkMode }) => {
           whileInView={textAreaAnimationVariants.whileInView}
           viewport={textAreaAnimationVariants.viewport}
         />
-        <motion.button
+        <Button
           type="submit"
+          label="Start Collaboration"
           className={`${
             darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
           } rounded-md bg-primary_dark py-2 text-lg font-semibold text-secondary_pale_light dark:text-text_light md:w-[49%]`}
@@ -88,9 +90,7 @@ const Contact = ({ darkMode }) => {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-        >
-          Start Collaboration
-        </motion.button>
+        />
       </form>
     </section>
   );

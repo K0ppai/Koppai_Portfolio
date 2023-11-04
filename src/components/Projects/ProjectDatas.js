@@ -11,7 +11,7 @@ const projectDatas = [
     id: 1,
     title: 'Dota2 Heros',
     description:
-      'DOTA2 HEROS is a responsive website designed to help users explore and learn about all the heroes featured in the DOTA2 game. The project was developed using React.js and Redux, and it leverages the OpenDota API for data retrieval. I served as the sole developer for this project.',
+      "Hey there! DOTA2 HEROS is a cool, user-friendly website I built to help you dive into the world of DOTA2 heroes. It's super responsive and lets you explore all those awesome heroes in the game. I used React.js and Redux to create it, and I hooked it up to the OpenDota API for all that amazing hero data. I'm pretty proud to say that I was the one behind the scenes making it happen. So, if you're ready to discover and learn more about your favorite DOTA2 heroes, you're in the right place!",
     image: dota2Heros,
     live_link: 'https://dota2-heros.netlify.app',
     github_link: 'https://github.com/K0ppai/dota2_heros',
@@ -19,17 +19,17 @@ const projectDatas = [
     tech: ['React', 'Redux', 'TailwindCss', 'Rest API'],
     built_date: 'August 2023',
     development_type: 'Front-End Development',
-    goal: 'The goal of this project was to use react components, react props, react router, connect react and redux, handle events in a react app, write integration tests with a react testing library, use styles in a react app, use react life cycle methods, apply react best practices and language style guides in code, use store, actions and reducers in react.',
+    goal: "The main objective of this project was to put React to work in full swing. I used React components, props, and even set up routing for smooth navigation. Connecting React with Redux was a big part of the game plan, and I got pretty good at handling events within a React app. Plus, I didn't stop there – I even wrote integration and even mock tests using React Testing Library. Styling? You bet! I made sure my React app looked sleek and stylish. I also dived into React's lifecycle methods and followed the best practices and coding style guides to keep things clean and tidy. And, of course, I used store, actions, and reducers like a pro in React. It was a comprehensive journey into the world of React, and I'm pretty pleased with the results!",
     key_feature:
-      'This app provides search feature which allows users to have the capability to search for their favorite heroes by name. One of the standout features that I take great pride in is the hero animation, which you can experience when visiting the hero detail page.',
+      "This app comes with a handy search feature, giving users the power to easily search for their beloved heroes by name. But what I'm particularly excited about is the hero animation – it's a standout feature. When you head to the hero detail page, you're in for a visually stunning experience. It's something I'm really proud of, and I can't wait for you to check it out!",
     lesson_learned:
-      'One of the notable challenges I encountered during this project was implementing real-time dynamic rendering. Ensuring that the app updated and displayed results as users typed hero names was a complex task. However, this project served as a valuable learning experience, equipping me with the skills to master dynamic rendering in web applications.',
+      "One tricky part of this project was making things update in real-time as you type. It took some effort to get the app to show results while you were still typing hero names. But you know what? It was a great learning experience. It taught me how to handle real-time updates in web apps, and now I've got that skill in my toolbox.",
   },
   {
     id: 2,
     title: 'SiriBox',
     description:
-      'SIRIBOX is a responsive website that exhibits TV shows and series. It utilizes the TVmaze API to obtain information about these shows. This project is developed using Pure JavaScript, coupled with the Bootstrap CSS framework to enhance the overall appearance of the website. I collaborated with another developer on implementing the functionalities, while also investing time in refining the UI designs of the project.',
+      "SIRIBOX is a friendly website that showcases TV shows and series. To make it all work, we used the TVmaze API to gather info about those shows. We built this project using Pure JavaScript and spiced things up with the Bootstrap CSS framework to make the website look good. I wasn't alone on this journey; I teamed up with another developer to make sure all the cool features came to life. Plus, I put some effort into making the project look stylish and user-friendly.",
     image: siribox,
     live_link: 'https://siribox.netlify.app',
     github_link: 'https://github.com/K0ppai/SiriBox',
@@ -37,17 +37,17 @@ const projectDatas = [
     responsive: 'Responsive',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
-    goal: "The project's main goals were to use JavaScript for creating dynamic websites and developing basic single-page applications. This involved adopting the ES6 syntax and modular code structure. Additionally, it aimed to handle asynchronous tasks efficiently using callbacks and promises, optimize code bundling with Webpack, and maintain high coding standards by following best practices and style guides. This project implemented the AAA pattern for unit testing to ensure the reliability of the JavaScript app and followed Gitflow for organized version control. It also dealt with simple git conflicts, interacted with external APIs by referring to their documentation, and effectively processed data in JSON format. Prioritizing website responsiveness, making JavaScript code asynchronous was essential. We conducted code reviews to promote collaboration and uphold code quality among team members.",
+    goal: "The project had a clear mission: use JavaScript to create lively websites and build straightforward single-page applications. To make it all happen, we embraced the user-friendly ES6 language features and organized our code into neat, modular pieces. We tackled the challenge of handling tasks that happen at different times in a smart way using callbacks and promises. Plus, we made sure our code bundles were nice and tidy with the help of Webpack. We were all about following the best coding rules and style guides to keep things top-notch. Testing was a big deal, so we used the AAA pattern to make sure our JavaScript app was super dependable. Gitflow kept us on track with versions, and we knew how to resolve minor git tiffs. Working with external APIs was a breeze, we just followed the docs. JSON data? No problem, we processed it like pros. Oh, and we didn't forget to make the website super responsive and keep our JavaScript snappy and asynchronous. Plus, we teamed up for code reviews, making sure everything was A-OK and everyone was on the same page.",
     key_feature:
-      'To enhance searchability, I included a filtering feature based on the genre of the shows. Users can make interactions by giving likes and comments on their favorite shows. By clicking the comment button, a pop-up window will appear with details such as the description, rating, IMDB ID, genre, type of show, and a form for adding new comments.',
+      "To make it easier to find stuff, I added a filter for different show types, like action or comedy. You can also do cool things like 'liking' and leaving comments on your fave shows. When you hit the comment button, a little window pops up with all the info about the show, like the description, rating, and more. Plus, there's a spot to type in your own comments. It's all about making the app more interactive and user-friendly!",
     lesson_learned:
-      "Reflecting on the project, I initially designed functions to send and retrieve data from the API and then update likes and comments on the shows. However, this approach caused a delay in displaying the added likes and comments when users interacted with the website. In hindsight, a more efficient approach would have been to first update the website's display (DOM) and then send the data to the API. To keep the likes and comments consistent, data fetching could have been implemented only when a user reloads the page. This would have improved the user experience by reducing delays in showing interactions.",
+      "When I look back on this project, I realized that I originally set things up to send and get data from the API, and then I'd update likes and comments on the shows. The problem was that there was a bit of a lag when users interacted with the website. Thinking about it now, a smarter way to do it would've been to update what you see on the website first (that's called the DOM), and then send the data to the API. To keep things like likes and comments the same, I could've only fetched data when a user refreshed the page. That way, people wouldn't have to wait as long to see what's going on, making the website smoother to use.",
   },
   {
     id: 3,
     title: 'Leaderboard',
     description:
-      "LEADERBOARD project is an another stepping stone in my web development journey. It's my first project where I've used asynchronous JavaScript functions. I've used Microverse's Leaderboard API service which enabled me to send and retrieve data via API.",
+      "The LEADERBOARD project marks another step in my web development journey. It's special because it's my first project where I've used asynchronous JavaScript functions. Plus, I got to work with Microverse's Leaderboard API service, which let me send and fetch data using APIs. Pretty cool, right?",
     image: leaderboard,
     live_link: 'https://leaderboard-list.netlify.app',
     github_link: 'https://github.com/K0ppai/leaderboard-list-app',
@@ -55,17 +55,17 @@ const projectDatas = [
     responsive: 'Responsive',
     built_date: 'June 2023',
     development_type: 'Front-End Development',
-    goal: 'In this project, my main goals are to get comfortable with callbacks and promises in JavaScript, use the latest ES6 syntax, organize my code with ES6 modules, bundle everything neatly using Webpack, interact with APIs to send and receive data (following API documentation), work with JSON, make my JavaScript code asynchronous for smoother execution, and translate medium-fidelity wireframes into a user-friendly interface.',
+    goal: "In this project, my main aims are to get the hang of callbacks and promises in JavaScript, make use of the latest ES6 syntax (which is like a fancy way of writing JavaScript), keep my code tidy using ES6 modules, bundle everything neatly with Webpack (it's like organizing your stuff in a backpack), talk to APIs to send and receive data (following the instructions they give), work with JSON (that's a type of data format), make my JavaScript code work more smoothly by making it do multiple things at once, and turn okay-looking plans into a friendly and easy-to-use interface.",
     key_feature:
-      "In this project, users can input their scores, which are then stored in the API. These scores are automatically sorted from the highest to the lowest, making it easy to see who's at the top. Plus, the website is designed to be responsive, so it looks and works great on all kinds of devices.",
+      "In this project, you can put in your scores, and they go right into the system. What's cool is that the scores get sorted automatically, from the highest to the lowest, so you can easily check out who's leading the pack. And don't worry about your device 😉. The website is designed to fit and work well on all sorts of screens.",
     lesson_learned:
-      "This project has been a fantastic learning experience for me. I've gained valuable skills in working with asynchronous functions and APIs. It's also introduced me to the concept of using medium-fidelity wireframes to plan and build projects.",
+      "This project has been a super learning experience for me. I've picked up some really useful skills, like how to work with stuff that doesn't happen all at the same time (that's what 'asynchronous' means) and how to use those internet connections to get cool data (that's the API part). Plus, I learned about using 'medium-fidelity wireframes,' which is like having a plan for building stuff that's not too fancy but just right.",
   },
   {
     id: 4,
     title: 'Space Travellers',
     description:
-      'SPACE TRAVELLERS is a collaborative project I worked on with another developer, and my specific responsibility was handling the missions part. The website retrieves data from the SpaceX API to showcase missions and rockets. It consists of three main pages: one for browsing and reserving rockets, another for exploring and joining missions, and a third page to view reserved rockets and joined missions.',
+      "I teamed up with another developer to create SPACE TRAVELLERS, and my main job was taking care of the missions part. We used data from the SpaceX API to show off cool missions and rockets. The site has three big pages: one for checking out and reserving rockets, another for diving into missions and getting on board, and a third page where you can see the rockets you've reserved and the missions you've joined. It's all about exploring the universe!",
     image: spaceTravellers,
     live_link: 'https://space-travellers-koppai.netlify.app',
     github_link: 'https://github.com/K0ppai/space_travelers',
@@ -73,17 +73,17 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
-    goal: "The project goals are to create a web application using React that incorporates key development techniques and best practices. This includes using React components and props to build a modular structure, implementing React Router for navigation, connecting React with Redux for state management, effectively handling events within the app, and writing unit tests with React Testing Library to ensure code reliability. Additionally, the project aims to apply styling to the React application, utilize React hooks for state and lifecycle management, follow React's best practices and coding style guidelines, and implement store, actions, and reducers to manage application data seamlessly.",
+    goal: "The main idea of this project is to build a web app using React. We're using some important tricks and rules to make it great. We're creating different pieces in React, using them together, and making sure everything works smoothly. We're also setting up routes for moving around the app, and we're keeping track of the app's information using Redux. We're making sure that when you click or do something, the app responds nicely. To be extra sure everything's working well, we're testing it too. And of course, we're making the app look good with some styling. We're also using a special feature called React hooks to manage how things change over time. We're following the best ways of doing things in React and keeping the code neat and tidy. Lastly, we're handling the data the app needs really well with a few more tricks.",
     key_feature:
-      'On the Rockets page, users can explore detailed information about rockets and reserve their favorite ones. Similarly, on the Missions page, they can access mission details and join them.',
+      'On the Rockets page, you can check out all the cool info about rockets and even pick your favorites to book. And guess what? The Missions page is just as awesome. You get to see all the nitty-gritty details about missions and jump right in!',
     lesson_learned:
-      "This project has shown me how vital it is to communicate effectively and plan thoroughly before starting any development work. I've come to understand how crucial it is to have a clear discussion about our folder structure and where each team member will work in advance. This prevents any unnecessary duplication of effort and helps maintain a tidy project environment. Ultimately, it ensures that all team members are working together smoothly and are on the same page.",
+      "This project taught me the importance of talking things out and making a good plan before we dive into development. I realized how essential it is to figure out stuff like where everyone works and how our folders are organized right from the start. It keeps us from doing the same things twice and keeps our project nice and neat. Plus, it makes sure we're all working together and knowing what's going on.",
   },
   {
     id: 5,
     title: 'Bookstore',
     description:
-      'BOOKSTORE project has been a valuable learning experience for me as it taught me how to use React together with Redux. The app uses the Bookstore API provided by Microverse, which grants me the ability to perform essential operations such as retrieving books, adding new books along with their genres and authors, and removing books.',
+      'The BOOKSTORE project was a great learning experience for me. I got to learn how to use React and Redux, which are super handy tools. With the Bookstore API from Microverse, I could do cool stuff like getting books, adding new ones with all their details, and even removing books. It was a fantastic learning journey!',
     image: bookstore,
     live_link: 'https://bookstore-koppai.netlify.app',
     github_link: 'https://github.com/K0ppai/bookstore_app',
@@ -91,11 +91,11 @@ const projectDatas = [
     responsive: 'Desktop',
     built_date: 'July 2023',
     development_type: 'Front-End Development',
-    goal: 'The project goals are to understand the concept of state management, use store, actions, and reducers in React, connect React and Redux, and connect an existing API via Redux to use the data for displaying content on the UI.',
+    goal: "The main things I wanted to achieve with this project were pretty simple: get the hang of how to handle stuff like state in an app, work with store, actions, and reducers in React, connect up React and Redux to make them best buddies, and plug into an existing API using Redux to show data on the screen. It's all about getting the pieces to work together smoothly!",
     key_feature:
-      'This app offers three key features: it allows you to view a list of books, add new books along with their genres and authors, and remove books from the list.',
+      "This app does three main things: first, you can check out a list of books. Second, you can add new books, including their genres and authors. And third, you can take books off the list. It's all about making books easy to manage.",
     lesson_learned:
-      'After finishing this project, I learned how to use Redux and React icons to make the user interface look better. In the middle of this project, my coding partner inspired me to explore the Tailwind CSS framework and implement dark mode on websites. All of this has helped me become a better frontend developer.',
+      "Once I wrapped up this project, I picked up some cool tricks. I figured out how to use Redux and React icons to make the app look way cooler. Plus, my coding buddy got me into Tailwind CSS, and taught me how to add a dark mode to websites. I'm proud to say that this project made me a better frontend developer.",
   },
 ];
 export default projectDatas;

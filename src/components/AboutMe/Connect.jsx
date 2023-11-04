@@ -18,7 +18,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'mailto:psthu.koppai@gmail.com',
       icon: (
         <BiLogoGmail
-          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-90 p-4 text-[400%] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90`}
         />
       ),
     },
@@ -27,7 +27,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://wa.me/+959796679793',
       icon: (
         <BiLogoWhatsapp
-          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-90 p-4 text-[400%] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90`}
         />
       ),
     },
@@ -36,7 +36,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://discord.com/users/665938913256275980',
       icon: (
         <BiLogoDiscordAlt
-          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-90 p-4 text-[400%] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90`}
         />
       ),
     },
@@ -45,7 +45,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://twitter.com/_koppai_',
       icon: (
         <BiLogoTwitter
-          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-90 p-4 text-[400%] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90`}
         />
       ),
     },
@@ -54,7 +54,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://www.linkedin.com/in/paingsoe-thu/',
       icon: (
         <BiLogoLinkedin
-          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-90 p-4 text-[400%] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90`}
         />
       ),
     },
@@ -63,7 +63,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       url: 'https://github.com/K0ppai',
       icon: (
         <BiLogoGithub
-          className={`rounded-full bg-bg_light bg-opacity-80 p-4 text-[17vmin] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-80 md:text-[10vmin] lg:text-[10vmin]`}
+          className={`rounded-full bg-bg_light bg-opacity-90 p-4 text-[400%] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90`}
         />
       ),
     },
@@ -84,14 +84,14 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
     <div
       className={`${
         darkMode ? 'dark' : ''
-      } fixed left-[50%] top-[50%] flex w-[90vw] translate-x-[-50%] translate-y-[-50%] items-center justify-center md:w-[50vh] lg:w-[80vh]`}
+      } fixed left-[50%] top-[50%] flex w-[90vw] translate-x-[-50%] translate-y-[-50%] items-center justify-center md:w-[40vh] lg:w-[80vh]`}
       id="connect"
     >
       <button
-        className={`absolute z-[999] flex h-[25vmin] w-[25vmin] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light dark:bg-bg_dark md:h-[15vmin] md:w-[15vmin]`}
+        className={`absolute z-[999] flex h-[25vmin] w-[25vmin] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light dark:bg-bg_dark md:h-[13vmin] md:w-[13vmin]`}
         onClick={closeModal}
       >
-        <BiX className="text-[10vmin] text-primary_dark md:text-[9vmin] lg:text-[8vmin]" />
+        <BiX className="text-[300%] text-primary_dark" />
       </button>
       {socialMedias.map((socialMedia, index) => (
         <li key={socialMedia.id} className="rotate absolute list-none" style={{ '--i': index }}>

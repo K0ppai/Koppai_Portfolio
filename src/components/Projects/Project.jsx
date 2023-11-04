@@ -64,6 +64,7 @@ const Project = ({ projectData, index, darkMode }) => {
                 color: '#e38b26',
                 scale: 1.1,
               }}
+              className="text-primary_dark lg:text-text_dark"
             >
               <FiGithub className="text-xl lg:text-[26px]" />
             </motion.a>
@@ -76,6 +77,7 @@ const Project = ({ projectData, index, darkMode }) => {
                 color: '#e38b26',
                 scale: 1.1,
               }}
+              className="text-primary_dark lg:text-text_dark"
             >
               <FiExternalLink className="text-xl lg:text-[26px]" />
             </motion.a>
