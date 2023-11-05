@@ -83,7 +83,7 @@ const Project = ({ projectData, index, darkMode }) => {
             </motion.a>
           </div>
           <span className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl">
-            {projectData.responsive}
+            {projectData.development_type.replace(' Development','')}
           </span>
         </motion.div>
       </div>
