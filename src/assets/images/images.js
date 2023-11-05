@@ -7,5 +7,6 @@ import todo from './todo.png';
 import awesomeBooks from './awesome_books.png';
 import matrix from './matrix.png';
 import profile from './profile1.jpg'
+import yachtRental from './yacht-rental.png'
 
-export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, todo, awesomeBooks, matrix,profile };
+export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, todo, awesomeBooks, matrix,profile, yachtRental };

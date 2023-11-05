@@ -4,11 +4,30 @@ import {
   leaderboard,
   siribox,
   spaceTravellers,
+  yachtRental,
 } from '../../assets/images/images';
 
 const projectDatas = [
   {
     id: 1,
+    title: 'Yacht Rental',
+    description:
+      "Yacht Rental, a project I worked on with two fellow developers, is all about renting yachts. We used Ruby on Rails for the behind-the-scenes stuff, React.js for the user-friendly front end, and PostgreSQL to store all the important info. It's pretty simple: users can sign up, log in, and then, on the main page, they'll spot these amazingly eyecatching yachts. If they find one they like, they can easily reserve it in the city they prefer. Smooth sailing all the way!",
+    image: yachtRental,
+    live_link: 'https://beta-yacht-rental.netlify.app/',
+    github_link: 'https://github.com/K0ppai/yacht-rental-backend',
+    responsive: 'Responsive',
+    tech: ['React', 'Redux', 'TailwindCss', 'Ruby On Rails', 'PostgreSQL'],
+    built_date: 'October 2023',
+    development_type: 'Full-Stack Development',
+    goal: 'In our project, we had a few main goals. First, we wanted to challenge ourselves and test our technical skills with a more demanding project. Our mission was to connect the back-end (created with Ruby on Rails) to the front-end (built with React). We really got to know the ins and outs of both Ruby on Rails and React frameworks. It was super important for us to follow the best practices and coding guidelines for Ruby, RoR, JavaScript, and React. We provided each other with helpful feedback and carried out effective code reviews. Communication was key, and we successfully planned and finished the project without any conflicts. By setting clear working agreements, we made sure our team worked smoothly together. We understood that showing respect for our teammates was vital for building strong relationships, and we were reliable and committed team members. To keep everything organized, we used an empty Kanban board to manage our tasks and time efficiently. In the end, we successfully delivered the project on time.',
+    key_feature:
+      "We're super proud about how we've made things safe and simple for all users. We've got a system that makes sure there are no duplicate email addresses, so you won't run into any email troubles. When it comes to booking, users can't double-book the same yacht on the same day in the same city, so your reserved yacht stays yours 😉. And for all the reservation info, it's crystal clear. You'll know exactly how long it'll take and what the total cost is. We're all about making things easy and straightforward!",
+    lesson_learned:
+      "Looking back on my journey, I've learned how to put two different apps online and make them connect together. And here's the best part, I've also learned how to set up strong security with the help of a gem called devise-jwt. It's like having a secret code to keep everything safe and sound!",
+  },
+  {
+    id: 2,
     title: 'Dota2 Heros',
     description:
       "Hey there! DOTA2 HEROS is a cool, user-friendly website I built to help you dive into the world of DOTA2 heroes. It's super responsive and lets you explore all those awesome heroes in the game. I used React.js and Redux to create it, and I hooked it up to the OpenDota API for all that amazing hero data. I'm pretty proud to say that I was the one behind the scenes making it happen. So, if you're ready to discover and learn more about your favorite DOTA2 heroes, you're in the right place!",
@@ -26,7 +45,7 @@ const projectDatas = [
       "One tricky part of this project was making things update in real-time as you type. It took some effort to get the app to show results while you were still typing hero names. But you know what? It was a great learning experience. It taught me how to handle real-time updates in web apps, and now I've got that skill in my toolbox.",
   },
   {
-    id: 2,
+    id: 3,
     title: 'SiriBox',
     description:
       "SIRIBOX is a friendly website that showcases TV shows and series. To make it all work, we used the TVmaze API to gather info about those shows. We built this project using Pure JavaScript and spiced things up with the Bootstrap CSS framework to make the website look good. I wasn't alone on this journey; I teamed up with another developer to make sure all the cool features came to life. Plus, I put some effort into making the project look stylish and user-friendly.",
@@ -44,7 +63,7 @@ const projectDatas = [
       "When I look back on this project, I realized that I originally set things up to send and get data from the API, and then I'd update likes and comments on the shows. The problem was that there was a bit of a lag when users interacted with the website. Thinking about it now, a smarter way to do it would've been to update what you see on the website first (that's called the DOM), and then send the data to the API. To keep things like likes and comments the same, I could've only fetched data when a user refreshed the page. That way, people wouldn't have to wait as long to see what's going on, making the website smoother to use.",
   },
   {
-    id: 3,
+    id: 4,
     title: 'Leaderboard',
     description:
       "The LEADERBOARD project marks another step in my web development journey. It's special because it's my first project where I've used asynchronous JavaScript functions. Plus, I got to work with Microverse's Leaderboard API service, which let me send and fetch data using APIs. Pretty cool, right?",
@@ -62,7 +81,7 @@ const projectDatas = [
       "This project has been a super learning experience for me. I've picked up some really useful skills, like how to work with stuff that doesn't happen all at the same time (that's what 'asynchronous' means) and how to use those internet connections to get cool data (that's the API part). Plus, I learned about using 'medium-fidelity wireframes,' which is like having a plan for building stuff that's not too fancy but just right.",
   },
   {
-    id: 4,
+    id: 5,
     title: 'Space Travellers',
     description:
       "I teamed up with another developer to create SPACE TRAVELLERS, and my main job was taking care of the missions part. We used data from the SpaceX API to show off cool missions and rockets. The site has three big pages: one for checking out and reserving rockets, another for diving into missions and getting on board, and a third page where you can see the rockets you've reserved and the missions you've joined. It's all about exploring the universe!",
@@ -80,7 +99,7 @@ const projectDatas = [
       "This project taught me the importance of talking things out and making a good plan before we dive into development. I realized how essential it is to figure out stuff like where everyone works and how our folders are organized right from the start. It keeps us from doing the same things twice and keeps our project nice and neat. Plus, it makes sure we're all working together and knowing what's going on.",
   },
   {
-    id: 5,
+    id: 6,
     title: 'Bookstore',
     description:
       'The BOOKSTORE project was a great learning experience for me. I got to learn how to use React and Redux, which are super handy tools. With the Bookstore API from Microverse, I could do cool stuff like getting books, adding new ones with all their details, and even removing books. It was a fantastic learning journey!',
