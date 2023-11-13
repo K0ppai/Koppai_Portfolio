@@ -1,12 +1,10 @@
-import dota2Heros from './dota2_heros1.png';
-import spaceTravellers from './space-travellers1.png';
-import bookstore from './bookstore1.png';
-import siribox from './siribox1.png';
-import leaderboard from './leaderboard1.png';
-import todo from './todo.png';
-import awesomeBooks from './awesome_books.png';
-import matrix from './matrix.png';
-import profile from './profile1.jpg'
-import yachtRental from './yacht-rental.png'
+import dota2Heros from './dota2_heros1.webp';
+import spaceTravellers from './space-travellers1.webp';
+import bookstore from './bookstore1.webp';
+import siribox from './siribox1.webp';
+import leaderboard from './leaderboard1.webp';
+import matrix from './matrix.webp';
+import profile from './profile1.webp'
+import yachtRental from './yacht-rental.webp'
 
-export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, todo, awesomeBooks, matrix,profile, yachtRental };
+export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, matrix,profile, yachtRental };
