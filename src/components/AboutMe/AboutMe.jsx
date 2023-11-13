@@ -157,17 +157,19 @@ const AboutMe = ({ darkMode }) => {
             <div className="ml-2 h-[1px] w-[12vmin] bg-bg_dark dark:bg-white md:w-[48px]" />
           </motion.div>
           <p className="text-gray-500 dark:text-gray-400 sm:text-justify">
-            Heyy, my soon to be co-workers! I&apos;m
-            <span className="font-extrabold"> Paing Soe Thu</span>, but you can call me anytime 😉.
-            I&apos;m a self-motivated
-            <span className="font-extrabold"> full-stack </span>
-            web developer and a student of life enthusiastic about creating aesthetic websites using
-            React & Redux and Ruby on Rails. Spending 1789+ hours mastering algorithms, data
+            Heyy, my soon-to-be co-workers! I&apos;m
+            <span className="font-extrabold text-primary_dark"> Paing Soe Thu</span>, but you can
+            call me anytime 😉. I&apos;m a self-motivated
+            <span className="font-extrabold text-primary_dark"> full-stack </span>
+            web developer and a student of life enthusiastic about creating user-centric websites
+            using React.js and Ruby on Rails. I&apos;ve spent 1789+ hours mastering algorithms, data
             structures, and full-stack development while simultaneously developing projects with
-            Ruby, Rails, JavaScript, React, and Redux. Developing skills in remote pair programming
-            using GitHub, industry-standard git-flow, and daily standups to communicate and
-            collaborate with international remote developers. Built over 16+ projects in just six
-            months. Now, how can I help you?
+            Ruby, Rails, JavaScript, React, and Redux and developed skills in remote pair
+            programming using GitHub, industry-standard git-flow, and daily standups to communicate
+            and collaborate with international remote developers. Due to my strong commitment to
+            software development, I&apos;ve built over 16+ projects in just six months. I achieved a
+            perfect score in the final capstone due to my passion for striving for the best. Now,
+            how can I help you?
           </p>
         </motion.article>
       </motion.div>
