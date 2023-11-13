@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 
 const Project = ({ projectData, index, darkMode }) => {
   const [isHover, setIsHover] = useState(false);
+  const isLargeScreenWidth = window.innerWidth > 1024;
+
   const topToBtnVariants = {
     hover: {
       opacity: 1,
@@ -67,15 +69,15 @@ const Project = ({ projectData, index, darkMode }) => {
         <img src={projectData.image} className="absolute h-full w-full" />
         <motion.div
           className={`relative h-full w-full transition-all duration-500 ease-in-out ${
-            isHover ? 'opacity-100' : 'opacity-0'
+            isHover ? 'lg:opacity-100' : 'lg:opacity-0'
           }`}
         >
           <div className="absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80" />
-          <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
+          <Link to={`/projects/${projectData.id}`}>
             <motion.button
               className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
-              animate={isHover ? 'hover' : 'initial'}
-              variants={btnToTopVariants}
+              animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
+              variants={isLargeScreenWidth ? btnToTopVariants : {}}
               whileHover={{ scale: 1.03, color: '#030c17' }}
             >
               See More
@@ -84,15 +86,15 @@ const Project = ({ projectData, index, darkMode }) => {
           </Link>
           <motion.span
             className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl"
-            animate={isHover ? 'hover' : 'initial'}
-            variants={btnToTopVariants}
+            animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
+            variants={isLargeScreenWidth ? btnToTopVariants : {}}
           >
             {projectData.development_type.replace(' Development', '')}
           </motion.span>
           <motion.h2
             className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl"
-            animate={isHover ? 'hover' : 'initial'}
-            variants={topToBtnVariants}
+            animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
+            variants={isLargeScreenWidth ? topToBtnVariants : {}}
           >
             {projectData.title}
           </motion.h2>
@@ -102,8 +104,8 @@ const Project = ({ projectData, index, darkMode }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              animate={isHover ? 'hover' : 'initial'}
-              variants={topToBtnVariants}
+              animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
+              variants={isLargeScreenWidth ? topToBtnVariants : {}}
               whileHover={{
                 color: '#e38b26',
                 scale: 1.1,
@@ -117,8 +119,8 @@ const Project = ({ projectData, index, darkMode }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              animate={isHover ? 'hover' : 'initial'}
-              variants={topToBtnVariants}
+              animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
+              variants={isLargeScreenWidth ? topToBtnVariants : {}}
               whileHover={{
                 color: '#e38b26',
                 scale: 1.1,

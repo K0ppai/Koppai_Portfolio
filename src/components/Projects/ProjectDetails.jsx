@@ -8,8 +8,14 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { titleAnimationVariants } from '@/assets/Animations/Animations';
 import { liAnimationVariants } from '@/assets/Animations/Animations';
+import { useEffect } from 'react';
 
 const ProjectDetails = ({ darkMode }) => {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { projectId } = useParams();
   const currentProjectIndex = projectDatas.findIndex(
     (project) => project.id === parseInt(projectId),
