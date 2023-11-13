@@ -63,7 +63,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   return (
     <motion.nav
       className={`${
-        isNavExpanded ? 'w-[120px] 2xl:w-[150px]' : 'w-[45px] 2xl:w-[55px]'
+        isNavExpanded ? 'w-[150px] 2xl:w-[150px]' : 'w-[55px] 2xl:w-[55px]'
       } fixed right-0 top-1/2 z-[50] hidden -translate-y-1/2 transform rounded-xl text-text_light transition-all duration-500 ease-in-out dark:text-text_dark lg:block`}
       initial={{ x: '100vw', y: '-50%', opacity: 0 }}
       animate={{ x: 0, y: '-50%', opacity: 1 }}
@@ -82,7 +82,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           >
             <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
-          <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
+          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
             {darkMode ? (
               <motion.span
                 className={`${isNavExpanded ? 'block' : 'hidden'}`}
@@ -142,7 +142,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <></>
           )}
-          <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
+          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -181,7 +181,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <></>
           )}
-          <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
+          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -219,7 +219,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <></>
           )}
-          <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
+          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -247,7 +247,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 
           flex flex-grow flex-col items-center justify-center rounded-bl-md`}
         >
-          <div className="flex w-full items-center justify-end gap-x-[1.5vmax] pr-[1.2vmin]">
+          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
