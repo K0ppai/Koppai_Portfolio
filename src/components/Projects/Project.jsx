@@ -8,6 +8,35 @@ import PropTypes from 'prop-types';
 
 const Project = ({ projectData, index, darkMode }) => {
   const [isHover, setIsHover] = useState(false);
+  const topToBtnVariants = {
+    hover: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut',
+      },
+    },
+    initial: {
+      opacity: 0,
+      y: -100,
+    },
+  };
+
+  const btnToTopVariants = {
+    hover: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut',
+      },
+    },
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+  };
 
   return (
     <motion.div
@@ -38,28 +67,43 @@ const Project = ({ projectData, index, darkMode }) => {
         <img src={projectData.image} className="absolute h-full w-full" />
         <motion.div
           className={`relative h-full w-full transition-all duration-500 ease-in-out ${
-            isHover ? 'lg:top-0' : 'lg:top-[100%]'
+            isHover ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <div className="absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80" />
-          <Link to={`/projects/${projectData.id}`}  onClick={() => window.scrollTo(0, 0)}>
+          <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
             <motion.button
               className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
+              animate={isHover ? 'hover' : 'initial'}
+              variants={btnToTopVariants}
               whileHover={{ scale: 1.03, color: '#030c17' }}
             >
               See More
               <BsArrow90DegLeft className="ml-1 rotate-90 text-base xl:text-2xl" />
             </motion.button>
           </Link>
-          <h2 className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl">
+          <motion.span
+            className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl"
+            animate={isHover ? 'hover' : 'initial'}
+            variants={btnToTopVariants}
+          >
+            {projectData.development_type.replace(' Development', '')}
+          </motion.span>
+          <motion.h2
+            className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl"
+            animate={isHover ? 'hover' : 'initial'}
+            variants={topToBtnVariants}
+          >
             {projectData.title}
-          </h2>
+          </motion.h2>
           <div className="absolute right-4 top-4 flex w-[22%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10">
             <motion.a
               href={projectData.github_link}
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
+              animate={isHover ? 'hover' : 'initial'}
+              variants={topToBtnVariants}
               whileHover={{
                 color: '#e38b26',
                 scale: 1.1,
@@ -73,6 +117,8 @@ const Project = ({ projectData, index, darkMode }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
+              animate={isHover ? 'hover' : 'initial'}
+              variants={topToBtnVariants}
               whileHover={{
                 color: '#e38b26',
                 scale: 1.1,
@@ -82,9 +128,6 @@ const Project = ({ projectData, index, darkMode }) => {
               <FiExternalLink className="text-xl lg:text-[26px]" />
             </motion.a>
           </div>
-          <span className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl">
-            {projectData.development_type.replace(' Development','')}
-          </span>
         </motion.div>
       </div>
     </motion.div>
