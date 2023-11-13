@@ -13,7 +13,7 @@ const Project = ({ projectData, index, darkMode }) => {
     <motion.div
       className={`${
         darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
-      } flex h-[55vmin] flex-col overflow-hidden bg-transparent text-secondary_pale_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[70vmin]`}
+      } flex h-[55vmin] flex-col overflow-hidden bg-transparent text-secondary_pale_light dark:bg-bg_card_pale_dark dark:text-secondary_pale_light md:h-[30vmax] md:rounded-xl lg:h-[450px]`}
       initial={{
         opacity: 0,
         y: 100,
@@ -42,7 +42,7 @@ const Project = ({ projectData, index, darkMode }) => {
           }`}
         >
           <div className="absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80" />
-          <Link to={`/projects/${projectData.id}`} onClick={() => window.scrollTo(0, 0)}>
+          <Link to={`/projects/${projectData.id}`}  onClick={() => window.scrollTo(0, 0)}>
             <motion.button
               className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
               whileHover={{ scale: 1.03, color: '#030c17' }}
