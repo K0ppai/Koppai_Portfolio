@@ -100,6 +100,8 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         <a
           href="https://docs.google.com/document/d/13VXPE2wM48DAPK3_WT7ezjwauV8LerirY-1tkKwVdzE/edit?usp=sharing"
           className="flex flex-col items-center justify-center"
+          target="_blank"
+          rel="noreferrer"
         >
           <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
         </a>

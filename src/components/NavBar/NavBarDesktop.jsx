@@ -246,6 +246,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           bg-gray-200 bg-opacity-90 dark:bg-gray-900 
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 
           flex flex-grow flex-col items-center justify-center rounded-bl-md`}
+          target="_blank"
         >
           <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
             <motion.span
