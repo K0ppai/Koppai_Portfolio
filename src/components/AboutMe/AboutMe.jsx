@@ -42,26 +42,6 @@ const AboutMe = ({ darkMode }) => {
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} darkMode={darkMode} />
       </Modal>
-      {/* <ReactModal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
-        overlayClassName="fixed inset-0 bg-black backdrop-blur-[0.1rem] bg-opacity-40 z-50"
-        closeTimeoutMS={600}
-      >
-        <svg className="h-[4vmax] w-[27vmin]">
-          <text
-            x="50%"
-            y="50%"
-            dy=".35em"
-            textAnchor="middle"
-            id="name"
-            className="text-4xl font-extrabold"
-          >
-            Koppai
-          </text>
-        </svg>
-      </ReactModal> */}
       <motion.div
         className="h-[20vh] w-screen bg-primary_dark md:h-[20vh]"
         initial={{ y: '-100vh', opacity: 0 }}
@@ -95,7 +75,6 @@ const AboutMe = ({ darkMode }) => {
             transition={{ duration: 0.7 }}
           >
             <span className="text-4xl font-extrabold">Koppai</span>
-            {/* <div className="ml-2 h-3 w-3 rounded-[50%] bg-green-400" /> */}
             <VscVerifiedFilled className="ml-2 text-2xl text-green-500" />
           </motion.div>
           <motion.div
@@ -156,7 +135,7 @@ const AboutMe = ({ darkMode }) => {
             <h1 className="text-2xl">About Me</h1>
             <div className="ml-2 h-[1px] w-[12vmin] bg-bg_dark dark:bg-white md:w-[48px]" />
           </motion.div>
-          <p className="text-gray-500 dark:text-gray-400 sm:text-justify">
+          <p className="text-gray-500 dark:text-gray-400 tracking-wide sm:text-justify">
             Heyy, my soon-to-be co-workers! I&apos;m
             <span className="font-extrabold text-primary_dark"> Paing Soe Thu</span>, but you can
             call me anytime 😉. I&apos;m a self-motivated
