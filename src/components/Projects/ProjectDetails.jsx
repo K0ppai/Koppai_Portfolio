@@ -75,7 +75,6 @@ const ProjectDetails = ({ darkMode }) => {
           once: true,
         }}
       >
-        {/* <div className="m-auto mb-4 h-[3px] w-14 rounded-full bg-orange-400" /> */}
         <motion.figure
           initial={{
             opacity: 0,

@@ -37,7 +37,7 @@ const Projects = ({ darkMode }) => {
         whileInView={titleAnimationVariants.whileInView2}
         viewport={titleAnimationVariants.viewport}
       >
-        My Most Proud Projects can be seen here. 😎
+        My proudest projects can be seen here. 😎
       </motion.h2>
       <p className="mt-10 text-lg"></p>
       <Swiper
