@@ -65,7 +65,6 @@ const AboutMe = ({ darkMode }) => {
             initial={{ x: '-100vw', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            loading="lazy"
           />
         </figure>
         <div className="mt-4 flex items-center justify-between">
