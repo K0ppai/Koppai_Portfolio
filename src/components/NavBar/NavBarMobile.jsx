@@ -98,7 +98,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
           )}
         </button>
         <a
-          href="https://docs.google.com/document/d/13VXPE2wM48DAPK3_WT7ezjwauV8LerirY-1tkKwVdzE/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1HMwbozbfAfAtPKraRLDyvU3twcYYmuuK_ybTTBE_G70/edit?usp=sharing"
           className="flex flex-col items-center justify-center"
           target="_blank"
           rel="noreferrer"
