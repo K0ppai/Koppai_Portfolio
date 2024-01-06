@@ -66,7 +66,12 @@ const Project = ({ projectData, index, darkMode }) => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <img src={projectData.image} className='absolute h-full w-full' loading='lazy' />
+        <img
+          src={projectData.image}
+          className='absolute h-full w-full'
+          alt={`${projectData.title}-image`}
+          loading='lazy'
+        />
         <motion.div
           className={`relative h-full w-full transition-all duration-500 ease-in-out ${
             isHover ? 'lg:opacity-100' : 'lg:opacity-0'

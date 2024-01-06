@@ -58,7 +58,7 @@ const AboutMe = ({ darkMode }) => {
         <figure className="relative flex flex-col">
           <motion.img
             src={profile}
-            alt="Profile"
+            alt="Koppai Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             } box-border w-[40%] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
