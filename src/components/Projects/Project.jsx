@@ -62,47 +62,52 @@ const Project = ({ projectData, index, darkMode }) => {
       }}
     >
       <div
-        className="relative h-full w-full"
+        className='relative h-full w-full'
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <img src={projectData.image} className="absolute h-full w-full" loading='lazy' />
+        <img
+          src={projectData.image}
+          className='absolute h-full w-full'
+          alt={`${projectData.title}-image`}
+          loading='lazy'
+        />
         <motion.div
           className={`relative h-full w-full transition-all duration-500 ease-in-out ${
             isHover ? 'lg:opacity-100' : 'lg:opacity-0'
           }`}
         >
-          <div className="absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80" />
+          <div className='absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80' />
           <Link to={`/projects/${projectData.id}`}>
             <motion.button
-              className="absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl"
+              className='absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl'
               animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
               variants={isLargeScreenWidth ? btnToTopVariants : {}}
               whileHover={{ scale: 1.03, color: '#030c17' }}
             >
               See More
-              <BsArrow90DegLeft className="ml-1 rotate-90 text-base xl:text-2xl" />
+              <BsArrow90DegLeft className='ml-1 rotate-90 text-base xl:text-2xl' />
             </motion.button>
           </Link>
           <motion.span
-            className="absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl"
+            className='absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl'
             animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
             variants={isLargeScreenWidth ? btnToTopVariants : {}}
           >
             {projectData.development_type.replace(' Development', '')}
           </motion.span>
           <motion.h2
-            className="absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl"
+            className='absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl'
             animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
             variants={isLargeScreenWidth ? topToBtnVariants : {}}
           >
             {projectData.title}
           </motion.h2>
-          <div className="absolute right-4 top-4 flex w-[22%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10">
+          <div className='absolute right-4 top-4 flex w-[22%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10'>
             <motion.a
               href={projectData.github_link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
               onClick={(e) => e.stopPropagation()}
               animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
               variants={isLargeScreenWidth ? topToBtnVariants : {}}
@@ -110,14 +115,14 @@ const Project = ({ projectData, index, darkMode }) => {
                 color: '#e38b26',
                 scale: 1.1,
               }}
-              className="text-primary_dark lg:text-text_dark"
+              className='text-primary_dark lg:text-text_dark'
             >
-              <FiGithub className="text-xl lg:text-[26px]" />
+              <FiGithub className='text-xl lg:text-[26px]' />
             </motion.a>
             <motion.a
               href={projectData.live_link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
               onClick={(e) => e.stopPropagation()}
               animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
               variants={isLargeScreenWidth ? topToBtnVariants : {}}
@@ -125,9 +130,9 @@ const Project = ({ projectData, index, darkMode }) => {
                 color: '#e38b26',
                 scale: 1.1,
               }}
-              className="text-primary_dark lg:text-text_dark"
+              className='text-primary_dark lg:text-text_dark'
             >
-              <FiExternalLink className="text-xl lg:text-[26px]" />
+              <FiExternalLink className='text-xl lg:text-[26px]' />
             </motion.a>
           </div>
         </motion.div>

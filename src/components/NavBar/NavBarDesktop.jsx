@@ -241,7 +241,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           </div>
         </li>
         <NavLink
-          to="https://docs.google.com/document/d/13VXPE2wM48DAPK3_WT7ezjwauV8LerirY-1tkKwVdzE/edit?usp=sharing"
+          to="https://docs.google.com/document/d/1HMwbozbfAfAtPKraRLDyvU3twcYYmuuK_ybTTBE_G70/edit?usp=sharing"
           className={`
           bg-gray-200 bg-opacity-90 dark:bg-gray-900 
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 

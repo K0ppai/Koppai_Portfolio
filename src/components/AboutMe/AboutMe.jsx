@@ -58,14 +58,13 @@ const AboutMe = ({ darkMode }) => {
         <figure className="relative flex flex-col">
           <motion.img
             src={profile}
-            alt="Profile"
+            alt="Koppai Profile"
             className={`${
               darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
             } box-border w-[40%] rounded-lg border-4 border-bg_light dark:border-bg_dark md:w-[10vmax]`}
             initial={{ x: '-100vw', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            loading="lazy"
           />
         </figure>
         <div className="mt-4 flex items-center justify-between">
