@@ -38,7 +38,7 @@ Button.propTypes = {
   type: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   initial: PropTypes.object,
-  whileInView: PropTypes.func,
+  whileInView: PropTypes.object,
   viewport: PropTypes.object,
   whileHover: PropTypes.object,
   whileTap: PropTypes.object,

@@ -78,8 +78,8 @@ const Project = ({ projectData, index, darkMode }) => {
           }`}
         >
           <div className='absolute h-[120%] w-[120%] bg-black bg-opacity-60 lg:bg-opacity-80' />
-          <Link to={`/projects/${projectData.id}`}>
-            <motion.button
+          <Link to={`/projects/${projectData.end_point}`}>
+            <motion.span
               className='absolute bottom-4 right-4 flex items-center justify-center rounded-[4px] bg-primary_dark px-4 py-2 md:bottom-6 md:right-6 xl:bottom-10 xl:right-10 xl:text-2xl'
               animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
               variants={isLargeScreenWidth ? btnToTopVariants : {}}
@@ -87,7 +87,7 @@ const Project = ({ projectData, index, darkMode }) => {
             >
               See More
               <BsArrow90DegLeft className='ml-1 rotate-90 text-base xl:text-2xl' />
-            </motion.button>
+            </motion.span>
           </Link>
           <motion.span
             className='absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl'
@@ -142,6 +142,7 @@ const Project = ({ projectData, index, darkMode }) => {
 };
 
 export default Project;
+
 Project.propTypes = {
   projectData: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
