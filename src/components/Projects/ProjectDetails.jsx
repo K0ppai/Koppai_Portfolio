@@ -186,9 +186,8 @@ const ProjectDetails = ({ darkMode }) => {
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
-        >
-          {currentProjectData.description}
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: currentProjectData.description }}
+        />
       </article>
       <motion.article>
         <motion.h2

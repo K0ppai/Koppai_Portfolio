@@ -1,5 +1,6 @@
 import {
   bookstore,
+  dineSpotter,
   dota2Heros,
   leaderboard,
   siribox,
@@ -9,7 +10,24 @@ import {
 
 const projectDatas = [
   {
-    id: 1,
+    title: 'Dine Spotter',
+    description:
+      "Dine Spotter is a desktop web application that serves as a clone of <a href='https://www.opentable.com/' class='hover:underline text-green-500 dark:text-secondary_light' target='_blank'>OpenTable</a> website. Users can discover available tables based on the number of people, preferred time, and date for their reservation.",
+    image: dineSpotter,
+    live_link: 'https://dine-spotter.vercel.app',
+    github_link: 'https://github.com/K0ppai/Dine-Spotter',
+    responsive: 'Desktop',
+    tech: ['Next.js', 'TailwindCss', 'Prisma', 'Supabase'],
+    built_date: 'December 2023',
+    development_type: 'Full-Stack Development',
+    goal: 'My goal in building this website is to practice constructing a real-world application and enhance my technical skills using the Next.js framework and TypeScript.',
+    key_feature:
+      "Dine spotter's key features include search features with filtering system, availability system for the desired booking time, booking system with your party sizes, time and day at your favourite restaurant and finally the authentication sytem",
+    lesson_learned:
+      'After completing the development of this website, I have acquired a comprehensive skill set that includes effectively implementing middleware, establishing secure authentication using JSON Web Tokens (JWT), incorporating a robust filtering system with search queries, and significantly improving code quality, readability, maintainability, and scalability through the use of TypeScript in my Next.js application.',
+    end_point: 'dine-spotter',
+  },
+  {
     title: 'Yacht Rental',
     description:
       "Yacht Rental, a project I worked on with two fellow developers, is all about renting yachts. We used Ruby on Rails for the behind-the-scenes stuff, React.js for the user-friendly front end, and PostgreSQL to store all the important info. It's pretty simple: users can sign up, log in, and then, on the main page, they'll spot these amazingly eyecatching yachts. If they find one they like, they can easily reserve it in the city they prefer. Smooth sailing all the way!",
@@ -25,10 +43,9 @@ const projectDatas = [
       "We're super proud about how we've made things safe and simple for all users. We've got a system that makes sure there are no duplicate email addresses, so you won't run into any email troubles. When it comes to booking, users can't double-book the same yacht on the same day in the same city, so your reserved yacht stays yours 😉. And for all the reservation info, it's crystal clear. You'll know exactly how long it'll take and what the total cost is. We're all about making things easy and straightforward!",
     lesson_learned:
       "Looking back on my journey, I've learned how to put two different apps online and make them connect together. And here's the best part, I've also learned how to set up strong security with the help of a gem called devise-jwt. It's like having a secret code to keep everything safe and sound!",
-      end_point: 'yacht-rental'
+    end_point: 'yacht-rental',
   },
   {
-    id: 2,
     title: 'Dota2 Heros',
     description:
       "Hey there! DOTA2 HEROS is a cool, user-friendly website I built to help you dive into the world of DOTA2 heroes. It's super responsive and lets you explore all those awesome heroes in the game. I used React.js and Redux to create it, and I hooked it up to the OpenDota API for all that amazing hero data. I'm pretty proud to say that I was the one behind the scenes making it happen. So, if you're ready to discover and learn more about your favorite DOTA2 heroes, you're in the right place!",
@@ -44,10 +61,9 @@ const projectDatas = [
       "This app comes with a handy search feature, giving users the power to easily search for their beloved heroes by name. But what I'm particularly excited about is the hero animation – it's a standout feature. When you head to the hero detail page, you're in for a visually stunning experience. It's something I'm really proud of, and I can't wait for you to check it out!",
     lesson_learned:
       "One tricky part of this project was making things update in real-time as you type. It took some effort to get the app to show results while you were still typing hero names. But you know what? It was a great learning experience. It taught me how to handle real-time updates in web apps, and now I've got that skill in my toolbox.",
-      end_point: 'dota2-heros'
+    end_point: 'dota2-heros',
   },
   {
-    id: 3,
     title: 'SiriBox',
     description:
       "SIRIBOX is a friendly website that showcases TV shows and series. To make it all work, we used the TVmaze API to gather info about those shows. We built this project using Pure JavaScript and spiced things up with the Bootstrap CSS framework to make the website look good. I wasn't alone on this journey; I teamed up with another developer to make sure all the cool features came to life. Plus, I put some effort into making the project look stylish and user-friendly.",
@@ -63,10 +79,9 @@ const projectDatas = [
       "To make it easier to find stuff, I added a filter for different show types, like action or comedy. You can also do cool things like 'liking' and leaving comments on your fave shows. When you hit the comment button, a little window pops up with all the info about the show, like the description, rating, and more. Plus, there's a spot to type in your own comments. It's all about making the app more interactive and user-friendly!",
     lesson_learned:
       "When I look back on this project, I realized that I originally set things up to send and get data from the API, and then I'd update likes and comments on the shows. The problem was that there was a bit of a lag when users interacted with the website. Thinking about it now, a smarter way to do it would've been to update what you see on the website first (that's called the DOM), and then send the data to the API. To keep things like likes and comments the same, I could've only fetched data when a user refreshed the page. That way, people wouldn't have to wait as long to see what's going on, making the website smoother to use.",
-      end_point: 'siribox'
+    end_point: 'siribox',
   },
   {
-    id: 4,
     title: 'Leaderboard',
     description:
       "The LEADERBOARD project marks another step in my web development journey. It's special because it's my first project where I've used asynchronous JavaScript functions. Plus, I got to work with Microverse's Leaderboard API service, which let me send and fetch data using APIs. Pretty cool, right?",
@@ -82,10 +97,9 @@ const projectDatas = [
       "In this project, you can put in your scores, and they go right into the system. What's cool is that the scores get sorted automatically, from the highest to the lowest, so you can easily check out who's leading the pack. And don't worry about your device 😉. The website is designed to fit and work well on all sorts of screens.",
     lesson_learned:
       "This project has been a super learning experience for me. I've picked up some really useful skills, like how to work with stuff that doesn't happen all at the same time (that's what 'asynchronous' means) and how to use those internet connections to get cool data (that's the API part). Plus, I learned about using 'medium-fidelity wireframes,' which is like having a plan for building stuff that's not too fancy but just right.",
-      end_point: 'leaderboard'
+    end_point: 'leaderboard',
   },
   {
-    id: 5,
     title: 'Space Travellers',
     description:
       "I teamed up with another developer to create SPACE TRAVELLERS, and my main job was taking care of the missions part. We used data from the SpaceX API to show off cool missions and rockets. The site has three big pages: one for checking out and reserving rockets, another for diving into missions and getting on board, and a third page where you can see the rockets you've reserved and the missions you've joined. It's all about exploring the universe!",
@@ -101,10 +115,9 @@ const projectDatas = [
       'On the Rockets page, you can check out all the cool info about rockets and even pick your favorites to book. And guess what? The Missions page is just as awesome. You get to see all the nitty-gritty details about missions and jump right in!',
     lesson_learned:
       "This project taught me the importance of talking things out and making a good plan before we dive into development. I realized how essential it is to figure out stuff like where everyone works and how our folders are organized right from the start. It keeps us from doing the same things twice and keeps our project nice and neat. Plus, it makes sure we're all working together and knowing what's going on.",
-      end_point: 'space-travellers'
+    end_point: 'space-travellers',
   },
   {
-    id: 6,
     title: 'Bookstore',
     description:
       'The BOOKSTORE project was a great learning experience for me. I got to learn how to use React and Redux, which are super handy tools. With the Bookstore API from Microverse, I could do cool stuff like getting books, adding new ones with all their details, and even removing books. It was a fantastic learning journey!',
@@ -120,7 +133,7 @@ const projectDatas = [
       "This app does three main things: first, you can check out a list of books. Second, you can add new books, including their genres and authors. And third, you can take books off the list. It's all about making books easy to manage.",
     lesson_learned:
       "Once I wrapped up this project, I picked up some cool tricks. I figured out how to use Redux and React icons to make the app look way cooler. Plus, my coding buddy got me into Tailwind CSS, and taught me how to add a dark mode to websites. I'm proud to say that this project made me a better frontend developer.",
-      end_point: 'bookstore'
+    end_point: 'bookstore',
   },
 ];
 export default projectDatas;
