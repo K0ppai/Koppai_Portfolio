@@ -33,7 +33,7 @@ const ProjectDetails = ({ darkMode }) => {
           transition: { duration: 0.5, delay: 0.5 },
         }}
         viewport={{
-          once: true,
+          once: false,
         }}
       >
         {currentProjectData.title.toUpperCase()}
@@ -50,7 +50,7 @@ const ProjectDetails = ({ darkMode }) => {
           transition: { duration: 0.5, delay: 0.7 },
         }}
         viewport={{
-          once: true,
+          once: false,
         }}
       >
         {currentProjectData.development_type}
@@ -67,7 +67,7 @@ const ProjectDetails = ({ darkMode }) => {
           transition: { duration: 0.5, delay: 1 },
         }}
         viewport={{
-          once: true,
+          once: false,
         }}
       >
         <motion.figure
@@ -81,7 +81,7 @@ const ProjectDetails = ({ darkMode }) => {
             transition: { duration: 0.5, delay: 1.5 },
           }}
           viewport={{
-            once: true,
+            once: false,
           }}
         >
           <img
@@ -109,7 +109,7 @@ const ProjectDetails = ({ darkMode }) => {
               transition: { duration: 0.5, delay: 1 },
             }}
             viewport={{
-              once: true,
+              once: false,
             }}
             whileHover={{ scale: 1.05, color: 'black' }}
             whileTap={{ scale: 0.95 }}
@@ -135,7 +135,7 @@ const ProjectDetails = ({ darkMode }) => {
               transition: { duration: 0.5, delay: 1 },
             }}
             viewport={{
-              once: true,
+              once: false,
             }}
             whileHover={{ scale: 1.05, color: 'black' }}
             whileTap={{ scale: 0.95 }}
@@ -248,7 +248,13 @@ const ProjectDetails = ({ darkMode }) => {
 
       <div className='flex px-4'>
         {currentIndex !== 0 && (
-          <Link to={`/projects/${projectDatas[currentIndex - 1].end_point}`} className='me-auto'>
+          <Link
+            to={`/projects/${projectDatas[currentIndex - 1].end_point}`}
+            className='me-auto'
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <motion.span
               className='flex items-center rounded-md border-2 border-primary_dark px-4 py-2 text-primary_dark'
               whileHover={{
@@ -264,7 +270,13 @@ const ProjectDetails = ({ darkMode }) => {
           </Link>
         )}
         {currentIndex !== projectDatas.length - 1 && (
-          <Link to={`/projects/${projectDatas[currentIndex + 1].end_point}`} className='ms-auto'>
+          <Link
+            to={`/projects/${projectDatas[currentIndex + 1].end_point}`}
+            className='ms-auto'
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <motion.span
               className='flex items-center rounded-md border-2 border-primary_dark px-4 py-2 text-primary_dark'
               whileHover={{
