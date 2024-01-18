@@ -4,7 +4,18 @@ import bookstore from './bookstore1.webp';
 import siribox from './siribox1.webp';
 import leaderboard from './leaderboard1.webp';
 import matrix from './matrix.webp';
-import profile from './profile1.webp'
-import yachtRental from './yacht-rental.webp'
+import profile from './profile1.webp';
+import yachtRental from './yacht-rental.webp';
+import dineSpotter from './dinespotter.png';
 
-export { dota2Heros, spaceTravellers, bookstore, siribox, leaderboard, matrix,profile, yachtRental };
+export {
+  dota2Heros,
+  spaceTravellers,
+  bookstore,
+  siribox,
+  leaderboard,
+  matrix,
+  profile,
+  yachtRental,
+  dineSpotter,
+};
