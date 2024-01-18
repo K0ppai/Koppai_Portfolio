@@ -17,7 +17,7 @@ const titleAnimationVariants = {
     transition: { duration: 0.5, delay: 1 },
   },
   viewport: {
-    once: false,
+    once: true,
   },
 };
 
@@ -35,7 +35,7 @@ const liAnimationVariants = {
     },
   }),
   viewport: {
-    once: false,
+    once: true,
   },
 };
 

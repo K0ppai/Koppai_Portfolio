@@ -152,7 +152,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-5 font-sans text-xl font-bold'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           TECHS
         </motion.h2>
@@ -164,7 +166,9 @@ const ProjectDetails = ({ darkMode }) => {
               custom={index}
               initial={liAnimationVariants.initial}
               whileInView={liAnimationVariants.whileInView}
-              viewport={liAnimationVariants.viewport}
+              viewport={{
+                once: false,
+              }}
             >
               {tech}
             </motion.li>
@@ -177,7 +181,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-5 font-sans text-xl font-bold'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           INTRODUCTION
         </motion.h2>
@@ -185,7 +191,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-8 text-gray-500 dark:text-gray-400'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
           dangerouslySetInnerHTML={{ __html: currentProjectData.description }}
         />
       </article>
@@ -194,7 +202,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-5 font-sans text-xl font-bold'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           PURPOSE AND GOAL
         </motion.h2>
@@ -202,7 +212,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-8 text-gray-500 dark:text-gray-400'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           {currentProjectData.goal}
         </motion.p>
@@ -212,7 +224,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-5 font-sans text-xl font-bold'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           SPOTLIGHT
         </motion.h2>
@@ -220,7 +234,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-8 text-gray-500 dark:text-gray-400'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           {currentProjectData.key_feature}
         </motion.p>
@@ -230,7 +246,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-5 font-sans text-xl font-bold'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           LESSON LEARNED
         </motion.h2>
@@ -238,7 +256,9 @@ const ProjectDetails = ({ darkMode }) => {
           className='mb-8 text-gray-500 dark:text-gray-400'
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
-          viewport={titleAnimationVariants.viewport}
+          viewport={{
+            once: false,
+          }}
         >
           {currentProjectData.lesson_learned}
         </motion.p>
