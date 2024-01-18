@@ -21,12 +21,12 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className="bg-bg_light text-text_light dark:bg-bg_dark dark:text-text_dark">
+      <div className='bg-bg_light text-text_light dark:bg-bg_dark dark:text-text_dark'>
         <NavBarDesktop darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <NavBarMobile darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/projects/:projectId" element={<ProjectDetails darkMode={darkMode} />} />
+          <Route path='/' element={<Home darkMode={darkMode} />} />
+          <Route path='/projects/:endpoint' element={<ProjectDetails darkMode={darkMode} />} />
         </Routes>
       </div>
     </div>

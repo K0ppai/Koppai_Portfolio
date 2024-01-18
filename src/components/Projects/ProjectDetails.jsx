@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import projectDatas from './ProjectDatas';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
@@ -11,17 +11,13 @@ import { liAnimationVariants } from '@/assets/Animations/Animations';
 import { useEffect } from 'react';
 
 const ProjectDetails = ({ darkMode }) => {
+  const { endpoint } = useParams();
+  const currentProjectData = projectDatas.find((project) => project.end_point === endpoint);
+  const currentIndex = projectDatas.indexOf(currentProjectData);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const { projectId } = useParams();
-  const currentProjectIndex = projectDatas.findIndex(
-    (project) => project.id === parseInt(projectId),
-  );
-
-  const nextProjectIndex = (currentProjectIndex + 1) % projectDatas.length;
-  const prevProjectIndex = (currentProjectIndex - 1 + projectDatas.length) % projectDatas.length;
 
   return (
     <section className='px-4 pb-[20vh] tracking-wider md:px-[10vmax] md:text-justify lg:px-[22vmax]'>
@@ -37,10 +33,10 @@ const ProjectDetails = ({ darkMode }) => {
           transition: { duration: 0.5, delay: 0.5 },
         }}
         viewport={{
-          once: true,
+          once: false,
         }}
       >
-        {projectDatas[currentProjectIndex].title.toUpperCase()}
+        {currentProjectData.title.toUpperCase()}
       </motion.h1>
       <motion.h2
         className='pb-6 text-center text-lg text-gray-400'
@@ -54,10 +50,10 @@ const ProjectDetails = ({ darkMode }) => {
           transition: { duration: 0.5, delay: 0.7 },
         }}
         viewport={{
-          once: true,
+          once: false,
         }}
       >
-        {projectDatas[currentProjectIndex].development_type}
+        {currentProjectData.development_type}
       </motion.h2>
       <motion.div
         className={`${
@@ -71,7 +67,7 @@ const ProjectDetails = ({ darkMode }) => {
           transition: { duration: 0.5, delay: 1 },
         }}
         viewport={{
-          once: true,
+          once: false,
         }}
       >
         <motion.figure
@@ -85,19 +81,19 @@ const ProjectDetails = ({ darkMode }) => {
             transition: { duration: 0.5, delay: 1.5 },
           }}
           viewport={{
-            once: true,
+            once: false,
           }}
         >
           <img
-            src={projectDatas[currentProjectIndex].image}
-            alt={`${projectDatas[currentProjectIndex].title}-image`}
+            src={currentProjectData.image}
+            alt={`${currentProjectData.title}-image`}
             className='w-full'
           />
         </motion.figure>
         {/* Source/Live Buttons */}
         <div className='flex justify-between'>
           <motion.a
-            href={projectDatas[currentProjectIndex].github_link}
+            href={currentProjectData.github_link}
             target='_blank'
             rel='noopener noreferrer'
             className={`left flex items-center justify-start bg-primary_dark py-2 text-secondary_pale_light dark:bg-primary_light ${
@@ -113,7 +109,7 @@ const ProjectDetails = ({ darkMode }) => {
               transition: { duration: 0.5, delay: 1 },
             }}
             viewport={{
-              once: true,
+              once: false,
             }}
             whileHover={{ scale: 1.05, color: 'black' }}
             whileTap={{ scale: 0.95 }}
@@ -123,7 +119,7 @@ const ProjectDetails = ({ darkMode }) => {
             <FiGithub className='ml-[5vmin] text-2xl lg:ml-[5.5vmax]' />
           </motion.a>
           <motion.a
-            href={projectDatas[currentProjectIndex].live_link}
+            href={currentProjectData.live_link}
             target='_blank'
             rel='noopener noreferrer'
             className={`right flex items-center justify-end bg-green-500 py-2 text-secondary_pale_light dark:bg-green-500 ${
@@ -139,7 +135,7 @@ const ProjectDetails = ({ darkMode }) => {
               transition: { duration: 0.5, delay: 1 },
             }}
             viewport={{
-              once: true,
+              once: false,
             }}
             whileHover={{ scale: 1.05, color: 'black' }}
             whileTap={{ scale: 0.95 }}
@@ -161,7 +157,7 @@ const ProjectDetails = ({ darkMode }) => {
           TECHS
         </motion.h2>
         <ul className='list-disc pl-4'>
-          {projectDatas[currentProjectIndex].tech.map((tech, index) => (
+          {currentProjectData.tech.map((tech, index) => (
             <motion.li
               key={index}
               className='text-gray-500 dark:text-gray-400'
@@ -190,9 +186,8 @@ const ProjectDetails = ({ darkMode }) => {
           initial={titleAnimationVariants.initial}
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
-        >
-          {projectDatas[currentProjectIndex].description}
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: currentProjectData.description }}
+        />
       </article>
       <motion.article>
         <motion.h2
@@ -209,7 +204,7 @@ const ProjectDetails = ({ darkMode }) => {
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
         >
-          {projectDatas[currentProjectIndex].goal}
+          {currentProjectData.goal}
         </motion.p>
       </motion.article>
       <article>
@@ -227,7 +222,7 @@ const ProjectDetails = ({ darkMode }) => {
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
         >
-          {projectDatas[currentProjectIndex].key_feature}
+          {currentProjectData.key_feature}
         </motion.p>
       </article>
       <article>
@@ -245,18 +240,22 @@ const ProjectDetails = ({ darkMode }) => {
           whileInView={titleAnimationVariants.whileInView2}
           viewport={titleAnimationVariants.viewport}
         >
-          {projectDatas[currentProjectIndex].lesson_learned}
+          {currentProjectData.lesson_learned}
         </motion.p>
       </article>
-      {/* Next/Previous Buttons */}
+
+      {/* Next & Previous Buttons */}
+
       <div className='flex px-4'>
-        {currentProjectIndex !== 0 && (
+        {currentIndex !== 0 && (
           <Link
-            to={`/projects/${projectDatas[prevProjectIndex].id}`}
+            to={`/projects/${projectDatas[currentIndex - 1].end_point}`}
             className='me-auto'
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
           >
-            <motion.button
+            <motion.span
               className='flex items-center rounded-md border-2 border-primary_dark px-4 py-2 text-primary_dark'
               whileHover={{
                 scale: 1.05,
@@ -267,16 +266,18 @@ const ProjectDetails = ({ darkMode }) => {
             >
               <BsArrowLeft className='mr-1 text-2xl' />
               <span className='pl-2'>Prev</span>
-            </motion.button>
+            </motion.span>
           </Link>
         )}
-        {currentProjectIndex !== projectDatas.length - 1 && (
+        {currentIndex !== projectDatas.length - 1 && (
           <Link
-            to={`/projects/${projectDatas[nextProjectIndex].id}`}
+            to={`/projects/${projectDatas[currentIndex + 1].end_point}`}
             className='ms-auto'
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
           >
-            <motion.button
+            <motion.span
               className='flex items-center rounded-md border-2 border-primary_dark px-4 py-2 text-primary_dark'
               whileHover={{
                 scale: 1.05,
@@ -287,7 +288,7 @@ const ProjectDetails = ({ darkMode }) => {
             >
               <span className='pr-2'>Next</span>
               <BsArrowRight className='ml-1 text-2xl' />
-            </motion.button>
+            </motion.span>
           </Link>
         )}
       </div>
