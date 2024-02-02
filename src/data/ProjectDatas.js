@@ -6,7 +6,7 @@ import {
   siribox,
   spaceTravellers,
   yachtRental,
-} from '../../assets/images/images';
+} from '../assets/images/images';
 
 const projectDatas = [
   {
