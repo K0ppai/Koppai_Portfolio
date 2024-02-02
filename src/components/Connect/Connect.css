@@ -1,0 +1,29 @@
+#connect .rotate {
+  transform-origin: calc(315px / 2);
+  left: 0;
+  transition: 0.5s;
+  transition-delay: calc(0.12s * var(--i));
+  transform: rotate(0deg) translateX(calc(250px / 2));
+}
+
+#connect .rotate.active {
+  transform: rotate(calc(360deg / 6 * var(--i)));
+}
+
+#connect .rotate a svg {
+  transform: rotate(calc(360deg / -6 * var(--i)));
+}
+
+@media screen and (min-width: 768px) {
+  #connect .rotate {
+    transform-origin: calc(400px / 2);
+    transform: rotate(0deg) translateX(calc(350px / 2));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #connect .rotate {
+    transform-origin: calc(500px / 2);
+    transform: rotate(0deg) translateX(calc(450px / 2));
+  }
+}
