@@ -13,6 +13,8 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+import { useHandler } from '../../hooks/useHandler';
+
 const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');
   const path = useLocation().pathname;
@@ -27,15 +29,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
     });
   };
 
-  const handleNavigation = (sectionId) => {
-    if (path.startsWith('/projects/')) {
-      navigate('/');
-    }
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  const { handleNavigation } = useHandler();
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
@@ -55,7 +49,7 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
   }, [sections]);
 
   return (
-    <nav className="flex justify-center">
+    <nav className='flex justify-center'>
       <motion.div
         className={`${
           darkMode ? 'shadow-drop-dark' : 'shadow-drop-light'
@@ -65,57 +59,57 @@ const NavBarMobile = ({ darkMode, toggleDarkMode }) => {
         transition={{ duration: 0.5, delay: 2.5, ease: 'easeInOut' }}
       >
         <a
-          href="#about-me"
+          href='#about-me'
           className={`flex flex-col items-center justify-center ${
             activeSection === 'about-me' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
-          onClick={() => handleNavigation('about-me')}
+          onClick={() => handleNavigation(path, navigate, 'about-me')}
         >
           {activeSection === 'about-me' ? (
-            <AiFillHome className="mx-0 text-2xl text-primary_dark" />
+            <AiFillHome className='mx-0 text-2xl text-primary_dark' />
           ) : (
-            <AiOutlineHome className="mx-[4vw] text-2xl text-primary_dark" />
+            <AiOutlineHome className='mx-[4vw] text-2xl text-primary_dark' />
           )}
         </a>
         <a
-          href="#projects"
+          href='#projects'
           className={`flex flex-col items-center justify-center ${
             activeSection === 'projects' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
-          onClick={() => handleNavigation('projects')}
+          onClick={() => handleNavigation(path, navigate, 'projects')}
         >
           {activeSection === 'projects' ? (
-            <BsFillGridFill className="mx-0 text-2xl text-primary_dark" />
+            <BsFillGridFill className='mx-0 text-2xl text-primary_dark' />
           ) : (
-            <BsGrid className="mx-[4vw] text-2xl text-primary_dark" />
+            <BsGrid className='mx-[4vw] text-2xl text-primary_dark' />
           )}
         </a>
-        <button className="flex flex-col items-center justify-center" onClick={toggleDarkMode}>
+        <button className='flex flex-col items-center justify-center' onClick={toggleDarkMode}>
           {darkMode ? (
-            <BsFillMoonStarsFill className="mx-[4vw] text-2xl text-primary_dark" />
+            <BsFillMoonStarsFill className='mx-[4vw] text-2xl text-primary_dark' />
           ) : (
-            <ImSun className="mx-[4vw] text-2xl text-primary_dark" />
+            <ImSun className='mx-[4vw] text-2xl text-primary_dark' />
           )}
         </button>
         <a
-          href="https://docs.google.com/document/d/1HMwbozbfAfAtPKraRLDyvU3twcYYmuuK_ybTTBE_G70/edit?usp=sharing"
-          className="flex flex-col items-center justify-center"
-          target="_blank"
-          rel="noreferrer"
+          href='https://docs.google.com/document/d/1HMwbozbfAfAtPKraRLDyvU3twcYYmuuK_ybTTBE_G70/edit?usp=sharing'
+          className='flex flex-col items-center justify-center'
+          target='_blank'
+          rel='noreferrer'
         >
-          <BsFileEarmarkText className="mx-[4vw] text-2xl text-primary_dark" />
+          <BsFileEarmarkText className='mx-[4vw] text-2xl text-primary_dark' />
         </a>
         <a
-          href="#contact"
+          href='#contact'
           className={`flex flex-col items-center justify-center ${
             activeSection === 'contact' && 'rounded-md bg-primary_light bg-opacity-[20%] p-[4vw]'
           }`}
-          onClick={() => handleNavigation('contact')}
+          onClick={() => handleNavigation(path, navigate, 'contact')}
         >
           {activeSection === 'contact' ? (
-            <BsFillSendFill className="mx-0 text-2xl text-primary_dark" />
+            <BsFillSendFill className='mx-0 text-2xl text-primary_dark' />
           ) : (
-            <BsSend className="mx-[4vw] text-2xl text-primary_dark" />
+            <BsSend className='mx-[4vw] text-2xl text-primary_dark' />
           )}
         </a>
       </motion.div>
