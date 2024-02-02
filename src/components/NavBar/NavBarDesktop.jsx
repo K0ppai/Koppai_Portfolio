@@ -20,37 +20,19 @@ import { useHandler } from '../../hooks/useHandler';
 import './NavBar.css';
 
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
-  const [activeSection, setActiveSection] = useState('about-me');
   const path = useLocation().pathname;
   const navigate = useNavigate();
   const sections = ['about-me', 'projects', 'contact'];
+  const [activeSection, setActiveSection] = useState('about-me');
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
-  const { handleNavigation } = useHandler();
-
-  const handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
-      }
-    });
-  };
+  const { handleNavigation, handleSectionObservation } = useHandler();
 
   const handleNavExpand = () => {
     setIsNavExpanded(!isNavExpanded);
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      rootMargin: '-50% 0px -50% 0px',
-    });
-
-    sections.forEach((section) => {
-      const target = document.getElementById(section);
-      if (target) {
-        observer.observe(target);
-      }
-    });
+    const observer = handleSectionObservation(sections, setActiveSection);
 
     return () => {
       observer.disconnect();

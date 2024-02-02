@@ -9,7 +9,36 @@ export const useHandler = () => {
     }
   };
 
+  const handleIntersection = (entries, setActiveSection) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  };
+
+  const handleSectionObservation = (sections, setActiveSection) => {
+    const observerOptions = {
+      rootMargin: '-50% 0px -50% 0px',
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => handleIntersection(entries, setActiveSection),
+      observerOptions,
+    );
+
+    sections.forEach((section) => {
+      const target = document.getElementById(section);
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+    return observer;
+  };
+
   return {
     handleNavigation,
+    handleSectionObservation,
   };
 };

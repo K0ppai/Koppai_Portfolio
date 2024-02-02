@@ -1,9 +1,8 @@
 import { useParams } from 'react-router-dom';
-
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 
-// Datas
+// Datas and components
 import projectDatas from '../../data/ProjectDatas';
 import Header from './components/Header';
 import ProjectImage from './components/ProjectImage';
