@@ -85,23 +85,16 @@ const Project = ({ projectData, index, darkMode }) => {
               variants={isLargeScreenWidth ? btnToTopVariants : {}}
               whileHover={{ scale: 1.03, color: '#030c17' }}
             >
-              See More
+              {projectData.title}
               <BsArrow90DegLeft className='ml-1 rotate-90 text-base xl:text-2xl' />
             </motion.span>
           </Link>
-          <motion.span
-            className='absolute bottom-4 left-4 text-lg md:bottom-6 md:left-6 xl:bottom-10 xl:left-10 xl:text-2xl'
-            animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
-            variants={isLargeScreenWidth ? btnToTopVariants : {}}
-          >
-            {projectData.development_type.replace(' Development', '')}
-          </motion.span>
           <motion.h2
             className='absolute left-4 top-3 text-xl font-bold md:left-6 md:top-5 xl:left-10 xl:top-9 xl:text-2xl'
             animate={isLargeScreenWidth && isHover ? 'hover' : 'initial'}
             variants={isLargeScreenWidth ? topToBtnVariants : {}}
           >
-            {projectData.title}
+            {projectData.development_type.split(' ')[0]}
           </motion.h2>
           <div className='absolute right-4 top-4 flex w-[22%] justify-between md:right-6 md:top-6 md:w-[15%] xl:right-10 xl:top-10'>
             <motion.a

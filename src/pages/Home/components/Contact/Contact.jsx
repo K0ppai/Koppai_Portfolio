@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { titleAnimationVariants } from '@/assets/Animations/Animations';
 import { motion } from 'framer-motion';
+
+import { titleAnimationVariants } from '@/assets/Animations/Animations';
 import { inputAnimationVariants, textAreaAnimationVariants } from '@/assets/Animations/Animations';
 import Button from '../Button/Button';
 

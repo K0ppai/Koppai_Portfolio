@@ -6,7 +6,7 @@ import {
   siribox,
   spaceTravellers,
   yachtRental,
-} from '../../assets/images/images';
+} from '../assets/images/images';
 
 const projectDatas = [
   {
@@ -19,7 +19,7 @@ const projectDatas = [
     responsive: 'Desktop',
     tech: ['Next.js', 'TailwindCss', 'Prisma', 'Supabase'],
     built_date: 'December 2023',
-    development_type: 'Full-Stack Development',
+    development_type: 'Full-stack Development',
     goal: 'My goal in building this website is to practice constructing a real-world application and enhance my technical skills using the Next.js framework and TypeScript.',
     key_feature:
       "Dine spotter's key features include search features with filtering system, availability system for the desired booking time, booking system with your party sizes, time and day at your favourite restaurant and finally the authentication sytem",
@@ -37,7 +37,7 @@ const projectDatas = [
     responsive: 'Responsive',
     tech: ['React', 'Redux', 'TailwindCss', 'Ruby On Rails', 'PostgreSQL'],
     built_date: 'October 2023',
-    development_type: 'Full-Stack Development',
+    development_type: 'Full-stack Development',
     goal: 'In our project, we had a few main goals. First, we wanted to challenge ourselves and test our technical skills with a more demanding project. Our mission was to connect the back-end (created with Ruby on Rails) to the front-end (built with React). We really got to know the ins and outs of both Ruby on Rails and React frameworks. It was super important for us to follow the best practices and coding guidelines for Ruby, RoR, JavaScript, and React. We provided each other with helpful feedback and carried out effective code reviews. Communication was key, and we successfully planned and finished the project without any conflicts. By setting clear working agreements, we made sure our team worked smoothly together. We understood that showing respect for our teammates was vital for building strong relationships, and we were reliable and committed team members. To keep everything organized, we used an empty Kanban board to manage our tasks and time efficiently. In the end, we successfully delivered the project on time.',
     key_feature:
       "We're super proud about how we've made things safe and simple for all users. We've got a system that makes sure there are no duplicate email addresses, so you won't run into any email troubles. When it comes to booking, users can't double-book the same yacht on the same day in the same city, so your reserved yacht stays yours 😉. And for all the reservation info, it's crystal clear. You'll know exactly how long it'll take and what the total cost is. We're all about making things easy and straightforward!",

@@ -1,4 +1,3 @@
-import './NavBar.css';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
   BsFileEarmarkText,
@@ -15,45 +14,25 @@ import { useState, useEffect } from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
+import { useHandler } from '../../hooks/useHandler';
+
+// Css
+import './NavBar.css';
+
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
-  const [activeSection, setActiveSection] = useState('about-me');
   const path = useLocation().pathname;
   const navigate = useNavigate();
   const sections = ['about-me', 'projects', 'contact'];
+  const [activeSection, setActiveSection] = useState('about-me');
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
-  const handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
-      }
-    });
-  };
+  const { handleNavigation, handleSectionObservation } = useHandler();
 
   const handleNavExpand = () => {
     setIsNavExpanded(!isNavExpanded);
   };
-  const handleNavigation = (sectionId) => {
-    if (path.startsWith('/projects/')) {
-      navigate('/');
-    }
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      rootMargin: '-50% 0px -50% 0px',
-    });
-
-    sections.forEach((section) => {
-      const target = document.getElementById(section);
-      if (target) {
-        observer.observe(target);
-      }
-    });
+    const observer = handleSectionObservation(sections, setActiveSection);
 
     return () => {
       observer.disconnect();
@@ -69,7 +48,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
       animate={{ x: 0, y: '-50%', opacity: 1 }}
       transition={{ duration: 0.5, delay: 1.5, ease: 'easeInOut' }}
     >
-      <motion.ul className="flex h-[80vh] flex-col lg:h-[60vh]">
+      <motion.ul className='flex h-[80vh] flex-col lg:h-[60vh]'>
         <li
           className={`
           bg-gray-200 bg-opacity-90 dark:bg-gray-900 
@@ -82,7 +61,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           >
             <MdOutlineKeyboardArrowLeft className={`${isNavExpanded ? 'rotate-180' : ''}`} />
           </button>
-          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
+          <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             {darkMode ? (
               <motion.span
                 className={`${isNavExpanded ? 'block' : 'hidden'}`}
@@ -109,16 +88,16 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               </motion.span>
             )}
             {darkMode ? (
-              <button className="my-[4vh]">
+              <button className='my-[4vh]'>
                 <BsFillMoonStarsFill
-                  className="min-w-[24px] text-lg text-primary_dark"
+                  className='min-w-[24px] text-lg text-primary_dark'
                   onClick={toggleDarkMode}
                 />
               </button>
             ) : (
-              <button className="my-[4vh]">
+              <button className='my-[4vh]'>
                 <ImSun
-                  className="min-w-[24px] text-lg text-primary_dark"
+                  className='min-w-[24px] text-lg text-primary_dark'
                   onClick={toggleDarkMode}
                 />
               </button>
@@ -142,7 +121,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <></>
           )}
-          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
+          <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -154,11 +133,11 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             >
               About
             </motion.span>
-            <a href="#about-me" onClick={() => handleNavigation('about-me')}>
+            <a href='#about-me' onClick={() => handleNavigation(path, navigate, 'about-me')}>
               {activeSection === 'about-me' ? (
-                <AiFillHome className="mx-0 min-w-[24px] text-lg text-primary_dark" />
+                <AiFillHome className='mx-0 min-w-[24px] text-lg text-primary_dark' />
               ) : (
-                <AiOutlineHome className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
+                <AiOutlineHome className='my-[4vh] min-w-[24px] text-lg text-primary_dark' />
               )}
             </a>
           </div>
@@ -181,7 +160,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <></>
           )}
-          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
+          <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -193,11 +172,11 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             >
               Projects
             </motion.span>
-            <a href="#projects" onClick={() => handleNavigation('projects')}>
+            <a href='#projects' onClick={() => handleNavigation(path, navigate, 'projects')}>
               {activeSection === 'projects' ? (
-                <BsFillGridFill className="mx-0 min-w-[24px] text-lg text-primary_dark" />
+                <BsFillGridFill className='mx-0 min-w-[24px] text-lg text-primary_dark' />
               ) : (
-                <BsGrid className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
+                <BsGrid className='my-[4vh] min-w-[24px] text-lg text-primary_dark' />
               )}
             </a>
           </div>
@@ -219,7 +198,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           ) : (
             <></>
           )}
-          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
+          <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -231,24 +210,24 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             >
               Contact
             </motion.span>
-            <a href="#contact" onClick={() => handleNavigation('contact')}>
+            <a href='#contact' onClick={() => handleNavigation(path, navigate, 'contact')}>
               {activeSection === 'contact' ? (
-                <BsFillSendFill className="mx-0 min-w-[24px] text-lg text-primary_dark" />
+                <BsFillSendFill className='mx-0 min-w-[24px] text-lg text-primary_dark' />
               ) : (
-                <BsSend className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
+                <BsSend className='my-[4vh] min-w-[24px] text-lg text-primary_dark' />
               )}
             </a>
           </div>
         </li>
         <NavLink
-          to="https://docs.google.com/document/d/1HMwbozbfAfAtPKraRLDyvU3twcYYmuuK_ybTTBE_G70/edit?usp=sharing"
+          to='https://docs.google.com/document/d/1HMwbozbfAfAtPKraRLDyvU3twcYYmuuK_ybTTBE_G70/edit?usp=sharing'
           className={`
           bg-gray-200 bg-opacity-90 dark:bg-gray-900 
           ${activeSection === 'contact' ? 'rounded-tl-[6px]' : ''} 
           flex flex-grow flex-col items-center justify-center rounded-bl-md`}
-          target="_blank"
+          target='_blank'
         >
-          <div className="flex w-full items-center justify-end gap-x-[15%] pr-[20%]">
+          <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
               className={`${isNavExpanded ? 'block' : 'hidden'}`}
               initial={{ opacity: 0, y: 50 }}
@@ -260,7 +239,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
             >
               Resume
             </motion.span>
-            <BsFileEarmarkText className="my-[4vh] min-w-[24px] text-lg text-primary_dark" />
+            <BsFileEarmarkText className='my-[4vh] min-w-[24px] text-lg text-primary_dark' />
           </div>
         </NavLink>
       </motion.ul>
