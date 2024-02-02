@@ -1,18 +1,16 @@
-import { profile } from '@/assets/images/images';
 import PropTypes from 'prop-types';
-import { techs } from '@/assets/Techs/Techs';
-import './AboutMe.css';
 import { useState } from 'react';
-import Connect from './Connect';
 import Modal from 'react-modal';
 import { VscVerifiedFilled } from 'react-icons/vsc';
 import { motion } from 'framer-motion';
-import { titleAnimationVariants } from '@/assets/Animations/Animations';
+
+import { profile } from '@/assets/images/images';
+import './AboutMe.css';
+import Connect from '../Connect/Connect';
 
 Modal.setAppElement('#root');
 
 const AboutMe = ({ darkMode }) => {
-  const [hoveredTech, setHoveredTech] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -109,7 +107,7 @@ const AboutMe = ({ darkMode }) => {
             animate={{ y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            Full-Stack
+            Full-stack
           </motion.span>
           <motion.span
             className='mr-2 rounded-md border-2 border-green-500 px-4 py-[0.1rem] text-green-500 dark:border-green-400 dark:text-green-400'
@@ -152,60 +150,6 @@ const AboutMe = ({ darkMode }) => {
           </p>
         </motion.article>
       </motion.div>
-      {/* Skills section */}
-      <section className='px-[5vmin] md:px-[13vmax] 2xl:px-[20vmax]'>
-        <div className='flex items-center py-8'>
-          <motion.h1
-            className='text-2xl'
-            initial={titleAnimationVariants.initial}
-            whileInView={titleAnimationVariants.whileInView}
-            viewport={titleAnimationVariants.viewport}
-          >
-            My Skills
-          </motion.h1>
-          <motion.div
-            className='ml-2 h-[1px] w-[12vmin] bg-bg_dark dark:bg-white md:w-[48px]'
-            initial={titleAnimationVariants.initial}
-            whileInView={titleAnimationVariants.whileInView}
-            viewport={titleAnimationVariants.viewport}
-          />
-        </div>
-        <motion.p
-          className='mb-8 text-gray-500 dark:text-gray-400'
-          initial={titleAnimationVariants.initial}
-          whileInView={titleAnimationVariants.whileInView}
-          viewport={titleAnimationVariants.viewport}
-        >
-          Technologies that I&apos;ve been working on recently.
-        </motion.p>
-        <ul className='mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-x-20 md:gap-y-8 lg:justify-center lg:gap-x-16'>
-          {techs.map((tech, index) => (
-            <motion.li
-              key={tech.id}
-              className='group'
-              onMouseEnter={() => setHoveredTech(tech.id)}
-              onMouseLeave={() => setHoveredTech(null)}
-              initial={{
-                opacity: 0,
-                y: 100,
-              }}
-              custom={index}
-              whileInView={(index) => ({
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: index * 0.1,
-                },
-              })}
-              viewport={{
-                once: true,
-              }}
-            >
-              {hoveredTech === tech.id ? tech.hoverElement : tech.originalElement}
-            </motion.li>
-          ))}
-        </ul>
-      </section>
     </section>
   );
 };

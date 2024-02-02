@@ -1,14 +1,15 @@
 import { Link, useParams } from 'react-router-dom';
-import projectDatas from './ProjectDatas';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import { RxExternalLink } from 'react-icons/rx';
-import './Projects.css';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+
+// Datas
 import { titleAnimationVariants } from '@/assets/Animations/Animations';
 import { liAnimationVariants } from '@/assets/Animations/Animations';
-import { useEffect } from 'react';
+import projectDatas from '../../data/ProjectDatas';
 
 const ProjectDetails = ({ darkMode }) => {
   const { endpoint } = useParams();

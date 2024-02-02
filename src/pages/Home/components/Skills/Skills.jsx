@@ -1,7 +1,9 @@
-import { titleAnimationVariants } from '@/assets/Animations/Animations';
-import { techs } from '../../data/Techs';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+
+import { titleAnimationVariants } from '@/assets/Animations/Animations';
+import { techs } from '../../../../data/Techs';
+
 import './Skills.css'
 
 const Skills = () => {

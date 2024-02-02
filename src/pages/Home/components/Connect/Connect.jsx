@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { BiX } from 'react-icons/bi';
 
-import { socialMedias } from '../../data/SocialMediaDatas';
+import { socialMedias } from '../../../../data/SocialMediaDatas';
 import './Connect.css';
 
 const Connect = ({ closeModal, isModalOpen, darkMode }) => {
@@ -28,7 +28,7 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
         className={`absolute z-[999] flex h-[65px] w-[65px] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light dark:bg-bg_dark md:h-[80px] md:w-[80px] lg:w-[100px] lg:h-[100px]`}
         onClick={closeModal}
       >
-        <BiX className='text-[40px] md:text-[50px] lg:text-[60px] text-primary_dark' />
+        <BiX className='text-[40px] md:text-[50px] lg:text-[55px] text-primary_dark' />
       </button>
       {socialMedias.map((socialMedia, index) => (
         <li key={socialMedia.id} className='rotate absolute list-none' style={{ '--i': index }}>

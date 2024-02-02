@@ -1,4 +1,3 @@
-import './NavBar.css';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
   BsFileEarmarkText,
@@ -14,6 +13,8 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { motion } from 'framer-motion';
+
+import './NavBar.css';
 
 const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('about-me');

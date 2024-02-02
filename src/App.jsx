@@ -1,10 +1,9 @@
 import NavBarDesktop from '@/components/NavBar/NavBarDesktop';
 import NavBarMobile from '@/components/NavBar/NavBarMobile';
 import { Routes, Route } from 'react-router-dom';
-import ProjectDetails from './components/Projects/ProjectDetails';
 import { useEffect, useState } from 'react';
-import Home from './pages/Home';
-
+import Home from './pages/Home/Home';
+import ProjectDetails from './pages/Details/ProjectDetails';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
