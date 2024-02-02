@@ -8,7 +8,7 @@ import {
 } from 'react-icons/bi';
 
 const iconClassname =
-  'rounded-full bg-bg_light bg-opacity-90 p-3 text-[50px] md:text-[60px] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90';
+  'rounded-full bg-bg_light bg-opacity-90 p-3 text-[55px] md:text-[60px] text-primary_dark backdrop-blur-sm dark:bg-bg_dark dark:bg-opacity-90';
 
 export const socialMedias = [
   {

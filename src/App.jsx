@@ -1,8 +1,10 @@
-import NavBarDesktop from '@/components/NavBar/NavBarDesktop';
-import NavBarMobile from '@/components/NavBar/NavBarMobile';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+
+// components
 import Home from './pages/Home/Home';
+import NavBarDesktop from '@/components/NavBar/NavBarDesktop';
+import NavBarMobile from '@/components/NavBar/NavBarMobile';
 import ProjectDetails from './pages/Details/ProjectDetails';
 
 function App() {
