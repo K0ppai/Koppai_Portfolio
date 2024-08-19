@@ -64,7 +64,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             {darkMode ? (
               <motion.span
-                className={`${isNavExpanded ? 'block' : 'hidden'}`}
+                className={`${isNavExpanded ? 'block' : 'hidden'} text-gray-500 dark:text-gray-400`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -76,7 +76,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
               </motion.span>
             ) : (
               <motion.span
-                className={`${isNavExpanded ? 'block' : 'hidden'}`}
+                className={`${isNavExpanded ? 'block' : 'hidden'} text-gray-500 dark:text-gray-400`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -123,7 +123,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           )}
           <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
-              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              className={`${isNavExpanded ? 'block' : 'hidden'} text-gray-500 dark:text-gray-400`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1, ease: 'easeInOut' }}
@@ -162,7 +162,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           )}
           <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
-              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              className={`${isNavExpanded ? 'block' : 'hidden'} text-gray-500 dark:text-gray-400`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2, ease: 'easeInOut' }}
@@ -200,7 +200,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
           )}
           <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
-              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              className={`${isNavExpanded ? 'block' : 'hidden'} text-gray-500 dark:text-gray-400`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.3, ease: 'easeInOut' }}
@@ -229,7 +229,7 @@ const NavBarDesktop = ({ darkMode, toggleDarkMode }) => {
         >
           <div className='flex w-full items-center justify-end gap-x-[15%] pr-[20%]'>
             <motion.span
-              className={`${isNavExpanded ? 'block' : 'hidden'}`}
+              className={`${isNavExpanded ? 'block' : 'hidden'} text-gray-500 dark:text-gray-400`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.4, ease: 'easeInOut' }}

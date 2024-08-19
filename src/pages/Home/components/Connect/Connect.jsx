@@ -25,10 +25,10 @@ const Connect = ({ closeModal, isModalOpen, darkMode }) => {
       id='connect'
     >
       <button
-        className={`absolute z-[999] flex h-[65px] w-[65px] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light dark:bg-bg_dark md:h-[80px] md:w-[80px] lg:w-[100px] lg:h-[100px]`}
+        className={`absolute z-[999] flex h-[65px] w-[65px] cursor-pointer items-center  justify-center rounded-[50%] bg-bg_light dark:bg-bg_dark md:h-[80px] md:w-[80px] lg:h-[100px] lg:w-[100px]`}
         onClick={closeModal}
       >
-        <BiX className='text-[45px] md:text-[50px] lg:text-[55px] text-primary_dark' />
+        <BiX className='text-[45px] text-primary_dark md:text-[50px] lg:text-[55px]' />
       </button>
       {socialMedias.map((socialMedia, index) => (
         <li key={socialMedia.id} className='rotate absolute list-none' style={{ '--i': index }}>

@@ -33,7 +33,7 @@ const Skills = () => {
         whileInView={titleAnimationVariants.whileInView}
         viewport={titleAnimationVariants.viewport}
       >
-        Technologies that I&apos;ve been working on recently.
+        Technologies that I&apos;ve been working with recently.
       </motion.p>
       <ul className='mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-x-20 md:gap-y-8 lg:justify-center lg:gap-x-16'>
         {techs.map((tech, index) => (
