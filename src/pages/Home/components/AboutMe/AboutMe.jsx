@@ -35,7 +35,9 @@ const AboutMe = ({ darkMode }) => {
         darkMode={darkMode}
         onRequestClose={closeModal}
         className={`${isModalOpen ? 'scale-in-center' : 'scale-out-center'} h-[100vh] w-[100vw]`}
-        overlayClassName='fixed inset-0 bg-black backdrop-blur-[0.2rem] bg-opacity-40 z-50'
+        overlayClassName={`fixed inset-0 ${
+          darkMode ? 'bg-white' : 'bg-black'
+        } backdrop-blur-[0.4rem] bg-opacity-[0.06] z-50`}
         closeTimeoutMS={600}
       >
         <Connect closeModal={closeModal} isModalOpen={isModalOpen} darkMode={darkMode} />
@@ -136,17 +138,12 @@ const AboutMe = ({ darkMode }) => {
           <p className='tracking-wide text-gray-500 dark:text-gray-400 sm:text-justify'>
             Heyy, my soon-to-be co-workers! I&apos;m
             <span className='font-extrabold text-primary_dark'> Paing Soe Thu</span>, but you can
-            call me anytime 😉. I&apos;m a self-motivated
-            <span className='font-extrabold text-primary_dark'> full-stack </span>
-            web developer and a student of life enthusiastic about creating user-centric websites
-            using React.js and Ruby on Rails. I&apos;ve spent 1789+ hours mastering algorithms, data
-            structures, and full-stack development while simultaneously developing projects with
-            Ruby, Rails, JavaScript, React, and Redux and developed skills in remote pair
-            programming using GitHub, industry-standard git-flow, and daily standups to communicate
-            and collaborate with international remote developers. Due to my strong commitment to
-            software development, I&apos;ve built over 16+ projects in just six months. I achieved a
-            perfect score in the final capstone due to my passion for striving for the best. Now,
-            how can I help you?
+            call me anytime 😉. A US-certified full-stack professional experienced in creating
+            customized and responsive web and mobile applications through remote collaboration with
+            developers from 50+ countries. Known for the ability to multi-task and juggle multiple
+            projects simultaneously, meeting all deadlínes. Thrives in environments that constantly
+            embrace new technologies. Always go the extra mile and make it better than requested.
+            Now, how can I help you?
           </p>
         </motion.article>
       </motion.div>
